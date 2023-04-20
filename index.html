@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helen Moreno</title>
-    <link rel="icon" href="assets/logos/icon.png"/>
+    <link rel="icon" href="assets/logos/icon.png" />
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- bootstrap -->
@@ -15,29 +16,32 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script src="js/svg-inject.min.js"></script>
 </head>
 
 <body>
     <img class="StarBackground" src="assets/imgs/Estrelas.png" alt="">
     <header>
-        <nav class="home">
-            <a href="Nave.html">Minha nave</a>
-
-            <a href="Blog.html">Meu universo</a>
-            <a data-toggle="dropdown">aa</a>
-
-            <div class="dropdown-menu">
-                <a href="#">Crescimento Pessoal</a>
-                <a href="#">Gestão de negocios</a>
-                <a href="#">Empreendedora sucesso</a>
-                <a href="#">Desenvolvimento Pessoal</a>
-                <a href="#">Café, Conexões e bagagens</a>
-                <a href="#">Casais de sucesso</a>
-            </div>
-            
-            <a href="Serviços.html">Serviços</a>
-            <a href="Palestras.html">Minha voz</a>
-            <a href="contato.html">Contato</a>
+        <nav>
+            <ul>
+                <li class="logo"><a href="index.html"><img src="assets/imgs/Lgbranca.png" alt=""></a></li>
+                <li><a href="Nave.html">Minha nave</a></li>
+                <li class="blogDrop">
+                    <a href="Blog.html">Meu universo</a>
+                    <a data-toggle="dropdown"><img src="assets/imgs/seta.svg" onload="SVGInject(this)" /></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Crescimento Pessoal</a>
+                        <a class="dropdown-item" href="#">Gestão de negocios</a>
+                        <a class="dropdown-item" href="#">Empreendedora sucesso</a>
+                        <a class="dropdown-item" href="#">Desenvolvimento Pessoal</a>
+                        <a class="dropdown-item" href="#">Café, Conexões e bagagens</a>
+                        <a class="dropdown-item" href="#">Casais de sucesso</a>
+                    </div>
+                </li>
+                <li><a href="Serviços.html">Serviços</a></li>
+                <li><a href="Palestras.html">Minha voz</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
         </nav>
     </header>
 

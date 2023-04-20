@@ -71,11 +71,81 @@ body {
 }
 
 header{
-    border: solid 2px red;
-    min-width: 1260px;
+    min-width: 1200px;
     width: 75%;
+    height: 17vh;
     align-items: center;
     justify-content: center;
-    position: relative;
     display: flex;
+    z-index: 999;
+    nav{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        ul{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            li{
+                padding: 0.5vh 1vw;
+                margin:0 0.5vw;
+                &:nth-child(2){
+                    margin-left: auto;
+                }
+                a{
+                    color: $Branco;
+                    font-weight: 500;
+                    font-size: 1.4vw;
+                    &:hover{
+                        color: $LaranjaEscuro;
+                    }
+                } 
+            }
+            .logo{
+                width: 6vw;
+                img{
+                    width: 100%;
+                }
+            }
+            .blogDrop{
+                position: relative;
+                padding-right: 2vw;
+                display: flex;
+                align-items: center;
+                a{
+                    &:nth-child(2){
+                        position: absolute;
+                        right: 0;
+                        padding: 0 0.25vw 0 2vw;
+                        svg{
+                            width: 1.5vw;
+                        }
+                    }
+                    
+                }
+                .dropdown-menu{
+                    background: none;
+                    border: solid 1px $Branco;
+                    padding: 1vh 0.5vw;
+                    border-radius: 1vw;
+                    margin-left: -6vw;
+                    margin-top: 1vh;
+                    .dropdown-item{
+                        padding:0.5vh 0.25vw;
+                        color: $Branco;
+                        &:nth-child(2){
+                            position: relative;
+                        }
+                        &:hover{
+                            background-color: $PretoClaro;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
 }

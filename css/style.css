@@ -70,11 +70,76 @@ body {
   }
 }
 header {
-  border: solid 2px red;
-  min-width: 1260px;
+  min-width: 1200px;
   width: 75%;
+  height: 17vh;
   align-items: center;
   justify-content: center;
-  position: relative;
   display: flex;
+  z-index: 999;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+header nav ul li {
+  padding: 0.5vh 1vw;
+  margin: 0 0.5vw;
+}
+header nav ul li:nth-child(2) {
+  margin-left: auto;
+}
+header nav ul li a {
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.4vw;
+}
+header nav ul li a:hover {
+  color: #D9662B;
+}
+header nav ul .logo {
+  width: 6vw;
+}
+header nav ul .logo img {
+  width: 100%;
+}
+header nav ul .blogDrop {
+  position: relative;
+  padding-right: 2vw;
+  display: flex;
+  align-items: center;
+}
+header nav ul .blogDrop a:nth-child(2) {
+  position: absolute;
+  right: 0;
+  padding: 0 0.25vw 0 2vw;
+}
+header nav ul .blogDrop a:nth-child(2) svg {
+  width: 1.5vw;
+}
+header nav ul .blogDrop .dropdown-menu {
+  background: none;
+  border: solid 1px #D9D9D9;
+  padding: 1vh 0.5vw;
+  border-radius: 1vw;
+  margin-left: -6vw;
+  margin-top: 1vh;
+}
+header nav ul .blogDrop .dropdown-menu .dropdown-item {
+  padding: 0.5vh 0.25vw;
+  color: #D9D9D9;
+}
+header nav ul .blogDrop .dropdown-menu .dropdown-item:nth-child(2) {
+  position: relative;
+}
+header nav ul .blogDrop .dropdown-menu .dropdown-item:hover {
+  background-color: #212121;
 }/*# sourceMappingURL=style.css.map */
