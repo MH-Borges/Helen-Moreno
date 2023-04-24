@@ -132,25 +132,26 @@ body {
                     }
                 }
                 .logo {
-                    width: 6vw;
+                    width: 5.5vw;
 
                     img {
                         width: 100%;
+                        height: auto;
                     }
                 }
                 .blogDrop {
                     position: relative;
-                    padding-right: 2vw;
+                    padding-right: 3vw;
                     display: flex;
                     align-items: center;
                     a {
                         &:nth-child(2) {
                             position: absolute;
                             right: 0;
-                            padding: 0 0.25vw 0 2vw;
+                            padding: 0 0.25vw 0 1.5vw;
 
                             svg {
-                                width: 1.5vw;
+                                width: 1.4vw;
                             }
                         }
 

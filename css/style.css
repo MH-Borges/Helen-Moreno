@@ -126,24 +126,25 @@ body header nav ul li a:hover {
   color: #D9662B;
 }
 body header nav ul .logo {
-  width: 6vw;
+  width: 5.5vw;
 }
 body header nav ul .logo img {
   width: 100%;
+  height: auto;
 }
 body header nav ul .blogDrop {
   position: relative;
-  padding-right: 2vw;
+  padding-right: 3vw;
   display: flex;
   align-items: center;
 }
 body header nav ul .blogDrop a:nth-child(2) {
   position: absolute;
   right: 0;
-  padding: 0 0.25vw 0 2vw;
+  padding: 0 0.25vw 0 1.5vw;
 }
 body header nav ul .blogDrop a:nth-child(2) svg {
-  width: 1.5vw;
+  width: 1.4vw;
 }
 body header nav ul .blogDrop .dropdown-menu {
   background: none;

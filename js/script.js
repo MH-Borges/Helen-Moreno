@@ -7,7 +7,7 @@ function blinkingStars() {
   Blinkstar.style.width = stSize + "px";
   Blinkstar.style.backgroundColor = "#ffffff";
   Blinkstar.style.position = "absolute";
-  Blinkstar.style.top = yPos + "%";
+  Blinkstar.style.top = yPos > 99 ? 98 + "%" : yPos + "%";
   Blinkstar.style.left = xPos + "%";
   Blinkstar.style.borderRadius = "50%";
   document.body.appendChild(Blinkstar);
@@ -23,7 +23,7 @@ function Stars() {
   var yPos = Math.random() * 100;
   star.style.fontSize = stSize + "vw";
   star.style.position = "absolute";
-  star.style.top = yPos + "%";
+  star.style.top = yPos > 99 ? 98 + "%" : yPos + "%";
   star.style.left = xPos + "%";
   document.body.appendChild(star);
   star.classList.add("star");
