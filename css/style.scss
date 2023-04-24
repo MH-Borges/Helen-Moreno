@@ -10,53 +10,19 @@
     text-decoration: none !important;
 }
 
-body {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: $Main-font;
-    background-color: $Preto;
-    width: 100vw;
-    overflow: hidden;
-    justify-content: center;
+.hide {
+    opacity: 0;
+    display: none;
 }
 
-.StarBackground{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background: $LaranjaClaro;
 }
 
-.blinking-star {
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-iteration-count: 2;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    position: relative;
-}
-
-.star {
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-iteration-count: 2;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    position: relative;
-    &::after,&::before{
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "\2726";
-        font-size: 2.5vw;
-    }
-    &::after{
-        background: $Branco;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+::-webkit-scrollbar-thumb {
+    background: $LaranjaEscuro;
+    border-radius: 5vw;
 }
 
 @keyframes blink {
@@ -70,82 +36,241 @@ body {
     }
 }
 
-header{
-    min-width: 1200px;
-    width: 75%;
-    height: 17vh;
-    align-items: center;
-    justify-content: center;
+body {
     display: flex;
-    z-index: 999;
-    nav{
+    flex-wrap: wrap;
+    font-family: $Main-font;
+    background-color: $Preto;
+    width: 100%;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+
+    .blinking-star {
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-iteration-count: 2;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+        position: relative;
+    }
+
+    .star {
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-iteration-count: 2;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+        position: relative;
+        width: 1.5vw;
+        height: 4vh;
         display: flex;
-        width: 100%;
-        height: 100%;
+        justify-content: center;
         align-items: center;
-        ul{
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "\2726";
+        }
+
+        &::after {
+            background: $Branco;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .StarBackground {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+
+        img {
             width: 100%;
+            height: 100%;
+
+            &:nth-child(6) {
+                height: 50%;
+            }
+        }
+    }
+
+    header {
+        min-width: 1200px;
+        width: 75%;
+        height: 17vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        z-index: 999;
+        nav {
             display: flex;
+            width: 100%;
+            height: 100%;
             align-items: center;
-            margin: 0;
-            li{
-                padding: 0.5vh 1vw;
-                margin:0 0.5vw;
-                &:nth-child(2){
-                    margin-left: auto;
-                }
-                a{
-                    color: $Branco;
-                    font-weight: 500;
-                    font-size: 1.4vw;
-                    &:hover{
-                        color: $LaranjaEscuro;
-                    }
-                } 
-            }
-            .logo{
-                width: 6vw;
-                img{
-                    width: 100%;
-                }
-            }
-            .blogDrop{
-                position: relative;
-                padding-right: 2vw;
+            ul {
+                width: 100%;
                 display: flex;
                 align-items: center;
-                a{
-                    &:nth-child(2){
-                        position: absolute;
-                        right: 0;
-                        padding: 0 0.25vw 0 2vw;
-                        svg{
-                            width: 1.5vw;
-                        }
+                margin: 0;
+                li {
+                    padding: 0.5vh 1vw;
+                    margin: 0 0.5vw;
+                    &:nth-child(2) {
+                        margin-left: auto;
                     }
-                    
-                }
-                .dropdown-menu{
-                    background: none;
-                    border: solid 1px $Branco;
-                    padding: 1vh 0.5vw;
-                    border-radius: 1vw;
-                    margin-left: -6vw;
-                    margin-top: 1vh;
-                    .dropdown-item{
-                        padding:0.5vh 0.25vw;
+                    a {
                         color: $Branco;
-                        &:nth-child(2){
-                            position: relative;
-                        }
-                        &:hover{
-                            background-color: $PretoClaro;
+                        font-weight: 500;
+                        font-size: 1.4vw;
+                        &:hover {
+                            color: $LaranjaEscuro;
                         }
                     }
                 }
-                
+                .logo {
+                    width: 6vw;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+                .blogDrop {
+                    position: relative;
+                    padding-right: 2vw;
+                    display: flex;
+                    align-items: center;
+                    a {
+                        &:nth-child(2) {
+                            position: absolute;
+                            right: 0;
+                            padding: 0 0.25vw 0 2vw;
+
+                            svg {
+                                width: 1.5vw;
+                            }
+                        }
+
+                    }
+                    .dropdown-menu {
+                        background: none;
+                        border: solid 1px $Branco;
+                        padding: 1vh 0.5vw;
+                        border-radius: 1vw;
+                        margin-left: -6.5vw;
+                        margin-top: 1.5vh;
+
+                        .dropdown-item {
+                            padding: 0.5vh 0.25vw;
+                            color: $Branco;
+
+                            &:nth-child(2) {
+                                position: relative;
+                            }
+
+                            &:hover {
+                                background-color: $PretoClaro;
+                            }
+                        }
+                    }
+                    &:hover {
+                        a {
+                            &:nth-child(2) {
+                                svg {
+                                    path {
+                                        fill: $LaranjaEscuro;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
             }
-            
+        }
+    }
+
+    section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .banner {
+        height: 83vh;
+        border: solid blue;
+    }
+
+    .blog {
+        border: solid purple;
+    }
+
+    .inst {
+        border: solid orange;
+    }
+
+    .depos {
+        border: solid cyan;
+    }
+
+    .conversa {
+        border: solid purple;
+    }
+
+    .contato {
+        height: 50vh;
+        border: solid green;
+    }
+
+    footer {
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        img {
+            width: 12vw;
+            height: auto;
+            z-index: 3;
+            margin-bottom: 1vh;
+        }
+
+        .fundo {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        p {
+            z-index: 3;
+            color: $Branco;
+            margin: 0;
+            font-family: 'Jost';
+            font-weight: 800;
+            font-size: 0.75vw;
+        }
+
+        a {
+            position: absolute;
+            right: 1vw;
+            z-index: 3;
+            width: 4vw;
+            height: 75%;
+            padding: 0.5vh 0.5vw;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
