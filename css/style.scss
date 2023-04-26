@@ -499,6 +499,7 @@ body {
     .inst {
         display: flex;
         padding: 5vw;
+        animation: floater 2.4s ease-in-out infinite;
         .infosInsti{
             width: 50%;
             padding: 1vw;
@@ -506,7 +507,6 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: floater 2.4s ease-in-out infinite;
             p{
                 font-size: 1.5vw;
                 text-align: right;
@@ -543,7 +543,6 @@ body {
             img{
                 width: auto;
                 height: 75%;
-                animation: floater 2.5s ease-in-out infinite;
             }
         }
         
@@ -558,158 +557,124 @@ body {
             font-weight: 800;
             font-size: 2vw;
             padding: 1vh 0;
-            margin: 5vh 0 2vh;
+            margin: 5vh 0 1vh;
         }
         h4{
             font-weight: 200;
             text-align: center;
             font-size: 1.5vw;
             padding: 0.5vh 0;
-            margin-bottom: 7vh ;
-        }
-        .splide{
+            margin-bottom: 6vh ;
+        }    
+
+        .carousel {
+            width: 100%;
             height: 65vh;
-            .splide__track{
+            display: flex;
+            align-items: center;
+            .carousel__list {
+                overflow: hidden;
+                display: flex;
+                list-style: none;
+                position: relative;
+                width: 100%;
                 height: 100%;
-                .splide__list{
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                .carousel__item {
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    .splide__slide{
-                        height: 32vh;
-                        width: 20vw !important;
-                        margin: 0 2vw;
-                        transition: ease-in-out 0.2s;
-                        border-radius: 1.5vw;
-                        .boxCardDepo{
-                            width: 100%;
-                            height: 100%;
-                            background-color: $LaranjaEscuro;
-                            border-radius: 1.5vw;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0 2.5vw;
-                            img{
-                                position: absolute;
-                                top: -15%;
-                                width: 4.5vw;
-                                border-radius: 1vw;
-                                border: 1px $Branco solid;
-                            }
-                            .asp{
-                                position: absolute;
-                                top: -3vh;
-                                left: -0.75vw;
-                                width: 2vw;
-                            }
-                            .asp2{
-                                width: 2vw;
-                                position: absolute;
-                                bottom: -3vh;
-                                right: -0.75vw;
-                                transform: rotate(180deg);
-                            }
-                            p{
-                                font-weight: 500;
-                                font-size: 0.75vw;
-                                text-align: center;
-                            }
-                            span{
-                                font-weight: 800;
-                                font-size: 0.55vw;
-                                margin-top: 1vh;
-                                text-align: center;
-                            }
-                        }
-                        .roxo{
-                            background-color: $RoxoEscuro;
-                        }
-                        .rosa{
-                            background-color: $RosaEscuro;
-                        }
+                    justify-content: center;
+                    color: $Branco;
+                    width: 20vw;
+                    height: 47vh;
+                    border-radius: 1.5vw;
+                    position: absolute;
+                    transition: all .3s ease-in;
+                    padding: 0 2vw;
+                    &:nth-child(1) {
+                        background: $LaranjaEscuro;
                     }
-                    .is-active{
-                        height: 45vh;
-                        .boxCardDepo{
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 1.5vw;
-                            position: relative;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0 1.5vw;
-                            img{
-                                position: absolute;
-                                top: -15%;
-                                width: 7vw;
-                                border-radius: 1vw;
-                                border: 1px $Branco solid;
-                            }
-                            .asp{
-                                position: absolute;
-                                top: -4vh;
-                                left: -1.5vw;
-                                width: 3.5vw;
-                            }
-                            .asp2{
-                                width: 3.5vw;
-                                position: absolute;
-                                bottom: -4vh;
-                                right: -1.5vw;
-                                transform: rotate(180deg);
-                            }
-                            p{
-                                margin-top: 3vh;
-                                font-weight: 500;
-                                font-size: 1.1vw;
-                                text-align: center;
-                            }
-                            span{
-                                font-weight: 800;
-                                font-size: 0.9vw;
-                                margin-top: 1vh;
-                                text-align: center;
-                            }
-                        }
+                    &:nth-child(2) {
+                        background: $RoxoEscuro;
                     }
-                    .is-prev, .is-next{
-                        height: 38vh;
-                        .boxCardDepo{
-                            img{
-                                position: absolute;
-                                top: -15%;
-                                width: 5.5vw;
-                            }
-                            .asp{
-                                position: absolute;
-                                top: -3.5vh;
-                                left: -1vw;
-                                width: 2.5vw;
-                            }
-                            .asp2{
-                                width: 2.5vw;
-                                position: absolute;
-                                bottom: -3.5vh;
-                                right: -1vw;
-                                transform: rotate(180deg);
-                            }
-                            p{
-                                font-weight: 500;
-                                font-size: 0.9vw;
-                                text-align: center;
-                            }
-                            span{
-                                font-weight: 800;
-                                font-size: 0.7vw;
-                                margin-top: 2vh;
-                                text-align: center;
-                            }
-                        }
+                    &:nth-child(3) {
+                        background: $LaranjaEscuro;
                     }
-                    
+                    &:nth-child(4) {
+                        background: $RosaEscuro;
+                    }
+                    &:nth-child(5) {
+                    background: $RoxoEscuro;
+                    }
+                    &[data-pos="0"] {
+                        z-index: 5;
+                    }
+                    &[data-pos="-1"],
+                    &[data-pos="1"] {
+                        opacity: 0.7;
+                        filter: blur(0.05vw) grayscale(10%);
+                    }
+                    &[data-pos="-1"] {
+                        transform: translateX(-110%) scale(.8);
+                        z-index: 4;
+                    }
+                    &[data-pos="1"] {
+                        transform: translateX(110%) scale(.8);
+                        z-index: 4;
+                    }
+                    &[data-pos="-2"],
+                    &[data-pos="2"] {
+                        opacity: 0.4;
+                        filter: blur(0.10vw)  grayscale(20%);
+                    }
+                    &[data-pos="-2"] {
+                        transform: translateX(-195%) scale(.6);
+                        z-index: 3;
+                    }
+                    &[data-pos="2"] {
+                        transform: translateX(195%) scale(.6);
+                        z-index: 3;
+                    }
+                    img{
+                        width: 6.5vw;
+                        border-radius: 1vw;
+                        border: solid $Branco 1px;
+                        margin: -5vh;
+                        position: absolute;
+                        top: -1vh;
+                        pointer-events: none;
+                    }
+                    .asp, .asp2{
+                        width: 3.5vw;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                    .asp{
+                        top: -3.5vh;
+                        left: -2vw;
+                    }
+                    .asp2{
+                        transform: rotate(180deg);
+                        bottom: -3.5vh;
+                        right: -2vw;
+                    }
+                    p{
+                        font-weight: 200;
+                        text-align: center;
+                        font-size: 1.1vw;
+                        margin-top: 4vh;
+                        pointer-events: none;
+                    }
+                    span{
+                        font-weight: 800;
+                        font-size: 1vw;
+                        pointer-events: none;
+                        margin-top: 2vh;
+                    }
+
                 }
             }
         }
@@ -733,10 +698,10 @@ body {
             align-items: center;
             justify-content: end;
             padding: 0 1vw;
+            animation: floater 3s ease-in-out infinite;
             img{
                 width: auto;
                 height: 80%;
-                animation: floater 2.5s ease-in-out infinite;
             }
         }
         .infosConv{
@@ -746,7 +711,7 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: floater 2.4s ease-in-out infinite;
+            animation: floater 3s ease-in-out infinite;
             p{
                 font-size: 1.5vw;
                 text-align: left;

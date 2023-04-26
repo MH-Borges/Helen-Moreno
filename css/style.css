@@ -477,6 +477,7 @@ body .blog .botao:hover {
 body .inst {
   display: flex;
   padding: 5vw;
+  animation: floater 2.4s ease-in-out infinite;
 }
 body .inst .infosInsti {
   width: 50%;
@@ -485,7 +486,6 @@ body .inst .infosInsti {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: floater 2.4s ease-in-out infinite;
 }
 body .inst .infosInsti p {
   font-size: 1.5vw;
@@ -523,7 +523,6 @@ body .inst .imgInst {
 body .inst .imgInst img {
   width: auto;
   height: 75%;
-  animation: floater 2.5s ease-in-out infinite;
 }
 body .depos {
   color: #D9D9D9;
@@ -535,157 +534,122 @@ body .depos h2 {
   font-weight: 800;
   font-size: 2vw;
   padding: 1vh 0;
-  margin: 5vh 0 2vh;
+  margin: 5vh 0 1vh;
 }
 body .depos h4 {
   font-weight: 200;
   text-align: center;
   font-size: 1.5vw;
   padding: 0.5vh 0;
-  margin-bottom: 7vh;
+  margin-bottom: 6vh;
 }
-body .depos .splide {
+body .depos .carousel {
+  width: 100%;
   height: 65vh;
-}
-body .depos .splide .splide__track {
-  height: 100%;
-}
-body .depos .splide .splide__track .splide__list {
+  display: flex;
   align-items: center;
 }
-body .depos .splide .splide__track .splide__list .splide__slide {
-  height: 32vh;
-  width: 20vw !important;
-  margin: 0 2vw;
-  transition: ease-in-out 0.2s;
-  border-radius: 1.5vw;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo {
+body .depos .carousel .carousel__list {
+  overflow: hidden;
+  display: flex;
+  list-style: none;
+  position: relative;
   width: 100%;
   height: 100%;
-  background-color: #D9662B;
-  border-radius: 1.5vw;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+body .depos .carousel .carousel__list .carousel__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2.5vw;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo img {
-  position: absolute;
-  top: -15%;
-  width: 4.5vw;
-  border-radius: 1vw;
-  border: 1px #D9D9D9 solid;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo .asp {
-  position: absolute;
-  top: -3vh;
-  left: -0.75vw;
-  width: 2vw;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo .asp2 {
-  width: 2vw;
-  position: absolute;
-  bottom: -3vh;
-  right: -0.75vw;
-  transform: rotate(180deg);
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo p {
-  font-weight: 500;
-  font-size: 0.75vw;
-  text-align: center;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .boxCardDepo span {
-  font-weight: 800;
-  font-size: 0.55vw;
-  margin-top: 1vh;
-  text-align: center;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .roxo {
-  background-color: #3A008C;
-}
-body .depos .splide .splide__track .splide__list .splide__slide .rosa {
-  background-color: #9300B3;
-}
-body .depos .splide .splide__track .splide__list .is-active {
-  height: 45vh;
-}
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo {
-  width: 100%;
-  height: 100%;
+  color: #D9D9D9;
+  width: 20vw;
+  height: 47vh;
   border-radius: 1.5vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1.5vw;
-}
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo img {
   position: absolute;
-  top: -15%;
-  width: 7vw;
+  transition: all 0.3s ease-in;
+  padding: 0 2vw;
+}
+body .depos .carousel .carousel__list .carousel__item:nth-child(1) {
+  background: #D9662B;
+}
+body .depos .carousel .carousel__list .carousel__item:nth-child(2) {
+  background: #3A008C;
+}
+body .depos .carousel .carousel__list .carousel__item:nth-child(3) {
+  background: #D9662B;
+}
+body .depos .carousel .carousel__list .carousel__item:nth-child(4) {
+  background: #9300B3;
+}
+body .depos .carousel .carousel__list .carousel__item:nth-child(5) {
+  background: #3A008C;
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="0"] {
+  z-index: 5;
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="-1"], body .depos .carousel .carousel__list .carousel__item[data-pos="1"] {
+  opacity: 0.7;
+  filter: blur(0.05vw) grayscale(10%);
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="-1"] {
+  transform: translateX(-110%) scale(0.8);
+  z-index: 4;
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="1"] {
+  transform: translateX(110%) scale(0.8);
+  z-index: 4;
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="-2"], body .depos .carousel .carousel__list .carousel__item[data-pos="2"] {
+  opacity: 0.4;
+  filter: blur(0.1vw) grayscale(20%);
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="-2"] {
+  transform: translateX(-195%) scale(0.6);
+  z-index: 3;
+}
+body .depos .carousel .carousel__list .carousel__item[data-pos="2"] {
+  transform: translateX(195%) scale(0.6);
+  z-index: 3;
+}
+body .depos .carousel .carousel__list .carousel__item img {
+  width: 6.5vw;
   border-radius: 1vw;
-  border: 1px #D9D9D9 solid;
-}
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo .asp {
+  border: solid #D9D9D9 1px;
+  margin: -5vh;
   position: absolute;
-  top: -4vh;
-  left: -1.5vw;
-  width: 3.5vw;
+  top: -1vh;
+  pointer-events: none;
 }
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo .asp2 {
+body .depos .carousel .carousel__list .carousel__item .asp, body .depos .carousel .carousel__list .carousel__item .asp2 {
   width: 3.5vw;
   position: absolute;
-  bottom: -4vh;
-  right: -1.5vw;
-  transform: rotate(180deg);
+  pointer-events: none;
 }
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo p {
-  margin-top: 3vh;
-  font-weight: 500;
-  font-size: 1.1vw;
-  text-align: center;
-}
-body .depos .splide .splide__track .splide__list .is-active .boxCardDepo span {
-  font-weight: 800;
-  font-size: 0.9vw;
-  margin-top: 1vh;
-  text-align: center;
-}
-body .depos .splide .splide__track .splide__list .is-prev, body .depos .splide .splide__track .splide__list .is-next {
-  height: 38vh;
-}
-body .depos .splide .splide__track .splide__list .is-prev .boxCardDepo img, body .depos .splide .splide__track .splide__list .is-next .boxCardDepo img {
-  position: absolute;
-  top: -15%;
-  width: 5.5vw;
-}
-body .depos .splide .splide__track .splide__list .is-prev .boxCardDepo .asp, body .depos .splide .splide__track .splide__list .is-next .boxCardDepo .asp {
-  position: absolute;
+body .depos .carousel .carousel__list .carousel__item .asp {
   top: -3.5vh;
-  left: -1vw;
-  width: 2.5vw;
+  left: -2vw;
 }
-body .depos .splide .splide__track .splide__list .is-prev .boxCardDepo .asp2, body .depos .splide .splide__track .splide__list .is-next .boxCardDepo .asp2 {
-  width: 2.5vw;
-  position: absolute;
-  bottom: -3.5vh;
-  right: -1vw;
+body .depos .carousel .carousel__list .carousel__item .asp2 {
   transform: rotate(180deg);
+  bottom: -3.5vh;
+  right: -2vw;
 }
-body .depos .splide .splide__track .splide__list .is-prev .boxCardDepo p, body .depos .splide .splide__track .splide__list .is-next .boxCardDepo p {
-  font-weight: 500;
-  font-size: 0.9vw;
+body .depos .carousel .carousel__list .carousel__item p {
+  font-weight: 200;
   text-align: center;
+  font-size: 1.1vw;
+  margin-top: 4vh;
+  pointer-events: none;
 }
-body .depos .splide .splide__track .splide__list .is-prev .boxCardDepo span, body .depos .splide .splide__track .splide__list .is-next .boxCardDepo span {
+body .depos .carousel .carousel__list .carousel__item span {
   font-weight: 800;
-  font-size: 0.7vw;
+  font-size: 1vw;
+  pointer-events: none;
   margin-top: 2vh;
-  text-align: center;
 }
 body .conversa {
   display: flex;
@@ -706,11 +670,11 @@ body .conversa .imgConv {
   align-items: center;
   justify-content: end;
   padding: 0 1vw;
+  animation: floater 3s ease-in-out infinite;
 }
 body .conversa .imgConv img {
   width: auto;
   height: 80%;
-  animation: floater 2.5s ease-in-out infinite;
 }
 body .conversa .infosConv {
   width: 50%;
@@ -719,7 +683,7 @@ body .conversa .infosConv {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: floater 2.4s ease-in-out infinite;
+  animation: floater 3s ease-in-out infinite;
 }
 body .conversa .infosConv p {
   font-size: 1.5vw;
