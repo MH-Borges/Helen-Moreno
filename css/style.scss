@@ -14,12 +14,10 @@
     opacity: 0;
     display: none;
 }
-
 ::-webkit-scrollbar {
     width: 0.5vw;
     background: $LaranjaClaro;
 }
-
 ::-webkit-scrollbar-thumb {
     background: $LaranjaEscuro;
     border-radius: 5vw;
@@ -30,10 +28,14 @@
         opacity: 0;
         transform: scale(0.2);
     }
-
     100% {
         transform: scale(1.1);
     }
+}
+@keyframes floater {
+    0%{transform: translateY(0px)}
+    50%{transform: translateY(15px)}
+    100%{transform: translateY(0px)}
 }
 
 body {
@@ -87,7 +89,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100vh;
-
+        z-index: -1;
         img {
             width: 100%;
             height: 100%;
@@ -95,6 +97,21 @@ body {
             &:nth-child(6) {
                 height: 50%;
             }
+        }
+    }
+
+    .toTop {
+        display: none;
+        position: fixed;
+        right: 1.5vw;
+        bottom: 3vh;
+        z-index: 998;
+        cursor: pointer;
+        width: 4vw;
+        height: 13vh;
+        .foguete{
+          width: 100%;
+          height: 100%;
         }
     }
 
@@ -196,34 +213,595 @@ body {
     }
 
     section {
-        width: 100%;
+        width: 75%;
         height: 100vh;
+        z-index: 5;
     }
 
     .banner {
         height: 83vh;
-        border: solid blue;
+        display: flex;
+        flex-wrap: wrap;
+        color: $Branco;
+        padding: 1vw;
+        .infos{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 2vw;
+            h1{
+                font-size: 3vw;
+                line-height: 3.5vw;
+                font-weight: 200;
+                margin-bottom: 5.5vh;
+                animation: floater 5s ease-in-out infinite;
+
+                b{
+                    font-weight: 800;
+                }
+            }
+            h2{
+                font-weight: 200;
+                font-size: 2.5vw;
+                margin-bottom: 8vh;
+                animation: floater 4.8s ease-in-out infinite;
+
+                b{
+                    font-weight: 800;
+                }
+            }
+            .botao{
+                background-color: $LaranjaEscuro;
+                padding: 0.5vh 0;
+                text-align: center;
+                color: $Branco;
+                font-weight: 500;
+                font-size: 1.5vw;
+                margin: 0 10vw 0 0;
+                border-radius: 3vw;
+                transition: ease-in-out 0.2s;
+                &:hover{
+                    background-color: $LaranjaClaro;
+                    transform: translateY(5px);
+                }
+            }
+        }
+        .ilustra{
+            width: 45.5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(217, 101, 43, 0.5);
+            font-size: 1.5vw;
+            padding: 3vw;
+            margin: 7vh 0 7vh 3vw;
+            text-align: center;
+            border-radius: 2.5vw;
+        }
     }
 
     .blog {
-        border: solid purple;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        h2{
+            text-align: center;
+            color: $Branco;
+            font-weight: 800;
+            font-size: 2.5vw;
+            padding: 0.5vh 0;
+            margin-bottom: 4vh;
+        }
+        .MenuBlog{
+            display: flex;
+            justify-content: center;
+            a{
+                text-align: center;
+                width: 15vw;
+                color: $Branco;
+                padding: 1vh 2.5vw;
+                font-size: 1.3vw;
+                margin: 0 0.5vw;
+                border: solid 1px $Branco;
+                border-top-left-radius: 1.5vw;
+                border-top-right-radius: 1.5vw;
+                font-weight: 800;
+            }
+            .active{
+                background-color: $RoxoEscuro;
+                border: none;
+            }
+        }
+        .TabsBlog{
+            margin-bottom: 1vh;
+            height: 70vh;
+            .tab-pane{
+                height: 100%;
+                .boxCards{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100%;
+                    align-items: start;
+                    padding: 3vh 0 0 0 ;
+                    .cardPostBlog{
+                        width: 32%;
+                        height: 60vh;
+                        position: relative;
+                        color: $Branco;
+                        border-radius: 2vw;
+                        transition: ease-in-out 0.25s;
+                        &::before{
+                            content: '';
+                            background: rgba(33, 33, 33, 0.8);
+                            backdrop-filter: blur(1.5px);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            border-radius: 2vw;
+                        }
+                        .imgBlog{
+                            width: 100%;
+                            height: 70%;
+                            border-radius: 2.1vw;
+                            background-color: $BrancoEscuro;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            i{
+                                font-size: 5.5vw;
+                            }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 2vw;
+                            }
+                        }
+                        .icons{
+                            display: flex;
+                            flex-direction: column;
+                            border: solid $Branco 1px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            color: $Branco;
+                            padding: 1.5vh 0.5vw;
+                            margin: 0;
+                            border-top-right-radius: 2vw;
+                            border-bottom-left-radius: 2vw;
+                            transition: ease-in-out 0.25s;
+                            .iconInfo{
+                                padding: 0.5vh 0.5vw;
+                                display: flex;
+                                align-items: center;
+                                transition: ease-in-out 0.25s;
+                                i{
+                                    font-size: 1.1vw;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                        .active{
+                            border: none;
+                            background-color: $RoxoEscuro;
+                            transition: ease-in-out 0.25s;
+                            .iconInfo{
+                                padding: 0.5vh 0.5vw;
+                                display: flex;
+                                align-items: center;
+                                transition: ease-in-out 0.25s;
+                                i{
+                                    font-size: 1.25vw;
+                                    padding: 0.5vh 0;
+                                }
+                                .hide{
+                                    display: block;
+                                    opacity: 1;
+                                    font-size: 1.1vw;
+                                    padding-left: 0.5vw;
+                                    font-weight: 800;
+                                    transition: ease-in-out 0.25s;
+                                }
+                            }
+                        }
+                        p{
+                            font-size: 1vw;
+                            padding: 1.5vh 1.5vw 1vh;
+                            margin: 0;
+                            font-weight: 200;
+                            transition: ease-in-out 0.25s;
+                        }
+                        h3{
+                            font-size: 1.5vw;
+                            padding: 0 1.5vw;
+                            margin: 1vh 0 0 0;
+                            line-height: 1.5vw;
+                            transition: ease-in-out 0.25s;
+                        }
+                    }
+                    .menor{
+                        width: 29%;
+                        height: 58vh;
+                        position: relative;
+                        color: $Branco;
+                        border-radius: 2vw;
+                        p{
+                            font-size: 0.75vw;
+                            padding: 2vh 1.5vw 1vh;
+                            margin: 0;
+                            font-weight: 200;
+                        }
+                        h3{
+                            font-size: 1.2vw;
+                            padding: 0 2.5vw 0 1.5vw;
+                            margin: 1vh 0 0 0;
+                            line-height: 1.5vw;
+                        }
+                    }
+                    .maior{
+                        width: 38%;
+                        height: 65vh;
+                        position: relative;
+                        color: $Branco;
+                        border-radius: 2vw;
+                        p{
+                            font-size: 1.25vw;
+                            padding: 1.5vh 1.5vw 1vh;
+                            margin: 0;
+                            font-weight: 200;
+                        }
+                        h3{
+                            font-size: 1.8vw;
+                            padding: 0 1.5vw;
+                            margin: 1.25vh 0 0 0;
+                            line-height: 1.8vw;
+                        }
+                    }
+                }
+            }
+        }
+        .botao{
+            background-color: $RoxoEscuro;
+            padding: 0.5vh 0;
+            text-align: center;
+            color: $Branco;
+            font-weight: 500;
+            font-size: 1.5vw;
+            border-radius: 3vw;
+            transition: ease-in-out 0.2s;
+            margin: 0 25vw;
+            font-weight: 500;
+            &:hover{
+                background-color: $RoxoClaro;
+                transform: translateY(5px);
+            }
+        }
     }
 
     .inst {
-        border: solid orange;
+        display: flex;
+        padding: 5vw;
+        .infosInsti{
+            width: 50%;
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: floater 2.4s ease-in-out infinite;
+            p{
+                font-size: 1.5vw;
+                text-align: right;
+                color: $Branco;
+                font-weight: 200;
+                padding-left: 1vw;
+                line-height: 1.75vw;
+                margin-bottom: 5vh;
+                b{
+                    font-weight: 800;
+                }
+            }
+            .botao{
+                background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+                padding: 0.5vh 2vw;
+                text-align: center;
+                color: $Branco;
+                font-weight: 500;
+                font-size: 1.25vw;
+                border-radius: 3vw;
+                transition: ease-in-out 0.2s;
+                font-weight: 500;
+                margin: 0;
+                &:hover{
+                    transform: translateY(5px);
+                }
+            }
+        }
+        .imgInst{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 0 2vw;
+            img{
+                width: auto;
+                height: 75%;
+                animation: floater 2.5s ease-in-out infinite;
+            }
+        }
+        
     }
 
     .depos {
-        border: solid cyan;
+        color: $Branco;
+        display: flex;
+        flex-direction: column;
+        h2{
+            text-align: center;
+            font-weight: 800;
+            font-size: 2vw;
+            padding: 1vh 0;
+            margin: 5vh 0 2vh;
+        }
+        h4{
+            font-weight: 200;
+            text-align: center;
+            font-size: 1.5vw;
+            padding: 0.5vh 0;
+            margin-bottom: 7vh ;
+        }
+        .splide{
+            height: 65vh;
+            .splide__track{
+                height: 100%;
+                .splide__list{
+                    align-items: center;
+                    .splide__slide{
+                        height: 32vh;
+                        width: 20vw !important;
+                        margin: 0 2vw;
+                        transition: ease-in-out 0.2s;
+                        border-radius: 1.5vw;
+                        .boxCardDepo{
+                            width: 100%;
+                            height: 100%;
+                            background-color: $LaranjaEscuro;
+                            border-radius: 1.5vw;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 2.5vw;
+                            img{
+                                position: absolute;
+                                top: -15%;
+                                width: 4.5vw;
+                                border-radius: 1vw;
+                                border: 1px $Branco solid;
+                            }
+                            .asp{
+                                position: absolute;
+                                top: -3vh;
+                                left: -0.75vw;
+                                width: 2vw;
+                            }
+                            .asp2{
+                                width: 2vw;
+                                position: absolute;
+                                bottom: -3vh;
+                                right: -0.75vw;
+                                transform: rotate(180deg);
+                            }
+                            p{
+                                font-weight: 200;
+                                font-size: 0.75vw;
+                                text-align: center;
+                            }
+                            span{
+                                font-weight: 500;
+                                font-size: 0.55vw;
+                                margin-top: 1vh;
+                                text-align: center;
+                            }
+                        }
+                        .roxo{
+                            background-color: $RoxoEscuro;
+                        }
+                        .rosa{
+                            background-color: $RosaEscuro;
+                        }
+                    }
+                    .is-active{
+                        height: 45vh;
+                        .boxCardDepo{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 1.5vw;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 1.5vw;
+                            img{
+                                position: absolute;
+                                top: -15%;
+                                width: 7vw;
+                                border-radius: 1vw;
+                                border: 1px $Branco solid;
+                            }
+                            .asp{
+                                position: absolute;
+                                top: -4vh;
+                                left: -1.5vw;
+                                width: 3.5vw;
+                            }
+                            .asp2{
+                                width: 3.5vw;
+                                position: absolute;
+                                bottom: -4vh;
+                                right: -1.5vw;
+                                transform: rotate(180deg);
+                            }
+                            p{
+                                font-weight: 200;
+                                font-size: 1.1vw;
+                                text-align: center;
+                            }
+                            span{
+                                font-weight: 500;
+                                font-size: 0.9vw;
+                                margin-top: 1vh;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .is-prev, .is-next{
+                        height: 38vh;
+                        .boxCardDepo{
+                            img{
+                                position: absolute;
+                                top: -15%;
+                                width: 5.5vw;
+                            }
+                            .asp{
+                                position: absolute;
+                                top: -3.5vh;
+                                left: -1vw;
+                                width: 2.5vw;
+                            }
+                            .asp2{
+                                width: 2.5vw;
+                                position: absolute;
+                                bottom: -3.5vh;
+                                right: -1vw;
+                                transform: rotate(180deg);
+                            }
+                            p{
+                                font-weight: 200;
+                                font-size: 0.9vw;
+                                text-align: center;
+                            }
+                            span{
+                                font-weight: 500;
+                                font-size: 0.7vw;
+                                margin-top: 2vh;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
     }
 
     .conversa {
-        border: solid purple;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3vh 5vw;
+        h2{
+            width: 100%;
+            color: $Branco;
+            text-align: center;
+            font-weight: 800;
+            padding: 1vh 0;
+        }
+        .imgConv{
+            width: 50%;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 0 1vw;
+            img{
+                width: auto;
+                height: 80%;
+                animation: floater 2.5s ease-in-out infinite;
+            }
+        }
+        .infosConv{
+            width: 50%;
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: floater 2.4s ease-in-out infinite;
+            p{
+                font-size: 1.5vw;
+                text-align: left;
+                color: $Branco;
+                font-weight: 200;
+                padding-left: 1vw;
+                line-height: 1.75vw;
+                margin-bottom: 5vh;
+                b{
+                    font-weight: 800;
+                }
+            }
+            .botao{
+                background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+                padding: 0.5vh 3vw;
+                text-align: center;
+                color: $Branco;
+                font-weight: 500;
+                font-size: 1.25vw;
+                border-radius: 3vw;
+                transition: ease-in-out 0.2s;
+                font-weight: 500;
+                margin: 0;
+                &:hover{
+                    transform: translateY(5px);
+                }
+            }
+        }
+        
     }
 
     .contato {
         height: 50vh;
-        border: solid green;
+        display: flex;
+        flex-direction: column;
+        color: $Branco;
+        justify-content: center;
+        h2{
+          font-weight: 200;
+          font-size: 2vw;
+          text-align: center;
+          padding: 1vh 20vh;
+          margin: 1vh 0 5vh;
+          b{
+            font-weight: 800;
+          }  
+        }
+        h3{
+            font-size: 2.4vw;
+            text-align: center;
+            font-weight: 800;
+            padding: 2vh 0;
+            margin-bottom: 3vh;
+        }
+        .botao{
+            background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+            padding: 0.5vh 3vw;
+            text-align: center;
+            color: $Branco;
+            font-weight: 500;
+            font-size: 1.55vw;
+            border-radius: 3vw;
+            transition: ease-in-out 0.2s;
+            font-weight: 500;
+            margin: 0 25vw;
+            &:hover{
+                transform: translateY(5px);
+            }
+        }
     }
 
     footer {
@@ -262,7 +840,7 @@ body {
 
         a {
             position: absolute;
-            right: 1vw;
+            left: 1vw;
             z-index: 3;
             width: 4vw;
             height: 75%;

@@ -7,11 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helen Moreno</title>
     <link rel="icon" href="assets/imgs/Lg_laranja.png" />
+    
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!-- splidejs -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -20,6 +27,7 @@
 </head>
 
 <body>
+
     <div class="StarBackground">
         <img src="assets/imgs/Estrelas.png" alt="">
         <img src="assets/imgs/Estrelas.png" alt="">
@@ -28,7 +36,11 @@
         <img src="assets/imgs/Estrelas.png" alt="">
         <img src="assets/imgs/Estrelas.png" alt="">
     </div>
-    
+
+    <div class="toTop">
+        <img class="foguete" src="assets/imgs/foguete.png">
+    </div>
+
     <header>
         <nav>
             <ul>
@@ -54,21 +66,270 @@
     </header>
 
     <section class="banner">
+        <div class="infos">
+            <h1>Sou especialista em
+                desenvolvimento de <br>
+                <b>estratégias</b> e <b>resultados</b>
+                <br> para o seu negócio.
+            </h1>
+            <h2> Embarque comigo <br> nesta <b>evolução!</b></h2>
+            <a class="botao" href="Palestras.html">Saiba mais com minha voz</a>
+        </div>
+
+        <div class="ilustra"> ilustração/vídeo personagem(capacete/janela com rosto dela “conversando”) </div>
     </section>
 
     <section class="blog">
+
+        <h2>Postagens do blog</h2>
+
+        <div class="nav nav-pills MenuBlog">
+            <a class="MenuSd active" data-toggle="pill" href="#Selecionados" aria-selected="true">Selecionados</a>
+            <a class="MenuSd" data-toggle="pill" href="#MaisVistos" aria-selected="false">Mais vistos</a>
+            <a class="MenuSd" data-toggle="pill" href="#Novos" aria-selected="false">Novos</a>
+        </div>
+        <div class="tab-content TabsBlog">
+            <div class="tab-pane fade show active" id="Selecionados">
+                <div class="boxCards">
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><i class="fa-solid fa-image"></i></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">20</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">07</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">101</span></div>
+                        </div>
+                        <p>por Helen Moreno | 27 de abril de 2023</p>
+                        <h3>Vamos falar de vendas e finanças?</h3>
+                    </a>
+
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-boris-ulzibat-4281932.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">24</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">142</span></div>
+                        </div>
+                        <p>por Helen Moreno | 15 de abril de 2023</p>
+                        <h3>Empreendedorismo do zero: como iniciar sua marca no mundo</h3>
+                    </a>
+                    
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-andre-moura-2747553.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">91</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">254</span></div>
+                        </div>
+                        <p>por Helen Moreno | 06 de abril de 2023</p>
+                        <h3>Mulher e empreendedora, como conciliar?</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="MaisVistos">
+                <div class="boxCards">
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-lacey-day-801867.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">20</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">07</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">101</span></div>
+                        </div>
+                        <p>por Helen Moreno | 27 de abril de 2023</p>
+                        <h3>Vamos falar de vendas e finanças?</h3>
+                    </a>
+
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-daniel-torobekov-5244258.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">24</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">142</span></div>
+                        </div>
+                        <p>por Helen Moreno | 15 de abril de 2023</p>
+                        <h3>Empreendedorismo do zero: como iniciar sua marca no mundo</h3>
+                    </a>
+                    
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-cottonbro-4753926.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">91</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">254</span></div>
+                        </div>
+                        <p>por Helen Moreno | 06 de abril de 2023</p>
+                        <h3>Mulher e empreendedora, como conciliar?</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Novos">
+                <div class="boxCards">
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-andrew-neel-4264049.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">20</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">07</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">101</span></div>
+                        </div>
+                        <p>por Helen Moreno | 27 de abril de 2023</p>
+                        <h3>Vamos falar de vendas e finanças?</h3>
+                    </a>
+
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-andrea-piacquadio-3830752.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">24</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">142</span></div>
+                        </div>
+                        <p>por Helen Moreno | 15 de abril de 2023</p>
+                        <h3>Empreendedorismo do zero: como iniciar sua marca no mundo</h3>
+                    </a>
+                    
+                    <a href="#" class="cardPostBlog">
+                        <div class="imgBlog"><img src="assets/imgs/blog/pexels-andrea-piacquadio-3756168.jpg" alt=""></div>
+                        <div class="icons">
+                            <div class="iconInfo"><i class="fa-solid fa-heart"></i><span class="hide">91</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-comment"></i><span class="hide">51</span></div>
+                            <div class="iconInfo"><i class="fa-solid fa-eye"></i><span class="hide">254</span></div>
+                        </div>
+                        <p>por Helen Moreno | 06 de abril de 2023</p>
+                        <h3>Mulher e empreendedora, como conciliar?</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <a class="botao" href="Blog.html">Veja mais do blog</a>
+
     </section>
 
     <section class="inst">
+        
+        <div class="infosInsti">
+            <p>Ferramentas e conhecimentos de anos apurados a fio,
+            com <b>muito estudo</b>, <b>reflexões</b>, <b>conexões</b>
+            e <b>experiências</b>, em todo tempo estudando e trabalhando
+            para atualizar os instrumentos de trabalho e pesquisa, 
+            a <b>Helen Moreno ampara</b> seus empreendedores em suas jornadas
+            solo num universo de possibilidades, obtendo o sucesso e a
+            liberdade ansiados.</p>
+            <a class="botao" href="Nave.html">Conheça melhor minha história</a>
+        </div>
+        
+        <div class="imgInst">
+            <img src="assets/imgs/Crop_index_Inst.png" alt="">            
+        </div>
+
     </section>
 
     <section class="depos">
+        <h2>Astronautas satisfeitas</h2>
+        <h4>Descubra aonde minha nave já pousou e transformou!</h4>
+        <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="boxCardDepo">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo01.jpeg" alt="">
+                        <p>Muito obrigada mesmo Helen!
+                            Quando se faz o que gosta não existem dificuldades que não possam ser superadas. Ter meu próprio negócio melhorou minha autoestima em todos os sentidos.</p>
+                        <span>(Camilla Folha)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="boxCardDepo roxo">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo02.jpeg" alt="">
+                        <p>Eu brinco que ter negócio próprio é como ter um filho. Você tem muito trabalho, preocupações, carga horária pesada e dedicação, porém, a realização e a felicidade de ver as coisas acontecendo é incrível. O sentimento é, talvez, inexplicável.
+                            A Helen deixa tudo tão mais fácil!</p>
+                        <span>(Ana Clara Mendes)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="boxCardDepo rosa">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo03.jpeg" alt="">
+                        <p>A Helen me ajudou tanto que já digo que ela é minha melhor amiga.
+                            Me auxiliou desde a tarefa mais simples, como por onde começar
+                            a renovar minha empresa, até as mais difíceis, pra mim, finanças.
+                            Amo fazer parte deste universo!</p>
+                        <span>(Emily dos Santos)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="boxCardDepo">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo01.jpeg" alt="">
+                        <p>Muito obrigada mesmo Helen!
+                            Quando se faz o que gosta não existem dificuldades que não possam ser superadas. Ter meu próprio negócio melhorou minha autoestima em todos os sentidos.</p>
+                        <span>(Camilla Folha)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="boxCardDepo roxo">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo02.jpeg" alt="">
+                        <p>Eu brinco que ter negócio próprio é como ter um filho. Você tem muito trabalho, preocupações, carga horária pesada e dedicação, porém, a realização e a felicidade de ver as coisas acontecendo é incrível. O sentimento é, talvez, inexplicável.
+                            A Helen deixa tudo tão mais fácil!</p>
+                        <span>(Ana Clara Mendes)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="boxCardDepo rosa">
+                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                        <img src="assets/imgs/Depo03.jpeg" alt="">
+                        <p>A Helen me ajudou tanto que já digo que ela é minha melhor amiga.
+                            Me auxiliou desde a tarefa mais simples, como por onde começar
+                            a renovar minha empresa, até as mais difíceis, pra mim, finanças.
+                            Amo fazer parte deste universo!</p>
+                        <span>(Emily dos Santos)</span>
+                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
     </section>
 
     <section class="conversa">
+        <h2>Bate-papo com a Helen</h2>
+
+        <div class="imgConv">
+            <img src="assets/imgs/Crop_index_Cont.png" alt="">            
+        </div>
+
+        <div class="infosConv">
+            <p>As <b>experiências</b> são servidas através da conexão
+                com a <b>autenticidade</b> de cada um em <b>ação</b>,
+                refletindo seu <b>diferencial</b>, e a missão em fazer
+                todos os clientes conhecerem eles mesmos, com 
+                <b>desenvolvimento emocional</b> pessoal e empresarial.
+                <br><br>
+                Minha <b>comunicação</b> é representada e fortalecida 
+                através dos atendimentos <b>personalizados</b> e do 
+                tema central no visual o <b>universo de cada um</b>,
+                trazendo para o lado <b>humano</b>.</p>
+            <a class="botao" href="contato.html">Marque sua conversa</a>
+        </div>
+        
+        
     </section>
 
     <section class="contato">
+
+        <h2>“<b>Helen Moreno</b>, a <b>certeza</b> do <b>sucesso</b> e <b>liberdade</b> na
+            jornada pelo universo de <b>possibilidades</b> do seu negócio."</h2>
+        
+        <h3>Faça parte deste universo você também!</h3>
+
+        <a class="botao" href="contato.html">Entre em contato comigo!</a>
+
     </section>
 
     <footer>
