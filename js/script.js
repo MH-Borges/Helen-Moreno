@@ -73,9 +73,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 $('.toTop').on('click', function(){
   $("html, body").animate({ scrollTop: 0 }, 400);
-  $('.foguete').addClass('hide');
+  $('.foguete').addClass('subindo');
   setTimeout(() => { 
-    $('.foguete').removeClass('hide');
+    $('.foguete').removeClass('subindo');
   }, 1000)
 });
 
