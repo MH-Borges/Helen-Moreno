@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,11 @@
     <link rel="icon" href="assets/imgs/Lg_laranja.png" />
 
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,15 +21,38 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Insti_Script.js"></script>
     <script src="js/svg-inject.min.js"></script>
 </head>
 
-<body>
+<body class="institucional">
 
     <div class="StarBackground">
         <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
     </div>
-    
+
+    <div class="toTopInsti">
+        <img class="foguete" src="assets/imgs/foguete.png">
+    </div>
+
+    <div class="fogueteMotion">
+        <svg class="linesvg" viewBox="0 0 1622 7000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="motionPath" d="M1622 0C962.5 671 5.5 1217 5.5 1614C5.5 2220.77 1333 1984.5 1333 2711C1333 3437.5 67 3138 67 3797C67 4456 1362 4200.5 1362 4858C1362 5515.5 128 5414.5 128 5942.5C128 6470.5 1169.5 6660.5 1544 7297.5" stroke="#E8E8E8" stroke-opacity="0.5" stroke-width="10" stroke-dasharray="100 100"/>
+        
+            <g id="motionSVG">
+                <g id="foguete">
+                    <path d="M72 286C88 290.5 126.5 296.8 152.5 286M72 286L63 307.5C113 325.9 147.5 315.167 158.5 307.5L152.5 286M72 286C69.3435 275.868 67.0425 266.036 65.0713 256.5M152.5 286C152.5 285.337 155.696 275.646 159.61 260M56.5539 197.5C47.7605 83.6313 91.0136 24.1704 119 7C174.032 55.9177 178.233 135.736 171.11 197.5M56.5539 197.5C40.8692 212.833 8.8 249.9 6 275.5C6.16667 277.5 8.6 282.4 17 286L65.0713 256.5M56.5539 197.5C57.9634 215.752 60.7101 235.402 65.0713 256.5M171.11 197.5C186.407 215.5 217.6 257.7 220 282.5C217.833 285.333 212.2 291 207 291C201.8 291 173.24 270.333 159.61 260M171.11 197.5C168.25 222.301 163.564 244.191 159.61 260" stroke="#E8E8E8" stroke-width="11"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+
     <header>
         <nav>
             <ul>
@@ -49,7 +77,143 @@
         </nav>
     </header>
 
-    <section class="banner">
+    <section class="bannerInsti">
+        <img src="assets/imgs/banner_Inst.png" t alt="">
+        <h1>A HELEN MORENO É...</h1>
+        <h3>
+            É <b>impactante</b>, mas não é <b>hostil.</b> <br>
+            É <b>autêntica</b>, mas não é <b>seletiva.</b> <br>
+            É <b>comunicativa</b>, mas não é <b>fraca.</b> <br>
+            É <b>ação</b>, mas traz <b>estabilidade</b> e <b>confiança.</b>
+        </h3>
+    </section>
+
+    <section class="manifesto">
+        <div class="imgBlock">
+            <img src="assets/imgs/manifesto.png" alt="">
+        </div>
+        <div class="infos">
+            <h2>Manisfesto de marca</h2>
+            <p>
+                Empreendedorismo corporativo é se posicionar
+                como empreendedor, gerando inovação, vantagens
+                e oportunidades de crescimento para a empresa. 
+                <br><br>
+                Pensando nisso, e nas dores internas e externas 
+                de cada empreendedor, a Helen Moreno, usando de 
+                todo conhecimento e comunicação assertiva, trás 
+                apoio e bases para o desenvolvimento e o 
+                autoconhecimento das empresas, sem esquecer de 
+                auxiliar na busca pelo diferencial de cada empreendedor.
+                <br><br>
+                Como consequência, a marca amparada terá 
+                desenvolvido todos os pilares para se consolidar 
+                no mercado e ser reconhecida facilmente pelos 
+                seus clientes, e com os valores e objetivos bem 
+                alinhados alcançara o sucesso e a liberdade almejadas.
+                Por fim, a satisfação é inevitável.</p>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="infos">
+            <h2>Mais sobre Helen Moreno</h2>
+            <p>A Helen Moreno é uma marca destinada a empreendedores que necessitam de ajuda com suas dores internas e dificuldades no mercado. Para ser assertiva e bem sucedida no processo, a partir da marca maior foram desenvolvidas algumas ramificações, são elas:</p>
+
+            <ul>
+                <li>
+                    <b>Mentoria em grupo:</b> pacote que ensina como melhor usar os poderes que cada empreendedor tem dentro do mercado, ministrando assuntos importantíssimos, além de como chamar atenção dos clientes.
+                </li>
+                <li>
+                    <b>Gestão de negócios:</b> linha destinada aos atendimentos personalizados e individuais, focando nas maiores aflições do empreendedor interna e externamente.
+                </li>
+                <li>
+                    <b>Café conexão e bagagens:</b> ramo onde se pode fazer conexões com outros empreendedores, visando o co-working e entretenimento.
+                </li>
+            </ul>
+
+            <p>
+                Ferramentas e conhecimentos de anos apurados a fio, com muito estudo, reflexões, conexões e experiências, em todo tempo estudando
+                e trabalhando para atualizar os instrumentos de trabalho e pesquisa,
+                a Helen Moreno ampara seus empreendedores em suas jornadas solo num universo de possibilidades, obtendo o sucesso e a
+                liberdade ansiados.
+            </p>
+        </div>
+        <div class="imgBlock">
+            <img src="assets/imgs/sobreHelen.png" alt="">
+        </div>
+    </section>
+
+    <section class="principios">
+
+        <div class="imgBlock">
+            <img src="assets/imgs/Principios.png" alt="">
+        </div>
+        <div class="infos">
+            <h2>Meus princípios</h2>
+            <p>
+                Poder, exclusividade, crescimento e comunicação.
+                <br><br>
+                As principais promessas são em sempre oferecer 
+                uma experiência poderosa de transformação, 
+                focando na exclusividade do atendimento, e se 
+                preocupando com o crescimento e a 
+                comunicabilidade completos da(o) cliente, tudo 
+                sendo resumido com uma identidade visual criativa.    
+            </p>
+        </div>
+
+    </section>
+
+    <section class="proposito">
+        <div class="infos">
+            <h2>Propósito</h2>
+            <p>
+
+                O propósito da Helen Moreno resume uma promessa aos consumidores. Uma promessa permanentemente renovada em todos os pontos de contato.
+                <br><br>
+                "A certeza do sucesso e liberdade na jornada pelo universo de possibilidades do seu negócio."
+                <br><br>
+                Com principal objetivo de trazer um senso de propósito e sucesso, traduzindo esses conceitos através da liberdade, poder e autenticidade.
+                Priorizando uma experiência de desenvolvimento pessoal e empresarial, com conexões e impacto.
+                <br><br>
+                É desprendida do que se conhece como convencional tendo um poder na ação juntamente de uma preocupação com o emocional.
+                Todos esses conceitos são traduzidos através de uma personalidade estável, criativa e ousada.
+
+            </p>
+        </div>
+        <div class="imgBlock">
+            <img src="assets/imgs/Proposito.png" alt="">
+        </div>
+    </section>
+
+    <section class="atributos">
+        <div class="imgBlock">
+            <img src="assets/imgs/Atributos.png" alt="">
+        </div>
+        <div class="infos">
+            <h2>Atributos</h2>
+            <p>
+                As experiências são servidas através da conexão com a autenticidade de cada um em ação, refletindo seu diferencial, e a missão em fazer todas as clientes conhecerem elas mesmas, de desenvolvendo emocionalmente e como empresa/marca.
+                <br><br>
+                A comunicação é representada e fortalecida através dos atendimentos personalizados e do tema central no visual o universo de cada um, trazendo para o lado humano.
+                <br><br>
+                O diferencial cresce com a espontaneidade e impacto na comunicação e no formato da representação da Helen Moreno.   
+            </p>
+        </div>
+    </section>
+
+    <section class="contatoInsti">
+
+        <h4>
+            Gostou? Quer conhecer mais?<br> 
+            <b>Me mande uma mensagem</b> agora mesmo.
+        </h4>
+ 
+        <h3>Faça parte deste universo!</h3>
+
+        <a class="botao" href="contato.html">Entre em contato comigo!</a>
+
     </section>
 
     <footer>
@@ -58,6 +222,9 @@
         <p>Todos os direitos reservados &copy; 2023.</p>
         <a href="https://www.universofarol.com.br"><img src="assets/imgs/UniversoFarol_logo.png" alt=""></a>
     </footer>
+
+
+
 
 </body>
 

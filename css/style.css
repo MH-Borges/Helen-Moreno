@@ -55,6 +55,16 @@
     opacity: 0;
   }
 }
+@keyframes Sobe_foguete {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-17vh);
+    opacity: 1;
+  }
+}
 body {
   display: flex;
   flex-wrap: wrap;
@@ -111,22 +121,31 @@ body .StarBackground img {
 body .StarBackground img:nth-child(6) {
   height: 50%;
 }
-body .toTop {
+body .toTop, body .toTopInsti {
   display: none;
   position: fixed;
   right: 1.5vw;
-  bottom: 3vh;
+  bottom: 2vh;
   z-index: 998;
   cursor: pointer;
   width: 4vw;
   height: 13vh;
 }
-body .toTop .foguete {
+body .toTop .foguete, body .toTopInsti .foguete {
   width: 100%;
   height: 100%;
 }
-body .toTop .subindo {
+body .toTop .subindo, body .toTopInsti .subindo {
   animation: foguete_subindo 1.25s;
+}
+body .toTopInsti {
+  bottom: -15vh;
+}
+body .sobe {
+  animation: Sobe_foguete 1.25s;
+}
+body .sobePara {
+  bottom: 2vh !important;
 }
 body header {
   min-width: 1200px;
@@ -136,6 +155,8 @@ body header {
   justify-content: center;
   display: flex;
   z-index: 999;
+  position: absolute;
+  top: 0;
 }
 body header nav {
   display: flex;
@@ -212,7 +233,7 @@ body section {
   z-index: 5;
 }
 body .banner {
-  height: 83vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   color: #D9D9D9;
@@ -220,6 +241,8 @@ body .banner {
 }
 body .banner .infos {
   width: 50%;
+  height: 80vh;
+  margin-top: 17vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,6 +283,7 @@ body .banner .infos .botao:hover {
   transform: translateY(5px);
 }
 body .banner .ilustra {
+  height: 80vh;
   width: 45.5%;
   display: flex;
   align-items: center;
@@ -267,7 +291,7 @@ body .banner .ilustra {
   background-color: rgba(217, 101, 43, 0.5);
   font-size: 1.5vw;
   padding: 3vw;
-  margin: 7vh 0 7vh 3vw;
+  margin: 17vh 0 7vh 3vw;
   text-align: center;
   border-radius: 2.5vw;
 }
@@ -793,4 +817,169 @@ body footer a {
 body footer a img {
   width: 100%;
   height: 100%;
+}
+
+.institucional {
+  position: relative;
+}
+.institucional .StarBackground {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.institucional .StarBackground img {
+  width: 100%;
+  height: 100%;
+}
+.institucional .StarBackground img:nth-child(6) {
+  height: 100%;
+}
+.institucional .StarBackground img:nth-child(7) {
+  height: 50%;
+}
+.institucional .fogueteMotion {
+  width: 100vw;
+  height: 662vh;
+  position: absolute;
+  overflow: hidden;
+}
+.institucional .fogueteMotion .linesvg {
+  width: 100%;
+  height: 650vh;
+  position: absolute;
+  right: 0;
+}
+.institucional section {
+  width: 75%;
+  height: 100vh;
+  z-index: 5;
+}
+.institucional .bannerInsti {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #D9D9D9;
+}
+.institucional .bannerInsti img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+}
+.institucional .bannerInsti h1 {
+  width: 75%;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5vw;
+  font-weight: 800;
+  padding: 1vh 0;
+}
+.institucional .bannerInsti h3 {
+  margin-left: 4vw;
+  padding: 1vh 2vw;
+  width: 37%;
+  text-align: left;
+  font-size: 1.7vw;
+  font-weight: 200;
+  line-height: 4vh;
+}
+.institucional .bannerInsti h3 b {
+  font-weight: 800;
+}
+.institucional .manifesto, .institucional .sobre, .institucional .principios, .institucional .proposito, .institucional .atributos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #D9D9D9;
+  font-weight: 500;
+}
+.institucional .manifesto .infos, .institucional .sobre .infos, .institucional .principios .infos, .institucional .proposito .infos, .institucional .atributos .infos {
+  width: 50%;
+  padding: 2vh 2vw;
+}
+.institucional .manifesto .infos h2, .institucional .sobre .infos h2, .institucional .principios .infos h2, .institucional .proposito .infos h2, .institucional .atributos .infos h2 {
+  font-size: 2.5vw;
+  font-weight: 800;
+  padding: 1vh 0;
+}
+.institucional .manifesto .infos p, .institucional .sobre .infos p, .institucional .principios .infos p, .institucional .proposito .infos p, .institucional .atributos .infos p {
+  font-size: 1.25vw;
+  font-weight: 500;
+  padding: 2vh 0 0;
+}
+.institucional .manifesto .infos ul, .institucional .sobre .infos ul, .institucional .principios .infos ul, .institucional .proposito .infos ul, .institucional .atributos .infos ul {
+  list-style: none;
+}
+.institucional .manifesto .infos ul li, .institucional .sobre .infos ul li, .institucional .principios .infos ul li, .institucional .proposito .infos ul li, .institucional .atributos .infos ul li {
+  font-size: 1.15vw;
+  margin: 1vh 0 0 1vw;
+}
+.institucional .manifesto .infos ul li b, .institucional .sobre .infos ul li b, .institucional .principios .infos ul li b, .institucional .proposito .infos ul li b, .institucional .atributos .infos ul li b {
+  font-size: 1.25vw;
+}
+.institucional .manifesto .imgBlock, .institucional .sobre .imgBlock, .institucional .principios .imgBlock, .institucional .proposito .imgBlock, .institucional .atributos .imgBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 60vh;
+}
+.institucional .manifesto .imgBlock img, .institucional .sobre .imgBlock img, .institucional .principios .imgBlock img, .institucional .proposito .imgBlock img, .institucional .atributos .imgBlock img {
+  width: 100%;
+  height: auto;
+}
+.institucional .manifesto .imgBlock {
+  margin-left: 1vw;
+}
+.institucional .principios .imgBlock {
+  margin-left: 5vw;
+}
+.institucional .atributos .imgBlock {
+  margin-left: 8vw;
+}
+.institucional .contatoInsti {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.institucional .contatoInsti h4 {
+  font-weight: 200;
+  font-size: 2vw;
+  text-align: center;
+  padding: 1vh 20vh;
+  margin: 1vh 0 5vh;
+}
+.institucional .contatoInsti h4 b {
+  font-weight: 800;
+}
+.institucional .contatoInsti h3 {
+  font-size: 2.4vw;
+  text-align: center;
+  font-weight: 800;
+  padding: 2vh 0;
+  margin-bottom: 3vh;
+}
+.institucional .contatoInsti .botao {
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  padding: 0.5vh 3vw;
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.55vw;
+  border-radius: 3vw;
+  transition: ease-in-out 0.2s;
+  font-weight: 500;
+  margin: 0 25vw;
+}
+.institucional .contatoInsti .botao:hover {
+  transform: translateY(5px);
 }/*# sourceMappingURL=style.css.map */

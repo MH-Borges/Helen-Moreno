@@ -46,7 +46,18 @@
       transform: translateY(-125vh);
       opacity: 0;
     }
-  }
+}
+
+@keyframes Sobe_foguete {
+    from {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-17vh);
+      opacity: 1;
+    }
+}
 
 body {
     display: flex;
@@ -110,11 +121,11 @@ body {
         }
     }
 
-    .toTop {
+    .toTop, .toTopInsti {
         display: none;
         position: fixed;
         right: 1.5vw;
-        bottom: 3vh;
+        bottom: 2vh;
         z-index: 998;
         cursor: pointer;
         width: 4vw;
@@ -127,6 +138,15 @@ body {
             animation: foguete_subindo 1.25s;
         }
     }
+    .toTopInsti{
+        bottom: -15vh;
+    }
+    .sobe{
+        animation: Sobe_foguete 1.25s;
+    }
+    .sobePara{
+        bottom: 2vh !important;
+    }
 
     header {
         min-width: 1200px;
@@ -136,6 +156,8 @@ body {
         justify-content: center;
         display: flex;
         z-index: 999;
+        position: absolute;
+        top: 0;
         nav {
             display: flex;
             width: 100%;
@@ -232,13 +254,15 @@ body {
     }
 
     .banner {
-        height: 83vh;
+        height: 100vh;
         display: flex;
         flex-wrap: wrap;
         color: $Branco;
         padding: 1vw;
         .infos{
             width: 50%;
+            height: 80vh;
+            margin-top: 17vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -281,6 +305,7 @@ body {
             }
         }
         .ilustra{
+            height: 80vh;
             width: 45.5%;
             display: flex;
             align-items: center;
@@ -288,7 +313,7 @@ body {
             background-color: rgba(217, 101, 43, 0.5);
             font-size: 1.5vw;
             padding: 3vw;
-            margin: 7vh 0 7vh 3vw;
+            margin: 17vh 0 7vh 3vw;
             text-align: center;
             border-radius: 2.5vw;
         }
@@ -832,3 +857,8 @@ body {
         }
     }
 }
+
+@import 'institucional';
+// @import 'contato';
+// @import 'servico';
+// @import 'pacotes_Design_Web';
