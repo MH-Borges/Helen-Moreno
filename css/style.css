@@ -213,6 +213,7 @@ body header nav ul .blogDrop .dropdown-menu {
   border-radius: 1vw;
   margin-left: -6.5vw;
   margin-top: 1.5vh;
+  background-color: #212121;
 }
 body header nav ul .blogDrop .dropdown-menu .dropdown-item {
   padding: 0.5vh 0.25vw;
@@ -222,7 +223,7 @@ body header nav ul .blogDrop .dropdown-menu .dropdown-item:nth-child(2) {
   position: relative;
 }
 body header nav ul .blogDrop .dropdown-menu .dropdown-item:hover {
-  background-color: #212121;
+  background-color: #080808;
 }
 body header nav ul .blogDrop:hover a:nth-child(2) svg path {
   fill: #D9662B;
@@ -814,7 +815,7 @@ body footer a {
   height: 75%;
   padding: 0.5vh 0.5vw;
 }
-body footer a img {
+body footer a svg {
   width: 100%;
   height: 100%;
 }
@@ -822,20 +823,17 @@ body footer a img {
 .institucional {
   position: relative;
 }
-.institucional .StarBackground {
+.institucional .StarBackground_Insti {
   position: absolute;
   width: 100%;
   height: 100vh;
   z-index: -1;
 }
-.institucional .StarBackground img {
+.institucional .StarBackground_Insti img {
   width: 100%;
   height: 100%;
 }
-.institucional .StarBackground img:nth-child(6) {
-  height: 100%;
-}
-.institucional .StarBackground img:nth-child(7) {
+.institucional .StarBackground_Insti img:nth-child(7) {
   height: 50%;
 }
 .institucional .fogueteMotion {
@@ -981,5 +979,282 @@ body footer a img {
   margin: 0 25vw;
 }
 .institucional .contatoInsti .botao:hover {
+  transform: translateY(5px);
+}
+
+.servicos {
+  position: relative;
+}
+.servicos .StarBackground_Servicos {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.servicos .StarBackground_Servicos img {
+  width: 100%;
+  height: 100%;
+}
+.servicos .StarBackground_Servicos img:nth-child(3) {
+  height: 50%;
+}
+.servicos section {
+  width: 75%;
+  height: 100vh;
+  z-index: 5;
+}
+.servicos .servicos {
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #D9D9D9;
+  padding: 0;
+}
+.servicos .servicos .carousel {
+  height: 100vh;
+  padding-top: 17vh;
+}
+.servicos .servicos .carousel h2 {
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 800;
+  font-size: 2.5vw;
+  padding: 1vh 0;
+  margin-bottom: 2vh;
+}
+.servicos .servicos .carousel p {
+  text-align: center;
+  font-size: 1.25vw;
+  font-weight: 200;
+  padding: 1vh 10vw;
+}
+.servicos .servicos .carousel .splide {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.servicos .servicos .carousel .splide__track .splide__list .splide__slide {
+  border: solid 1px #D9D9D9;
+  height: 45vh;
+  width: 20vw !important;
+  display: flex;
+  margin: 0 1vw;
+  border-radius: 2.5vw;
+  transition: ease-in-out 0.2s;
+}
+.servicos .servicos .carousel .splide__track .splide__list .splide__slide a {
+  border-radius: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.servicos .servicos .carousel .splide__track .splide__list .splide__slide a::before {
+  content: "";
+  background: rgba(8, 8, 8, 0.8);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 2.5vw;
+}
+.servicos .servicos .carousel .splide__track .splide__list .splide__slide a img, .servicos .servicos .carousel .splide__track .splide__list .splide__slide a svg {
+  width: 75%;
+  height: auto;
+}
+.servicos .servicos .carousel .splide__track .splide__list .splide__slide a p {
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 200;
+  margin-top: 5vh;
+  font-size: 1.2vw;
+  padding: 0 2vw;
+}
+.servicos .servicos .carousel .splide__track .splide__list .is-active {
+  z-index: 5;
+}
+.servicos .servicos .carousel .splide__track .splide__list .is-active a::before {
+  content: "";
+  background: rgba(249, 136, 78, 0.9);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 2.5vw;
+}
+.servicos .servicos .carousel .splide__arrows {
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--next {
+  right: -7vw;
+  top: 50%;
+  opacity: 1 !important;
+  background: none;
+  border-radius: 0;
+  width: 6vw;
+  height: 12vh;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--next svg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--next svg path {
+  fill: #E8E8E8;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--next svg:hover path {
+  fill: #D9662B;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--prev {
+  left: -7vw;
+  top: 50%;
+  opacity: 1 !important;
+  background: none;
+  border-radius: 0;
+  width: 6vw;
+  height: 12vh;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--prev svg {
+  transform: scaleX(1);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--prev svg path {
+  fill: #E8E8E8;
+}
+.servicos .servicos .carousel .splide__arrows .splide__arrow--prev svg:hover path {
+  fill: #D9662B;
+}
+.servicos .servicos .TabsBlog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.servicos .servicos .TabsBlog .tab-pane {
+  border-radius: 2.5vw;
+  height: 90vh;
+  width: 90%;
+  position: relative;
+}
+.servicos .servicos .TabsBlog .tab-pane::before {
+  content: "";
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 2.5vw;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 2vw;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .logoBox {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2vh 10vw;
+  margin-bottom: 2vh;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .logoBox img, .servicos .servicos .TabsBlog .tab-pane .boxContent .logoBox svg {
+  width: auto;
+  height: 11vh;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent p {
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: 500;
+  padding: 2vh 5vw;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .imgsBox {
+  display: flex;
+  position: relative;
+  width: 106.3%;
+  height: 25vh;
+  margin-left: -2vw;
+  overflow: hidden;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .imgsBox .imgFit {
+  width: 15vw;
+  height: 25vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 0.5vw 0;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .imgsBox .imgFit img {
+  width: 15vw;
+  height: 21vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5vw;
+}
+.servicos .servicos .TabsBlog .tab-pane .boxContent .imgsBox .imgFit:nth-child(1) {
+  margin-left: -6vw;
+}
+.servicos .contatoServicos {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.servicos .contatoServicos h4 {
+  font-weight: 200;
+  font-size: 2vw;
+  text-align: center;
+  padding: 1vh 20vh;
+  margin: 1vh 0 5vh;
+}
+.servicos .contatoServicos h4 b {
+  font-weight: 800;
+}
+.servicos .contatoServicos h3 {
+  font-size: 2.4vw;
+  text-align: center;
+  font-weight: 800;
+  padding: 2vh 0;
+  margin-bottom: 3vh;
+}
+.servicos .contatoServicos .botao {
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  padding: 0.5vh 3vw;
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.55vw;
+  border-radius: 3vw;
+  transition: ease-in-out 0.2s;
+  font-weight: 500;
+  margin: 0 25vw;
+}
+.servicos .contatoServicos .botao:hover {
   transform: translateY(5px);
 }/*# sourceMappingURL=style.css.map */

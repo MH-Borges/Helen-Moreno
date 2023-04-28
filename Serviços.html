@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helen Moreno</title>
-    <link rel="icon" href="assets/imgs/Lg_laranja.png" />
+    <title>Helen Moreno | Serviços</title>
+    <link rel="icon" href="assets/imgs/logos/Lg_laranja.png" />
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- splidejs -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,18 +18,26 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Servi_Script.js"></script>
+
     <script src="js/svg-inject.min.js"></script>
 </head>
 
-<body>
-    <div class="StarBackground">
+<body class="servicos">
+    <div class="StarBackground_Servicos">
+        <img src="assets/imgs/Estrelas.png" alt="">
+        <img src="assets/imgs/Estrelas.png" alt="">
         <img src="assets/imgs/Estrelas.png" alt="">
     </div>
-    
+
+    <div class="toTop">
+        <img class="foguete" src="assets/imgs/foguete.png">
+    </div>
+
     <header>
         <nav>
             <ul>
-                <li class="logo"><a href="index.html"><img src="assets/imgs/Lg_branca.png" alt=""></a></li>
+                <li class="logo"><a href="index.html"><img src="assets/imgs/logos/Lg_branca.png" alt=""></a></li>
                 <li><a href="Nave.html">Minha nave</a></li>
                 <li class="blogDrop">
                     <a href="Blog.html">Meu universo</a>
@@ -47,87 +58,202 @@
         </nav>
     </header>
 
-    <section class="banner">
-    </section>
+    <section class="servicos">
 
-    <!-- <div class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="boxCardDepo">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo01.jpeg" alt="">
-                        <p>Muito obrigada mesmo Helen!
-                            Quando se faz o que gosta não existem dificuldades que não possam ser superadas. Ter meu próprio negócio melhorou minha autoestima em todos os sentidos.</p>
-                        <span>(Camilla Folha)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="boxCardDepo roxo">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo02.jpeg" alt="">
-                        <p>Eu brinco que ter negócio próprio é como ter um filho. Você tem muito trabalho, preocupações, carga horária pesada e dedicação, porém, a realização e a felicidade de ver as coisas acontecendo é incrível. O sentimento é, talvez, inexplicável.
-                            A Helen deixa tudo tão mais fácil!</p>
-                        <span>(Ana Clara Mendes)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="boxCardDepo rosa">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo03.jpeg" alt="">
-                        <p>A Helen me ajudou tanto que já digo que ela é minha melhor amiga.
-                            Me auxiliou desde a tarefa mais simples, como por onde começar
-                            a renovar minha empresa, até as mais difíceis, pra mim, finanças.
-                            Amo fazer parte deste universo!</p>
-                        <span>(Emily dos Santos)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="boxCardDepo">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo01.jpeg" alt="">
-                        <p>Muito obrigada mesmo Helen!
-                            Quando se faz o que gosta não existem dificuldades que não possam ser superadas. Ter meu próprio negócio melhorou minha autoestima em todos os sentidos.</p>
-                        <span>(Camilla Folha)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="boxCardDepo roxo">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo02.jpeg" alt="">
-                        <p>Eu brinco que ter negócio próprio é como ter um filho. Você tem muito trabalho, preocupações, carga horária pesada e dedicação, porém, a realização e a felicidade de ver as coisas acontecendo é incrível. O sentimento é, talvez, inexplicável.
-                            A Helen deixa tudo tão mais fácil!</p>
-                        <span>(Ana Clara Mendes)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-                <li class="splide__slide">
-                    <div class="boxCardDepo rosa">
-                        <img class="asp" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                        <img src="assets/imgs/Depo03.jpeg" alt="">
-                        <p>A Helen me ajudou tanto que já digo que ela é minha melhor amiga.
-                            Me auxiliou desde a tarefa mais simples, como por onde começar
-                            a renovar minha empresa, até as mais difíceis, pra mim, finanças.
-                            Amo fazer parte deste universo!</p>
-                        <span>(Emily dos Santos)</span>
-                        <img class="asp2" src="assets/imgs/aspas.svg" onload="SVGInject(this)">
-                    </div>
-                </li>
-              </ul>
+        <div class="carousel">
+            <h2>Conheça mais dos meus serviços</h2>
+            <p>Trabalharemos juntos, com principal objetivo de trazer o seu senso de propósito e sucesso de volta, reavivando e lhe dando mais liberdade, muito poder e tudo com muita autenticidade e essência.</p>
+            
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <img src="assets/imgs/Seta_esquerda.svg" alt="" onload="SVGInject(this)">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <img src="assets/imgs/Seta_direita.svg" alt="" onload="SVGInject(this)">
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#gestao" aria-selected="true">
+                                <img src="assets/imgs/logos/GestãoNegócios.png" alt="">
+                                <p>Consultoria individual para pequenas empresas</p>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#cafeConexaoBagagens" aria-selected="false">
+                                <img src="assets/imgs/logos/Café_Conexão_e_Bagages.png" alt="">
+                                <p>Networking e parcerias</p>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#mentoria" aria-selected="false">
+                                <img src="assets/imgs/logos/Mentoria_Grupo.png" alt="">
+                                <p>Evolução pessoal e conexão entre pessoas</p>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#palestras" aria-selected="false">
+                                <img src="assets/imgs/logos/MinhaVoz.svg" onload="SVGInject(this)">
+                                <p>Consultoria individual para pequenas empresas</p>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#desenvolvimento" aria-selected="false">
+                                <img src="assets/imgs/logos/AstronautaDesenvolvimento.svg" onload="SVGInject(this)">
+                                <p>Consultoria individual para pequenas empresas</p>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a class="linkTab" data-toggle="pill" href="#casais" aria-selected="false">
+                                <img src="assets/imgs/logos/CasaisSucesso.svg" onload="SVGInject(this)">
+                                <p>Consultoria individual para pequenas empresas</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div> -->
+        </div>
+
+        <div class="tab-content TabsBlog">
+            <div class="tab-pane fade show active" id="gestao">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/GestãoNegócios.png" alt="">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cafeConexaoBagagens">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/Café_Conexão_e_Bagages.png" alt="">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="mentoria">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/Mentoria_Grupo.png" alt="">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="palestras">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/MinhaVoz.svg" onload="SVGInject(this)">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="desenvolvimento">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/AstronautaDesenvolvimento.svg" onload="SVGInject(this)">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="casais">
+                <div class="boxContent">
+                    <div class="logoBox">
+                        <img src="assets/imgs/logos/CasaisSucesso.svg" onload="SVGInject(this)">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam non nisi est sit. At ultrices mi tempus imperdiet nulla. Eu consequat ac felis donec et odio pellentesque diam. Ornare aenean euismod elementum nisi quis eleifend. Augue mauris augue neque gravida in. Neque vitae tempus quam pellentesque nec nam aliquam. <br><br>
+                        Praesent semper feugiat nibh sed pulvinar proin gravida. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tempor orci dapibus ultrices in iaculis. Amet tellus cras adipiscing enim eu turpis. Eu mi bibendum neque egestas congue quisque egestas. Elementum integer enim neque volutpat ac. 
+                    </p>
+                    <div class="imgsBox">
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt01.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt02.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt03.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt04.jpeg" alt=""></div>
+                        <div class="imgFit"><img src="assets/imgs/GestaoFt05.jpeg" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <section class="contatoServicos">
+
+        <h4>
+            Gostou? Quer conhecer mais?<br> 
+            <b>Me mande uma mensagem</b> agora mesmo.
+        </h4>
+ 
+        <h3>Faça parte deste universo!</h3>
+
+        <a class="botao" href="contato.html">Entre em contato comigo!</a>
+
+    </section>
 
     <footer>
         <img class="fundo" src="assets/imgs/rodape.png" alt="">
-        <img src="assets/imgs/Lg_branca_H.png" alt="">
+        <img src="assets/imgs/logos/Lg_branca_H.png" alt="">
         <p>Todos os direitos reservados &copy; 2023.</p>
-        <a href="https://www.universofarol.com.br"><img src="assets/imgs/UniversoFarol_logo.png" alt=""></a>
+        <a href="https://www.universofarol.com.br"><img src="assets/imgs/logos/UniversoFarol_logo.svg" onload="SVGInject(this)"></a>
     </footer>
 
 </body>
-
 </html>

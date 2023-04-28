@@ -215,6 +215,7 @@ body {
                         border-radius: 1vw;
                         margin-left: -6.5vw;
                         margin-top: 1.5vh;
+                        background-color: $PretoClaro;
 
                         .dropdown-item {
                             padding: 0.5vh 0.25vw;
@@ -225,7 +226,7 @@ body {
                             }
 
                             &:hover {
-                                background-color: $PretoClaro;
+                                background-color: $Preto;
                             }
                         }
                     }
@@ -850,7 +851,7 @@ body {
             height: 75%;
             padding: 0.5vh 0.5vw;
 
-            img {
+            svg {
                 width: 100%;
                 height: 100%;
             }
@@ -859,6 +860,8 @@ body {
 }
 
 @import 'institucional';
+@import 'servicos';
+
 // @import 'contato';
 // @import 'servico';
 // @import 'pacotes_Design_Web';

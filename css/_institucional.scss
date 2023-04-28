@@ -1,7 +1,7 @@
 .institucional{
     position: relative;
 
-    .StarBackground {
+    .StarBackground_Insti {
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -9,9 +9,6 @@
         img {
             width: 100%;
             height: 100%;
-            &:nth-child(6) {
-                height: 100%;
-            }
             &:nth-child(7) {
                 height: 50%;
             }

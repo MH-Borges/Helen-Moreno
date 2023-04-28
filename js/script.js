@@ -50,18 +50,3 @@ $(window).scroll(function () {
     $(".toTop").fadeOut();
   }
 });
-
-// document.addEventListener( 'DOMContentLoaded', function() {
-//   var splide = new Splide( '.splide', {
-//     type   : 'loop',
-//     perPage: 3,
-//     focus  : 'center',
-//     autoplay: true,
-
-//     classes: {
-//       arrows: 'splide__arrows teste',
-//     },
-//   } );
-  
-//   splide.mount();
-// });

@@ -85,7 +85,6 @@ $(window).scroll(function () {
       $('.toTopInsti').addClass('sobePara');
     }, 1250);
   } else {
-    
     $(".toTopInsti").fadeOut();
     $('.toTopInsti').removeClass('sobePara');
   }
