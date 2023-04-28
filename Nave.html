@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helen Moreno | Minha nave</title>
-    <link rel="icon" href="assets/imgs/logos/Lg_laranja.png" />
+    <link rel="icon" href="assets/logos/Lg_laranja.png" />
 
 
     <!-- Gsap -->
@@ -38,29 +38,102 @@
     </div>
 
     <div class="toTopInsti">
-        <img class="foguete" src="assets/imgs/foguete.png">
+        <img class="foguete" src="assets/icones/Foguete.svg" onload="SVGInject(this)">
     </div>
 
     <div class="fogueteMotion">
         <svg class="linesvg" viewBox="0 0 1622 7000" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="motionPath" d="M1622 0C962.5 671 5.5 1217 5.5 1614C5.5 2220.77 1333 1984.5 1333 2711C1333 3437.5 67 3138 67 3797C67 4456 1362 4200.5 1362 4858C1362 5515.5 128 5414.5 128 5942.5C128 6470.5 1169.5 6660.5 1544 7297.5" stroke="#E8E8E8" stroke-opacity="0.5" stroke-width="10" stroke-dasharray="100 100"/>
-        
+            <path id="motionPath"
+                d="M1622 0C962.5 671 5.5 1217 5.5 1614C5.5 2220.77 1333 1984.5 1333 2711C1333 3437.5 67 3138 67 3797C67 4456 1362 4200.5 1362 4858C1362 5515.5 128 5414.5 128 5942.5C128 6470.5 1169.5 6660.5 1544 7297.5"
+                stroke="#E8E8E8" stroke-opacity="0.5" stroke-width="10" stroke-dasharray="100 100" />
+            
             <g id="motionSVG">
-                <g id="foguete">
-                    <path d="M72 286C88 290.5 126.5 296.8 152.5 286M72 286L63 307.5C113 325.9 147.5 315.167 158.5 307.5L152.5 286M72 286C69.3435 275.868 67.0425 266.036 65.0713 256.5M152.5 286C152.5 285.337 155.696 275.646 159.61 260M56.5539 197.5C47.7605 83.6313 91.0136 24.1704 119 7C174.032 55.9177 178.233 135.736 171.11 197.5M56.5539 197.5C40.8692 212.833 8.8 249.9 6 275.5C6.16667 277.5 8.6 282.4 17 286L65.0713 256.5M56.5539 197.5C57.9634 215.752 60.7101 235.402 65.0713 256.5M171.11 197.5C186.407 215.5 217.6 257.7 220 282.5C217.833 285.333 212.2 291 207 291C201.8 291 173.24 270.333 159.61 260M171.11 197.5C168.25 222.301 163.564 244.191 159.61 260" stroke="#E8E8E8" stroke-width="11"/>
+                <g  id="foguete" clip-path="url(#clip0_504_22)">
+                    <path
+                        d="M135.779 54.0501H65.9062C77.0276 29.7836 88.3725 12.3854 94.7232 3.44958C97.2396 -0.0885664 102.461 -0.130917 105.035 3.36488C110.6 10.9301 119.945 24.4744 129.556 42.0997C131.625 45.8997 133.71 49.8883 135.775 54.0501H135.779Z"
+                        fill="url(#paint0_linear_504_22)" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M40.573 253.376C36.2686 255.96 31.4478 259.575 27.3707 264.426C23.6404 268.865 20.2185 273.712 17.5557 277.754C14.7503 282.009 8.3418 281.443 6.36878 276.746C1.66743 265.542 -2.82583 245.214 7.20115 217.086C10.9391 206.614 20.8967 196.007 28.7888 188.808C32.5692 220.782 39.6366 249.646 40.573 253.376Z"
+                        fill="url(#paint1_linear_504_22)" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M161.989 122.145C160.232 101.944 150.366 82.6132 141.226 65.7502H60.0158C51.8617 81.8625 43.2759 100.839 39.3144 122.145C36.0466 139.74 35.8077 162.582 38.3433 184.018C42.1237 215.993 49.1911 244.856 50.1275 248.591C50.1931 248.864 50.2277 248.999 50.2277 248.999H75.0563V215.981C75.0563 202.213 86.2316 191.018 99.9696 191.018C106.617 191.018 112.867 193.613 117.584 198.321C122.289 203.045 124.879 209.313 124.879 215.981V248.999H150.544C150.544 248.999 150.567 248.902 150.602 248.71C151.291 245.518 157.48 216.201 161.191 183.121C163.511 162.439 163.561 140.298 161.989 122.145ZM112.12 156.649C111.553 156.876 110.544 157.118 109.43 157.346C108.84 157.469 108.274 157.657 107.742 157.915C105.565 158.951 103.989 161.022 103.63 163.49C103.341 165.469 102.968 167.517 102.555 168.649C101.896 170.52 98.7981 170.551 98.089 168.695C97.6458 167.544 97.2181 165.484 96.8597 163.521C96.3703 160.776 94.3742 158.554 91.7345 157.773C91.538 157.711 91.3376 157.661 91.1333 157.619C89.985 157.38 88.9214 157.122 88.3241 156.899C86.4936 156.225 86.4705 153.934 88.2894 153.226C88.8443 153.003 89.8193 152.776 90.8944 152.572C93.9773 151.986 96.3279 149.484 96.7711 146.373C97.0524 144.402 97.4069 142.384 97.8038 141.272C98.4744 139.381 101.573 139.355 102.293 141.226C102.725 142.377 103.168 144.429 103.534 146.373C104.077 149.257 106.282 151.54 109.141 152.183C110.343 152.46 111.465 152.737 112.077 152.96C113.912 153.653 113.931 155.929 112.116 156.653L112.12 156.649ZM116.802 108.993C116 109.313 114.575 109.656 113.006 109.979C112.17 110.152 111.368 110.422 110.621 110.78C107.546 112.243 105.322 115.169 104.81 118.653C104.401 121.448 103.873 124.343 103.291 125.941C102.363 128.586 97.985 128.628 96.983 126.01C96.3549 124.382 95.7499 121.475 95.2489 118.699C94.5591 114.818 91.7345 111.688 88.0081 110.576C87.7306 110.491 87.4455 110.418 87.1564 110.36C85.5341 110.025 84.0312 109.659 83.1834 109.34C80.6015 108.389 80.5669 105.151 83.1333 104.15C83.9156 103.831 85.2952 103.511 86.8135 103.226C91.168 102.398 94.4859 98.8641 95.1141 94.4751C95.5148 91.6915 96.0119 88.8425 96.5746 87.2717C97.5264 84.5998 101.9 84.5613 102.918 87.2063C103.526 88.831 104.155 91.73 104.667 94.4751C105.434 98.5522 108.551 101.771 112.586 102.679C114.286 103.068 115.869 103.461 116.733 103.777C119.322 104.755 119.353 107.973 116.787 108.993H116.802Z"
+                        fill="url(#paint2_linear_504_22)" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M193.625 276.742C191.652 281.439 185.243 282.005 182.438 277.751C179.633 273.496 176.349 268.861 172.623 264.422C168.612 259.644 163.879 256.071 159.625 253.496C160.315 250.304 166.504 220.986 170.215 187.903C178.245 195.099 188.904 206.16 192.793 217.078C202.816 245.206 198.326 265.534 193.625 276.738V276.742Z"
+                        fill="url(#paint3_linear_504_22)" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M116.919 215.981V271.379C116.919 280.757 109.328 288.365 99.9714 288.365C90.6149 288.365 83.0195 280.757 83.0195 271.379V215.981C83.0195 206.603 90.611 198.995 99.9714 198.995C104.653 198.995 108.889 200.901 111.956 203.969C115.023 207.045 116.919 211.292 116.919 215.981Z"
+                        fill="url(#paint4_linear_504_22)" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M99.9691 384.23C97.6185 384.23 95.7109 382.32 95.7109 379.964V305.829C95.7109 303.472 97.6185 301.563 99.9691 301.563C102.32 301.563 104.227 303.472 104.227 305.829V379.964C104.227 382.32 102.32 384.23 99.9691 384.23Z"
+                        fill="#CC101D" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M68.8363 334.207C66.4856 334.207 64.5781 332.297 64.5781 329.941V289.293C64.5781 286.937 66.4856 285.027 68.8363 285.027C71.187 285.027 73.0945 286.937 73.0945 289.293V329.941C73.0945 332.297 71.187 334.207 68.8363 334.207Z"
+                        fill="#CC101D" stroke="#E8E8E8" stroke-miterlimit="10" />
+                    <path
+                        d="M131.106 334.207C128.755 334.207 126.848 332.297 126.848 329.941V289.293C126.848 286.937 128.755 285.027 131.106 285.027C133.457 285.027 135.364 286.937 135.364 289.293V329.941C135.364 332.297 133.457 334.207 131.106 334.207Z"
+                        fill="#CC101D" stroke="#E8E8E8" stroke-miterlimit="10" />
                 </g>
             </g>
+
+            <defs>
+                <linearGradient id="paint0_linear_504_22" x1="100.843" y1="54.0501" x2="100.843" y2="0.769986"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0.12" stop-color="#D9662B" />
+                    <stop offset="0.39" stop-color="#DA682D" />
+                    <stop offset="0.59" stop-color="#E07037" />
+                    <stop offset="0.77" stop-color="#EA7E47" />
+                    <stop offset="0.93" stop-color="#F7915D" />
+                    <stop offset="1" stop-color="#FF9C69" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_504_22" x1="20.8774" y1="280.63" x2="20.8774" y2="188.808"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CC101D" />
+                    <stop offset="0.16" stop-color="#C50E2D" />
+                    <stop offset="0.47" stop-color="#B40959" />
+                    <stop offset="0.9" stop-color="#99019F" />
+                    <stop offset="1" stop-color="#9300B2" />
+                </linearGradient>
+                <linearGradient id="paint2_linear_504_22" x1="99.8501" y1="248.999" x2="99.8501" y2="65.7541"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9300B2" />
+                    <stop offset="0.08" stop-color="#9909A5" />
+                    <stop offset="0.52" stop-color="#BB3B63" />
+                    <stop offset="0.84" stop-color="#D05A3A" />
+                    <stop offset="1" stop-color="#D9662B" />
+                </linearGradient>
+                <linearGradient id="paint3_linear_504_22" x1="179.22" y1="280.63" x2="179.22" y2="187.907"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CC101D" />
+                    <stop offset="0.16" stop-color="#C50E2D" />
+                    <stop offset="0.47" stop-color="#B40959" />
+                    <stop offset="0.9" stop-color="#99019F" />
+                    <stop offset="1" stop-color="#9300B2" />
+                </linearGradient>
+                <linearGradient id="paint4_linear_504_22" x1="99.9675" y1="288.361" x2="99.9675" y2="198.995"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CC101D" />
+                    <stop offset="0.16" stop-color="#C50E2D" />
+                    <stop offset="0.47" stop-color="#B40959" />
+                    <stop offset="0.9" stop-color="#99019F" />
+                    <stop offset="1" stop-color="#9300B2" />
+                </linearGradient>
+                <clipPath id="clip0_504_22">
+                    <rect width="200" height="385" fill="white" />
+                </clipPath>
+            </defs>
+
         </svg>
     </div>
 
     <header>
         <nav>
             <ul>
-                <li class="logo"><a href="index.html"><img src="assets/imgs/logos/Lg_branca.png" alt=""></a></li>
+                <li class="logo"><a href="index.html"><img src="assets/logos/Lg_branca.png" alt=""></a></li>
                 <li><a href="Nave.html">Minha nave</a></li>
                 <li class="blogDrop">
                     <a href="Blog.html">Meu universo</a>
-                    <a data-toggle="dropdown"><img src="assets/imgs/seta.svg" onload="SVGInject(this)" /></a>
+                    <a data-toggle="dropdown"><img src="assets/icones/seta.svg" onload="SVGInject(this)" /></a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Crescimento Pessoal</a>
                         <a class="dropdown-item" href="#">Gestão de negocios</a>
@@ -78,7 +151,7 @@
     </header>
 
     <section class="bannerInsti">
-        <img src="assets/imgs/banner_Inst.png" t alt="">
+        <img src="assets/imgs/Insti/banner_Inst.png" t alt="">
         <h1>A HELEN MORENO É...</h1>
         <h3>
             É <b>impactante</b>, mas não é <b>hostil.</b> <br>
@@ -90,76 +163,84 @@
 
     <section class="manifesto">
         <div class="imgBlock">
-            <img src="assets/imgs/manifesto.png" alt="">
+            <img src="assets/imgs/Insti/manifesto.png" alt="">
         </div>
         <div class="infos">
             <h2>Manisfesto de marca</h2>
             <p>
                 Empreendedorismo corporativo é se posicionar
                 como empreendedor, gerando inovação, vantagens
-                e oportunidades de crescimento para a empresa. 
+                e oportunidades de crescimento para a empresa.
                 <br><br>
-                Pensando nisso, e nas dores internas e externas 
-                de cada empreendedor, a Helen Moreno, usando de 
-                todo conhecimento e comunicação assertiva, trás 
-                apoio e bases para o desenvolvimento e o 
-                autoconhecimento das empresas, sem esquecer de 
+                Pensando nisso, e nas dores internas e externas
+                de cada empreendedor, a Helen Moreno, usando de
+                todo conhecimento e comunicação assertiva, trás
+                apoio e bases para o desenvolvimento e o
+                autoconhecimento das empresas, sem esquecer de
                 auxiliar na busca pelo diferencial de cada empreendedor.
                 <br><br>
-                Como consequência, a marca amparada terá 
-                desenvolvido todos os pilares para se consolidar 
-                no mercado e ser reconhecida facilmente pelos 
-                seus clientes, e com os valores e objetivos bem 
+                Como consequência, a marca amparada terá
+                desenvolvido todos os pilares para se consolidar
+                no mercado e ser reconhecida facilmente pelos
+                seus clientes, e com os valores e objetivos bem
                 alinhados alcançara o sucesso e a liberdade almejadas.
-                Por fim, a satisfação é inevitável.</p>
+                Por fim, a satisfação é inevitável.
+            </p>
         </div>
     </section>
 
     <section class="sobre">
         <div class="infos">
             <h2>Mais sobre Helen Moreno</h2>
-            <p>A Helen Moreno é uma marca destinada a empreendedores que necessitam de ajuda com suas dores internas e dificuldades no mercado. Para ser assertiva e bem sucedida no processo, a partir da marca maior foram desenvolvidas algumas ramificações, são elas:</p>
+            <p>A Helen Moreno é uma marca destinada a empreendedores que necessitam de ajuda com suas dores internas e
+                dificuldades no mercado. Para ser assertiva e bem sucedida no processo, a partir da marca maior foram
+                desenvolvidas algumas ramificações, são elas:</p>
 
             <ul>
                 <li>
-                    <b>Mentoria em grupo:</b> pacote que ensina como melhor usar os poderes que cada empreendedor tem dentro do mercado, ministrando assuntos importantíssimos, além de como chamar atenção dos clientes.
+                    <b>Mentoria em grupo:</b> pacote que ensina como melhor usar os poderes que cada empreendedor tem
+                    dentro do mercado, ministrando assuntos importantíssimos, além de como chamar atenção dos clientes.
                 </li>
                 <li>
-                    <b>Gestão de negócios:</b> linha destinada aos atendimentos personalizados e individuais, focando nas maiores aflições do empreendedor interna e externamente.
+                    <b>Gestão de negócios:</b> linha destinada aos atendimentos personalizados e individuais, focando
+                    nas maiores aflições do empreendedor interna e externamente.
                 </li>
                 <li>
-                    <b>Café conexão e bagagens:</b> ramo onde se pode fazer conexões com outros empreendedores, visando o co-working e entretenimento.
+                    <b>Café conexão e bagagens:</b> ramo onde se pode fazer conexões com outros empreendedores, visando
+                    o co-working e entretenimento.
                 </li>
             </ul>
 
             <p>
-                Ferramentas e conhecimentos de anos apurados a fio, com muito estudo, reflexões, conexões e experiências, em todo tempo estudando
+                Ferramentas e conhecimentos de anos apurados a fio, com muito estudo, reflexões, conexões e
+                experiências, em todo tempo estudando
                 e trabalhando para atualizar os instrumentos de trabalho e pesquisa,
-                a Helen Moreno ampara seus empreendedores em suas jornadas solo num universo de possibilidades, obtendo o sucesso e a
+                a Helen Moreno ampara seus empreendedores em suas jornadas solo num universo de possibilidades, obtendo
+                o sucesso e a
                 liberdade ansiados.
             </p>
         </div>
         <div class="imgBlock">
-            <img src="assets/imgs/sobreHelen.png" alt="">
+            <img src="assets/imgs/Insti/sobreHelen.png" alt="">
         </div>
     </section>
 
     <section class="principios">
 
         <div class="imgBlock">
-            <img src="assets/imgs/Principios.png" alt="">
+            <img src="assets/imgs/Insti/Principios.png" alt="">
         </div>
         <div class="infos">
             <h2>Meus princípios</h2>
             <p>
                 Poder, exclusividade, crescimento e comunicação.
                 <br><br>
-                As principais promessas são em sempre oferecer 
-                uma experiência poderosa de transformação, 
-                focando na exclusividade do atendimento, e se 
-                preocupando com o crescimento e a 
-                comunicabilidade completos da(o) cliente, tudo 
-                sendo resumido com uma identidade visual criativa.    
+                As principais promessas são em sempre oferecer
+                uma experiência poderosa de transformação,
+                focando na exclusividade do atendimento, e se
+                preocupando com o crescimento e a
+                comunicabilidade completos da(o) cliente, tudo
+                sendo resumido com uma identidade visual criativa.
             </p>
         </div>
 
@@ -170,35 +251,42 @@
             <h2>Propósito</h2>
             <p>
 
-                O propósito da Helen Moreno resume uma promessa aos consumidores. Uma promessa permanentemente renovada em todos os pontos de contato.
+                O propósito da Helen Moreno resume uma promessa aos consumidores. Uma promessa permanentemente renovada
+                em todos os pontos de contato.
                 <br><br>
                 "A certeza do sucesso e liberdade na jornada pelo universo de possibilidades do seu negócio."
                 <br><br>
-                Com principal objetivo de trazer um senso de propósito e sucesso, traduzindo esses conceitos através da liberdade, poder e autenticidade.
+                Com principal objetivo de trazer um senso de propósito e sucesso, traduzindo esses conceitos através da
+                liberdade, poder e autenticidade.
                 Priorizando uma experiência de desenvolvimento pessoal e empresarial, com conexões e impacto.
                 <br><br>
-                É desprendida do que se conhece como convencional tendo um poder na ação juntamente de uma preocupação com o emocional.
+                É desprendida do que se conhece como convencional tendo um poder na ação juntamente de uma preocupação
+                com o emocional.
                 Todos esses conceitos são traduzidos através de uma personalidade estável, criativa e ousada.
 
             </p>
         </div>
         <div class="imgBlock">
-            <img src="assets/imgs/Proposito.png" alt="">
+            <img src="assets/imgs/Insti/Proposito.png" alt="">
         </div>
     </section>
 
     <section class="atributos">
         <div class="imgBlock">
-            <img src="assets/imgs/Atributos.png" alt="">
+            <img src="assets/imgs/Insti/Atributos.png" alt="">
         </div>
         <div class="infos">
             <h2>Atributos</h2>
             <p>
-                As experiências são servidas através da conexão com a autenticidade de cada um em ação, refletindo seu diferencial, e a missão em fazer todas as clientes conhecerem elas mesmas, de desenvolvendo emocionalmente e como empresa/marca.
+                As experiências são servidas através da conexão com a autenticidade de cada um em ação, refletindo seu
+                diferencial, e a missão em fazer todas as clientes conhecerem elas mesmas, de desenvolvendo
+                emocionalmente e como empresa/marca.
                 <br><br>
-                A comunicação é representada e fortalecida através dos atendimentos personalizados e do tema central no visual o universo de cada um, trazendo para o lado humano.
+                A comunicação é representada e fortalecida através dos atendimentos personalizados e do tema central no
+                visual o universo de cada um, trazendo para o lado humano.
                 <br><br>
-                O diferencial cresce com a espontaneidade e impacto na comunicação e no formato da representação da Helen Moreno.   
+                O diferencial cresce com a espontaneidade e impacto na comunicação e no formato da representação da
+                Helen Moreno.
             </p>
         </div>
     </section>
@@ -206,10 +294,10 @@
     <section class="contatoInsti">
 
         <h4>
-            Gostou? Quer conhecer mais?<br> 
+            Gostou? Quer conhecer mais?<br>
             <b>Me mande uma mensagem</b> agora mesmo.
         </h4>
- 
+
         <h3>Faça parte deste universo!</h3>
 
         <a class="botao" href="contato.html">Entre em contato comigo!</a>
@@ -218,14 +306,10 @@
 
     <footer>
         <img class="fundo" src="assets/imgs/rodape.png" alt="">
-        <img src="assets/imgs/logos/Lg_branca_H.png" alt="">
+        <img src="assets/logos/Lg_branca_H.png" alt="">
         <p>Todos os direitos reservados &copy; 2023.</p>
-        <a href="https://www.universofarol.com.br"><img src="assets/imgs/logos/UniversoFarol_logo.svg" onload="SVGInject(this)"></a>
+        <a href="https://www.universofarol.com.br"><img src="assets/logos/UniversoFarol_logo.svg" onload="SVGInject(this)"></a>
     </footer>
 
-
-
-
 </body>
-
 </html>
