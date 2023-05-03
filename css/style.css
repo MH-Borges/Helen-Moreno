@@ -1626,36 +1626,165 @@ body footer a svg {
   transform: translateY(5px);
 }
 .Palestra .calendario {
-  border: solid purple 1px;
   display: flex;
-  flex-direction: column;
   color: #D9D9D9;
+  flex-direction: column;
   justify-content: center;
+  z-index: 10;
 }
 .Palestra .calendario h2 {
-  border: solid red 1px;
   width: 100%;
   text-align: center;
   padding: 2vh 0;
-  margin: 0 0 3vh;
+  margin: 4vh 0 1vh;
   font-weight: 800;
   font-size: 2.2vw;
 }
 .Palestra .calendario .calendarBlock {
-  border: solid cyan;
   width: 100%;
   display: flex;
-  padding: 5vh 0;
+  padding: 2vh 0 0;
 }
-.Palestra .calendario .calendarBlock .ListCalend {
+.Palestra .calendario .calendarBlock #calendarList {
   width: 30%;
-  height: 30vh !important;
   padding: 0;
-  border: none;
 }
-.Palestra .calendario .calendarBlock iframe {
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar {
+  margin-bottom: 1.5vh;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk {
+  margin: 0;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(1) h2 {
+  margin: 0;
+  font-size: 1.8vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(3) {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button {
+  background: #F9884E;
+  border: #D9662B 1px solid;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button:nth-child(2) {
+  border-radius: 0;
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-view-harness {
+  position: relative;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-view-harness::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-cell-shaded a {
+  color: #D9662B;
+  font-size: 1.1vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event {
+  background-color: #D9D9D9;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event td {
+  color: #000000;
+  opacity: 1;
+  font-size: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event td:nth-child(1) {
+  padding: 1.5vh 1.5vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event td:nth-child(2) {
+  padding: 1.5vh 1vw 1.5vh 2vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event td:nth-child(3) {
+  padding: 1.5vh 0vw;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event:hover {
+  background-color: #D9D9D9;
+}
+.Palestra .calendario .calendarBlock #calendarList .fc-event:hover td {
+  color: #D9662B;
+}
+.Palestra .calendario .calendarBlock #calendar {
   width: 70%;
   padding: 0 0 0 2vw;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar {
+  margin-bottom: 1.5vh;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk {
+  margin: 0;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(1) {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(1) button {
+  background: #F9884E;
+  border: #D9662B 1px solid;
+  border-radius: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(2) h2 {
+  margin: 0;
+  font-size: 1.8vw;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(3) {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button {
+  background: #F9884E;
+  border: #D9662B 1px solid;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button:nth-child(2) {
+  border-radius: 0;
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-scrollgrid a {
+  color: #D9D9D9;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-daygrid-day-frame {
+  position: relative;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-daygrid-day-frame::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.Palestra .calendario .calendarBlock #calendar .fc-day-today {
+  position: relative;
+}
+.Palestra .calendario .calendarBlock #calendar .fc-day-today::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 156, 105, 0.5);
+  -webkit-backdrop-filter: blur(0.1vw);
+          backdrop-filter: blur(0.1vw);
 }
 .Palestra .intro_curso {
   display: flex;

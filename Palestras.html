@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helen Moreno | Palestras</title>
     <link rel="icon" href="assets/logos/Lg_laranja.png" />
-
-
+    
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+    <!-- Fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.6/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.6/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.6/index.global.min.js"></script>  
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales-all.global.js'></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Pales_script.js"></script>
     <script src="js/svg-inject.min.js"></script>
 </head>
 
@@ -201,10 +209,13 @@
         <h2>Veja as datas das minhas próximas palestras</h2>
 
         <div class="calendarBlock">
-            <iframe
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&showTitle=0&showTz=0&showCalendars=0&showTabs=1&showPrint=0&showDate=1&src=dW5pdmVyc29mYXJvbEBnbWFpbC5jb20&color=%233F51B5"
-                style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+            <div id="calendarList"></div>
+
+            <div id="calendar"></div>
+            
         </div>
+
     </section>
 
     <section class="intro_curso">
@@ -280,4 +291,5 @@
     </footer>
 
 </body>
+
 </html>

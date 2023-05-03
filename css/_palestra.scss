@@ -332,35 +332,168 @@
     }
 
     .calendario{
-        border: solid purple 1px;
         display: flex;
-        flex-direction: column;
         color: $Branco;
+        flex-direction: column;
         justify-content: center;
+        z-index: 10;
         h2{
-            border: solid red 1px;
             width: 100%;
             text-align: center;
             padding: 2vh 0;
-            margin: 0 0 3vh;
+            margin: 4vh 0 1vh;
             font-weight: 800;
             font-size: 2.2vw;
         }
         .calendarBlock{
-            border: solid cyan;
             width: 100%;
             display: flex;
-            padding: 5vh 0;
-            .ListCalend{
+            padding: 2vh 0 0;
+            #calendarList{
                 width: 30%;
-                height: 30vh !important;
                 padding: 0;
-                border: none;
-                
+                .fc-toolbar{
+                    margin-bottom: 1.5vh;
+                    .fc-toolbar-chunk{
+                        margin: 0;
+                        &:nth-child(1){
+                            h2{
+                                margin: 0;
+                                font-size: 1.8vw;
+                            }
+                        }
+                        &:nth-child(3){
+                            margin: 0;
+                            padding: 0;
+                            .fc-button-group{
+                                margin: 0;
+                                padding: 0;
+                                button{
+                                    background: $Laranja;
+                                    border: $LaranjaEscuro 1px solid;
+                                    border-top-left-radius: 1vw;
+                                    border-bottom-left-radius: 1vw;
+                                    &:nth-child(2){
+                                        border-radius: 0;
+                                        border-top-right-radius: 1vw;
+                                        border-bottom-right-radius: 1vw; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-view-harness{
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(33, 33, 33, 0.2);
+                        backdrop-filter: blur(0.05vw);
+                    }
+                }
+                .fc-cell-shaded{
+                    a{
+                        color: $LaranjaEscuro;
+                        font-size: 1.1vw;
+                    }
+                }
+                .fc-event{
+                    background-color: $Branco;
+                    td{
+                        color: $PretoEscuro;
+                        opacity: 1;
+                        font-size: 1vw;
+                        &:nth-child(1){
+                            padding: 1.5vh 1.5vw;
+                        }
+                        &:nth-child(2){
+                            padding: 1.5vh 1vw 1.5vh 2vw;
+                        }
+                        &:nth-child(3){
+                            padding: 1.5vh 0vw;
+                        }
+                    }
+                    &:hover{
+                        background-color: $Branco;
+                        td{
+                            color: $LaranjaEscuro;
+                        }
+                    }
+                }
             }
-            iframe{
+            #calendar{
                 width: 70%;
                 padding: 0 0 0 2vw;
+                .fc-toolbar{
+                    margin-bottom: 1.5vh;
+                    .fc-toolbar-chunk{
+                        margin: 0;
+                        &:nth-child(1){
+                            margin: 0;
+                            padding: 0;
+                            button{
+                                background: $Laranja;
+                                border: $LaranjaEscuro 1px solid;
+                                border-radius: 1vw;
+                            }
+                        }
+                        &:nth-child(2){
+                            h2{
+                                margin: 0;
+                                font-size: 1.8vw;
+                            }
+                        }
+                        &:nth-child(3){
+                            margin: 0;
+                            padding: 0;
+                            .fc-button-group{
+                                margin: 0;
+                                padding: 0;
+                                button{
+                                    background: $Laranja;
+                                    border: $LaranjaEscuro 1px solid;
+                                    border-top-left-radius: 1vw;
+                                    border-bottom-left-radius: 1vw;
+                                    &:nth-child(2){
+                                        border-radius: 0;
+                                        border-top-right-radius: 1vw;
+                                        border-bottom-right-radius: 1vw; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-scrollgrid {
+                    a{
+                        color: $Branco;
+                    }
+                }
+                .fc-daygrid-day-frame {
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(33, 33, 33, 0.2);
+                        backdrop-filter: blur(0.05vw);
+                    }
+                }
+                .fc-day-today{
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(255, 156, 105, 0.5);
+                        backdrop-filter: blur(0.1vw);
+                    }
+                }
             }
         }
     }
