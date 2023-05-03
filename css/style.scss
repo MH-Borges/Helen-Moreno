@@ -205,13 +205,14 @@ body {
                         border: solid 1px $Branco;
                         padding: 1vh 0.5vw;
                         border-radius: 1vw;
-                        margin-left: -6.5vw;
+                        margin-left: -8vw;
                         margin-top: 1.5vh;
                         background-color: $PretoClaro;
 
                         .dropdown-item {
-                            padding: 0.5vh 0.25vw;
+                            padding: 0.75vh 0.5vw;
                             color: $Branco;
+                            border-radius: 1vw;
 
                             &:nth-child(2) {
                                 position: relative;
