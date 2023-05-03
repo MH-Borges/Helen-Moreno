@@ -1375,8 +1375,8 @@ body footer a svg {
 .Palestra .intro_Palest p {
   text-align: center;
   font-weight: 200;
-  font-size: 1.1vw;
-  padding: 1.5vh 17vw;
+  font-size: 1.3vw;
+  padding: 1.5vh 10vw;
   margin: 0 0 7vh 0;
 }
 .Palestra .intro_Palest .blockImgs {
@@ -1426,7 +1426,7 @@ body footer a svg {
 }
 .Palestra .verPalest .textInfo p {
   width: 95%;
-  font-size: 1.25vw;
+  font-size: 1.3vw;
   font-weight: 200;
   margin: 0;
   padding: 1vh 1vw 12vh 8vw;

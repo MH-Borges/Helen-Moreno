@@ -77,16 +77,31 @@ $('.toTopInsti').on('click', function(){
 
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
-  if (scroll >= 5500) {
-    $(".toTopInsti").addClass('sobe');
-    $(".toTopInsti").fadeIn();
-    setTimeout(() => { 
-      $('.toTopInsti').removeClass('sobe');
-      $('.toTopInsti').addClass('sobePara');
-    }, 1250);
-  } else {
-    $(".toTopInsti").fadeOut();
-    $('.toTopInsti').removeClass('sobePara');
+  if(document.documentElement.clientHeight >= 700){
+    if (scroll >= 5500) {
+      $(".toTopInsti").addClass('sobe');
+      $(".toTopInsti").fadeIn();
+      setTimeout(() => { 
+        $('.toTopInsti').removeClass('sobe');
+        $('.toTopInsti').addClass('sobePara');
+      }, 1250);
+    } else {
+      $(".toTopInsti").fadeOut();
+      $('.toTopInsti').removeClass('sobePara');
+    }
   }
-});
+  else{
+    if (scroll >= 3700) {
+      $(".toTopInsti").addClass('sobe');
+      $(".toTopInsti").fadeIn();
+      setTimeout(() => { 
+        $('.toTopInsti').removeClass('sobe');
+        $('.toTopInsti').addClass('sobePara');
+      }, 1250);
+    } else {
+      $(".toTopInsti").fadeOut();
+      $('.toTopInsti').removeClass('sobePara');
+    }
+  }
   
+});
