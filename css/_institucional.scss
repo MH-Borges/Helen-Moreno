@@ -4,13 +4,13 @@
     .StarBackground_Insti {
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: auto;
         z-index: -1;
-        img {
+        img, svg {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             &:nth-child(7) {
-                height: 50%;
+                height: 50vh;
             }
         }
     }
@@ -27,6 +27,35 @@
             right: 0;
            
         }
+    }
+
+
+    .toTopInsti {
+        display: none;
+        position: fixed;
+        right: 1vw;
+        bottom: -15vh;
+        z-index: 998;
+        cursor: pointer;
+        width: 6vw;
+        height: 17vh;
+        .foguete{
+          width: 100%;
+          height: 100%;
+          path{
+            fill:$Branco;
+          }
+        }
+        .subindo{
+            animation: foguete_subindo 1.25s;
+        }
+    }
+   
+    .sobe{
+        animation: Sobe_foguete 1.25s;
+    }
+    .sobePara{
+        bottom: 2vh !important;
     }
 
     section {

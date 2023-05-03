@@ -111,17 +111,17 @@ body .star::after {
 body .StarBackground {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: auto;
   z-index: -1;
 }
-body .StarBackground img {
+body .StarBackground svg, body .StarBackground img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-body .StarBackground img:nth-child(6) {
-  height: 50%;
+body .StarBackground svg:nth-child(6), body .StarBackground img:nth-child(6) {
+  height: 50vh;
 }
-body .toTop, body .toTopInsti {
+body .toTop {
   display: none;
   position: fixed;
   right: 1.5vw;
@@ -131,24 +131,15 @@ body .toTop, body .toTopInsti {
   width: 3.5vw;
   height: 11vh;
 }
-body .toTop .foguete, body .toTopInsti .foguete {
+body .toTop .foguete {
   width: 100%;
   height: 100%;
 }
-body .toTop .foguete path, body .toTopInsti .foguete path {
+body .toTop .foguete path {
   fill: #D9D9D9;
 }
-body .toTop .subindo, body .toTopInsti .subindo {
+body .toTop .subindo {
   animation: foguete_subindo 1.25s;
-}
-body .toTopInsti {
-  bottom: -15vh;
-}
-body .sobe {
-  animation: Sobe_foguete 1.25s;
-}
-body .sobePara {
-  bottom: 2vh !important;
 }
 body header {
   min-width: 1200px;
@@ -850,15 +841,15 @@ body footer a svg {
 .institucional .StarBackground_Insti {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: auto;
   z-index: -1;
 }
-.institucional .StarBackground_Insti img {
+.institucional .StarBackground_Insti img, .institucional .StarBackground_Insti svg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.institucional .StarBackground_Insti img:nth-child(7) {
-  height: 50%;
+.institucional .StarBackground_Insti img:nth-child(7), .institucional .StarBackground_Insti svg:nth-child(7) {
+  height: 50vh;
 }
 .institucional .fogueteMotion {
   width: 100vw;
@@ -871,6 +862,32 @@ body footer a svg {
   height: 650vh;
   position: absolute;
   right: 0;
+}
+.institucional .toTopInsti {
+  display: none;
+  position: fixed;
+  right: 1vw;
+  bottom: -15vh;
+  z-index: 998;
+  cursor: pointer;
+  width: 6vw;
+  height: 17vh;
+}
+.institucional .toTopInsti .foguete {
+  width: 100%;
+  height: 100%;
+}
+.institucional .toTopInsti .foguete path {
+  fill: #D9D9D9;
+}
+.institucional .toTopInsti .subindo {
+  animation: foguete_subindo 1.25s;
+}
+.institucional .sobe {
+  animation: Sobe_foguete 1.25s;
+}
+.institucional .sobePara {
+  bottom: 2vh !important;
 }
 .institucional section {
   width: 75%;
@@ -1012,15 +1029,15 @@ body footer a svg {
 .servicos .StarBackground_Servicos {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: auto;
   z-index: -1;
 }
-.servicos .StarBackground_Servicos img {
+.servicos .StarBackground_Servicos img, .servicos .StarBackground_Servicos svg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.servicos .StarBackground_Servicos img:nth-child(3) {
-  height: 50%;
+.servicos .StarBackground_Servicos img:nth-child(3), .servicos .StarBackground_Servicos svg:nth-child(3) {
+  height: 50vh;
 }
 .servicos section {
   width: 75%;
@@ -1078,6 +1095,7 @@ body footer a svg {
   justify-content: center;
   align-items: center;
   position: relative;
+  pointer-events: none;
 }
 .servicos .servicos .carousel .splide__track .splide__list .splide__slide a::before {
   content: "";
@@ -1095,6 +1113,7 @@ body footer a svg {
 .servicos .servicos .carousel .splide__track .splide__list .splide__slide a img, .servicos .servicos .carousel .splide__track .splide__list .splide__slide a svg {
   width: 75%;
   height: auto;
+  pointer-events: none;
 }
 .servicos .servicos .carousel .splide__track .splide__list .splide__slide a p {
   text-align: center;
@@ -1103,6 +1122,7 @@ body footer a svg {
   margin-top: 5vh;
   font-size: 1.2vw;
   padding: 0 2vw;
+  pointer-events: none;
 }
 .servicos .servicos .carousel .splide__track .splide__list .is-active {
   z-index: 5;
@@ -1280,5 +1300,466 @@ body footer a svg {
   margin: 0 25vw;
 }
 .servicos .contatoServicos .botao:hover {
+  transform: translateY(5px);
+}
+
+.Palestra {
+  position: relative;
+}
+.Palestra .StarBackground_Palestra {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.Palestra .StarBackground_Palestra img, .Palestra .StarBackground_Palestra svg {
+  width: 100%;
+  height: 100vh;
+}
+.Palestra .StarBackground_Palestra img:nth-child(6), .Palestra .StarBackground_Palestra img:nth-child(10), .Palestra .StarBackground_Palestra svg:nth-child(6), .Palestra .StarBackground_Palestra svg:nth-child(10) {
+  height: 50vh;
+}
+.Palestra section {
+  width: 75%;
+  height: 100vh;
+  z-index: 5;
+}
+.Palestra .bannerInsti {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #D9D9D9;
+  z-index: 10;
+}
+.Palestra .bannerInsti img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+}
+.Palestra .bannerInsti h2 {
+  width: 75%;
+  text-align: center;
+  margin: 0;
+  font-size: 3vw;
+  font-weight: 200;
+  padding: 1vh 9vw;
+  color: #D9D9D9;
+  line-height: 3vw;
+  margin: 40vh 0 0 0;
+}
+.Palestra .bannerInsti h2 b {
+  font-weight: 800;
+}
+.Palestra .intro_Palest {
+  color: #D9D9D9;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+.Palestra .intro_Palest h2 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5vw;
+  padding: 1vh 0;
+  margin: 0 0 2vh 0;
+}
+.Palestra .intro_Palest p {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.1vw;
+  padding: 1.5vh 17vw;
+  margin: 0 0 7vh 0;
+}
+.Palestra .intro_Palest .blockImgs {
+  display: flex;
+  position: relative;
+  height: 22vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
+  margin: 0 0 2vh 0;
+}
+.Palestra .intro_Palest .blockImgs img, .Palestra .intro_Palest .blockImgs svg {
+  margin: 0 0.25vw;
+  width: 20%;
+  height: 18vh;
+}
+.Palestra .intro_Palest h3 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2.2vw;
+  padding: 1vh 7vw;
+}
+.Palestra .intro_Palest h3 b {
+  font-weight: 800;
+}
+.Palestra .verPalest {
+  display: flex;
+  flex-wrap: wrap;
+  color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.Palestra .verPalest .textInfo {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Palestra .verPalest .textInfo h2 {
+  font-weight: 800;
+  font-size: 2.2vw;
+  text-align: right;
+  width: 100%;
+  margin: 0 0 8vh 0;
+  padding: 2vh 0 2vh 5vw;
+}
+.Palestra .verPalest .textInfo p {
+  width: 95%;
+  font-size: 1.25vw;
+  font-weight: 200;
+  margin: 0;
+  padding: 1vh 1vw 12vh 8vw;
+  text-align: right;
+}
+.Palestra .verPalest .textInfo .divisor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5%;
+}
+.Palestra .verPalest .textInfo .divisor .line {
+  border: solid #D9662B 1px;
+  height: 2.2vh;
+  width: 1.2vw;
+  border-radius: 50%;
+  margin-bottom: 10vh;
+  margin-top: 2.3vh;
+  position: relative;
+}
+.Palestra .verPalest .textInfo .divisor .line::before {
+  content: "";
+  position: absolute;
+  top: 21%;
+  left: 21%;
+  height: 1.15vh;
+  width: 0.65vw;
+  border-radius: 50%;
+  background-color: #D9662B;
+  z-index: 5;
+}
+.Palestra .verPalest .textInfo .divisor .line::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 41%;
+  height: 15vh;
+  width: 0.2vw;
+  background-color: #D9662B;
+  z-index: -2;
+}
+.Palestra .verPalest img {
+  width: 50%;
+  height: 75vh;
+  padding: 2vh 6vw 2vh 2vw;
+}
+.Palestra .diferencial {
+  z-index: 10;
+  color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.Palestra .diferencial h2 {
+  text-align: center;
+  width: 100%;
+  padding: 2vh 17vw;
+  font-weight: 800;
+  font-size: 2.3vw;
+  margin: 0;
+}
+.Palestra .diferencial img {
+  width: 45%;
+  height: 45vh;
+  border-radius: 3vw;
+  padding: 1.5vw;
+  margin: 0;
+  position: absolute;
+  top: 22%;
+  right: 0;
+}
+.Palestra .diferencial p {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-weight: 200;
+  font-size: 1.3vw;
+  padding: 2vh 33vw 2vh 2vw;
+}
+.Palestra .diferencial p:nth-child(4) {
+  padding: 2vh 2vw 2vh 2vw;
+}
+.Palestra .imgs_carousel {
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.Palestra .imgs_carousel h2 {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 800;
+  padding: 2vh 10vw 5vh;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item {
+  display: flex;
+  justify-content: center;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item img {
+  border-radius: 3vw;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item .carousel-caption {
+  margin: 0;
+  padding: 0;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  padding: 1vh 0;
+  font-family: "Jost";
+  font-size: 1.2vw;
+  font-weight: 800;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item .carousel-caption p {
+  margin: 0;
+  padding: 1vh 0;
+  font-family: "Jost";
+  font-size: 1vw;
+  font-weight: 200;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner .carousel-item .carousel-caption::before {
+  content: "";
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.1vw);
+          backdrop-filter: blur(0.1vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 1vw;
+}
+.Palestra .imgs_carousel .carousel .carousel-control-prev, .Palestra .imgs_carousel .carousel .carousel-control-next {
+  background: none;
+  width: auto;
+  height: 12vh;
+  padding: 0;
+  top: 40%;
+  opacity: 1;
+  border: none;
+}
+.Palestra .imgs_carousel .carousel .carousel-control-prev svg, .Palestra .imgs_carousel .carousel .carousel-control-next svg {
+  width: auto;
+  height: 12vh;
+}
+.Palestra .imgs_carousel .carousel .carousel-control-prev svg path, .Palestra .imgs_carousel .carousel .carousel-control-next svg path {
+  fill: #D9D9D9;
+}
+.Palestra .contatoPalest {
+  height: 50vh;
+  display: flex;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.Palestra .contatoPalest img {
+  width: 50%;
+  height: 50vh;
+  padding: 5vh 7.5vw;
+}
+.Palestra .contatoPalest .infosInside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Palestra .contatoPalest .infosInside h4 {
+  font-weight: 200;
+  font-size: 1.8vw;
+  text-align: center;
+  padding: 1.5vh 0;
+  margin: 0 0 2vh 0;
+}
+.Palestra .contatoPalest .infosInside h4 b {
+  font-weight: 800;
+}
+.Palestra .contatoPalest .infosInside h3 {
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 800;
+  padding: 2vh 1vw;
+  margin: 0 0 5vh 0;
+}
+.Palestra .contatoPalest .infosInside .botao {
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  padding: 0.5vh 3vw;
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.55vw;
+  border-radius: 3vw;
+  transition: ease-in-out 0.2s;
+  font-weight: 500;
+  margin: 0 5vw;
+}
+.Palestra .contatoPalest .infosInside .botao:hover {
+  transform: translateY(5px);
+}
+.Palestra .calendario {
+  border: solid purple 1px;
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.Palestra .calendario h2 {
+  border: solid red 1px;
+  width: 100%;
+  text-align: center;
+  padding: 2vh 0;
+  margin: 0 0 3vh;
+  font-weight: 800;
+  font-size: 2.2vw;
+}
+.Palestra .calendario .calendarBlock {
+  border: solid cyan;
+  width: 100%;
+  display: flex;
+  padding: 5vh 0;
+}
+.Palestra .calendario .calendarBlock .ListCalend {
+  width: 30%;
+  height: 30vh !important;
+  padding: 0;
+  border: none;
+}
+.Palestra .calendario .calendarBlock iframe {
+  width: 70%;
+  padding: 0 0 0 2vw;
+}
+.Palestra .intro_curso {
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.Palestra .intro_curso h2 {
+  text-align: center;
+  width: 100%;
+  padding: 2vh 17vw;
+  font-weight: 800;
+  font-size: 2.5vw;
+  margin: 0 0 3vh 0;
+}
+.Palestra .intro_curso p {
+  font-size: 1.3vw;
+  font-weight: 200;
+  padding: 1vh 10vw;
+  text-align: center;
+}
+.Palestra .maisInfo_curso {
+  z-index: 10;
+  color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.Palestra .maisInfo_curso h2 {
+  text-align: center;
+  width: 100%;
+  padding: 2vh 15vw;
+  font-weight: 800;
+  font-size: 2.5vw;
+  margin: 0 0 5vh 0;
+}
+.Palestra .maisInfo_curso img {
+  width: 35%;
+  height: 30vh;
+  border-radius: 3vw;
+  padding: 1.5vw;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.Palestra .maisInfo_curso p {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-weight: 200;
+  font-size: 1.3vw;
+  padding: 2vh 2vw 2vh 26vw;
+}
+.Palestra .maisInfo_curso p:nth-child(4) {
+  padding: 2vh 2vw 2vh 2vw;
+}
+.Palestra .contatoCurso {
+  height: 50vh;
+  display: flex;
+  color: #D9D9D9;
+  justify-content: center;
+}
+.Palestra .contatoCurso img {
+  width: 50%;
+  height: 50vh;
+  padding: 5vh 7.5vw;
+}
+.Palestra .contatoCurso .infosInside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Palestra .contatoCurso .infosInside h4 {
+  font-weight: 200;
+  font-size: 1.8vw;
+  text-align: center;
+  padding: 1.5vh 0;
+  margin: 0 0 2vh 0;
+}
+.Palestra .contatoCurso .infosInside h4 b {
+  font-weight: 800;
+}
+.Palestra .contatoCurso .infosInside h3 {
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 800;
+  padding: 2vh 1vw;
+  margin: 0 0 5vh 0;
+}
+.Palestra .contatoCurso .infosInside .botao {
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  padding: 0.5vh 3vw;
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.55vw;
+  border-radius: 3vw;
+  transition: ease-in-out 0.2s;
+  font-weight: 500;
+  margin: 0 2vw;
+}
+.Palestra .contatoCurso .infosInside .botao:hover {
   transform: translateY(5px);
 }/*# sourceMappingURL=style.css.map */
