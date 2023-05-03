@@ -213,20 +213,24 @@
 
     .imgs_carousel{
         display: flex;
-        flex-direction: column;
         color: $Branco;
+        flex-direction: column;
         justify-content: center;
         h2{
             text-align: center;
             font-size: 2vw;
             font-weight: 800;
-            padding: 2vh 10vw 5vh;
+            padding: 2vh 10vw;
+            margin: 0 0 2vh;
         }
         .carousel{
+            height: 70vh;
             .carousel-inner{
+                height: 100%;
                 .carousel-item{
                     display: flex;
                     justify-content: center;
+                    height: 100%;
                     img{
                         border-radius: 3vw;
                     }
@@ -472,6 +476,13 @@
                         color: $Branco;
                     }
                 }
+                
+                .fc-col-header-cell-cushion{
+                    padding: 1vh 0;
+                    font-size: 1.25vw;
+                    
+                }
+
                 .fc-daygrid-day-frame {
                     position: relative;
                     &::before{
@@ -481,6 +492,11 @@
                         height: 100%;
                         background: rgba(33, 33, 33, 0.2);
                         backdrop-filter: blur(0.05vw);
+                    }
+                    .fc-daygrid-day-top{
+                        a{
+                            font-size: 1vw;
+                        }
                     }
                 }
                 .fc-day-today{
@@ -493,6 +509,9 @@
                         background: rgba(255, 156, 105, 0.5);
                         backdrop-filter: blur(0.1vw);
                     }
+                }
+                .fc-event-title{
+                    font-size: 0.8vw;
                 }
             }
         }

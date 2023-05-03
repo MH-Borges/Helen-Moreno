@@ -1513,19 +1513,27 @@ body footer a svg {
 }
 .Palestra .imgs_carousel {
   display: flex;
-  flex-direction: column;
   color: #D9D9D9;
+  flex-direction: column;
   justify-content: center;
 }
 .Palestra .imgs_carousel h2 {
   text-align: center;
   font-size: 2vw;
   font-weight: 800;
-  padding: 2vh 10vw 5vh;
+  padding: 2vh 10vw;
+  margin: 0 0 2vh;
+}
+.Palestra .imgs_carousel .carousel {
+  height: 70vh;
+}
+.Palestra .imgs_carousel .carousel .carousel-inner {
+  height: 100%;
 }
 .Palestra .imgs_carousel .carousel .carousel-inner .carousel-item {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 .Palestra .imgs_carousel .carousel .carousel-inner .carousel-item img {
   border-radius: 3vw;
@@ -1762,6 +1770,10 @@ body footer a svg {
 .Palestra .calendario .calendarBlock #calendar .fc-scrollgrid a {
   color: #D9D9D9;
 }
+.Palestra .calendario .calendarBlock #calendar .fc-col-header-cell-cushion {
+  padding: 1vh 0;
+  font-size: 1.25vw;
+}
 .Palestra .calendario .calendarBlock #calendar .fc-daygrid-day-frame {
   position: relative;
 }
@@ -1774,6 +1786,9 @@ body footer a svg {
   -webkit-backdrop-filter: blur(0.05vw);
           backdrop-filter: blur(0.05vw);
 }
+.Palestra .calendario .calendarBlock #calendar .fc-daygrid-day-frame .fc-daygrid-day-top a {
+  font-size: 1vw;
+}
 .Palestra .calendario .calendarBlock #calendar .fc-day-today {
   position: relative;
 }
@@ -1785,6 +1800,9 @@ body footer a svg {
   background: rgba(255, 156, 105, 0.5);
   -webkit-backdrop-filter: blur(0.1vw);
           backdrop-filter: blur(0.1vw);
+}
+.Palestra .calendario .calendarBlock #calendar .fc-event-title {
+  font-size: 0.8vw;
 }
 .Palestra .intro_curso {
   display: flex;
