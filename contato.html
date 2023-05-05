@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helen Moreno | Contato</title>
-    <link rel="icon" href="assets/imgs/logos/Lg_laranja.png" />
+    <link rel="icon" href="assets/logos/Lg_laranja.png" />
 
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Contato_script.js"></script>
+
     <script src="js/svg-inject.min.js"></script>
 </head>
 
-<body>
+<body class="contato">
 
     <div class="StarBackground">
         <img src="assets/imgs/estrelas.svg" onload="SVGInject(this)">
@@ -49,7 +51,53 @@
         </nav>
     </header>
 
-    <section class="banner">
+    <section class="blockInfosContato">
+        <img src="assets/imgs/Ilustracoes/areaContato_Planetas.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/Ilustracoes/areaContato.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/Ilustracoes/areaContato_Mao.svg" onload="SVGInject(this)">
+
+
+        <div class="infos">
+            <h4><a href="https://www.instagram.com/helen_moreno_e/" target="_blank">@helen_moreno_e</a></h4>
+            <h4><a href="mailto:contato@helenmoreno.com.br" target="_blank" >contato@helenmoreno.com.br</a></h4>
+            <h4>Seg - Sex / 09:00 - 18:00</h4>
+        </div>
+
+        <div class="formBlock">
+            <div class="notf">
+                <div class="notificacaoWhats"><img src="assets/icones/comNotificação.svg" onload="SVGInject(this)"></div>
+                <div class="whats">
+                    <img src="assets/icones/whats.svg" onload="SVGInject(this)">
+                    <p>(41) 99839 - 1191</p>
+                </div>
+            </div>
+            <div class="form">
+                <form class="labels" method="POST">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" required>
+                        <span>Nome completo:</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="telefone" id="telefone" required>
+                        <span>Telefone:</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <span>E-mail:</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="assunto" id="assunto" required>
+                        <span>Assunto:</span>
+                    </div>
+                    <div class="BlockBox">
+                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <span>Como podemos te ajudar?</span>
+                    </div>
+                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
+                    <div class="col-md-12 text-right" id="Alertmsg"></div> 
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>

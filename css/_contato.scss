@@ -1,0 +1,441 @@
+.contato {
+    position: relative;
+
+    section {
+        width: 75%;
+        z-index: 5;
+    }
+
+    .blockInfosContato {
+        width: 100%;
+        height: 133vh;
+        position: relative;
+        overflow-y: hidden;
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            &:nth-child(1) {
+                animation: floater 12s ease-in-out infinite;
+            }
+            &:nth-child(2) {
+                animation: floater 8s ease-in-out infinite;
+            }
+            &:nth-child(3) {
+                animation: floater 8s ease-in-out infinite;
+                z-index: 10;
+            }
+            
+            .moon {
+                animation: floater 10s ease-in-out infinite;
+            }
+
+            .buttonNave {
+                pointer-events: all;
+                &:hover {
+                    fill: $RoxoClaro;
+                }
+            }
+
+            .buttonNave2 {
+                pointer-events: all;
+                &:hover {
+                    fill: $Roxo;
+                }
+            }
+
+            .buttonNave3 {
+                pointer-events: all;
+                &:hover {
+                    fill: $RoxoEscuro;
+                }
+            }
+
+            .alarm {
+                animation: alarm 1.5s ease-in-out infinite;
+            }
+
+            .mancheLight {
+                animation: manche 3s ease-in-out infinite;
+            }
+
+            .locateGps {
+                animation: moveright 8s ease-in-out infinite;
+            }
+
+            .locateGps2 {
+                animation: moveleftdown 8s ease-in-out infinite;
+            }
+
+            .locateGps3 {
+                animation: moverightdown 8s ease-in-out infinite;
+            }
+
+            .Location {
+                animation: moveleftup 8s ease-in-out infinite;
+            }
+
+            @keyframes alarm {
+                0% {
+                    fill: $VermelhoEscuro;
+                    filter: drop-shadow(0px 0px 15px rgb(204, 16, 29));
+                }
+
+                50% {
+                    fill: $VermelhoClaro;
+                    filter: drop-shadow(0px 0px 5px rgb(230, 38, 51));
+                }
+
+                100% {
+                    fill: $VermelhoEscuro;
+                    filter: drop-shadow(0px 0px 15px rgb(204, 16, 29));
+                }
+            }
+
+            @keyframes moveright {
+                0% {
+                    fill: $Roxo;
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    fill: $RoxoClaro;
+                    transform: translate(1.2vw, 2vh);
+
+                }
+
+                100% {
+                    fill: $Roxo;
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes moveleftdown {
+                0% {
+                    fill: $Laranja;
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    fill: $LaranjaEscuro;
+                    transform: translate(-0.5vw, 2.5vh);
+
+                }
+
+                100% {
+                    fill: $Laranja;
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes moverightdown {
+                0% {
+                    fill: $Rosa;
+                    transform: translate(0, -1vh);
+                }
+
+                50% {
+                    fill: $RosaEscuro;
+                    transform: translate(0, 2.5vh);
+
+                }
+
+                100% {
+                    fill: $Rosa;
+                    transform: translate(0, -1vh);
+                }
+            }
+
+            @keyframes moveleftup {
+                0% {
+                    transform: translate(-4.5vw, 1vh);
+                }
+
+                50% {
+                    transform: translate(1.5vw, -3.5vh);
+
+                }
+
+                100% {
+                    transform: translate(-4.5vw, 1vh);
+                }
+            }
+
+            @keyframes manche {
+                0% {
+                    fill: $VermelhoEscuro;
+                    filter: drop-shadow(0px 0px 10px rgb(204, 16, 29));
+                }
+
+                50% {
+                    fill: $LaranjaClaro;
+                    filter: drop-shadow(0px 0px 10px rgb(255, 156, 105));
+
+                }
+
+                100% {
+                    fill: $VermelhoEscuro;
+                    filter: drop-shadow(0px 0px 10px rgb(204, 16, 29));
+                }
+            }
+
+        }
+
+        .infos {
+            z-index: 5;
+            color: $PretoEscuro;
+            position: absolute;
+            padding: 0 1vw;
+            bottom: 16.3%;
+            left: 20vw;
+            animation: floater 8s ease-in-out infinite;
+
+            h4 {
+                font-size: 1.25vw;
+                font-weight: 500;
+                padding: 1vh 0.75vw;
+
+                a {
+                    color: $PretoEscuro;
+
+                    &:hover {
+                        color: $LaranjaEscuro;
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin: 6vh 0;
+                }
+
+            }
+        }
+
+        @media only screen and (min-width: 1300px) {
+            .infos {
+                bottom: 17.3%;
+
+                h4 {
+                    &:nth-child(2) {
+                        margin: 5.8vh 0;
+                    }
+                }
+            }
+        }
+
+        .formBlock{
+            animation: floater 8s ease-in-out infinite;
+            z-index: 5;
+            width: 25.2vw;
+            height: 63.8vh;
+            position: absolute;
+            right: 11.5vw;
+            top:26.5%;
+            background-color: $Branco;
+            border-radius: 1.5vw;
+            &::before{
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                content: '';
+                position: absolute;
+                border-radius: 1.5vw;
+                background: rgba(93, 177, 255, 0.100);
+                backdrop-filter: blur(0.02vw);
+                border: 1px solid rgba(191, 191, 191, 1);
+            }
+            &::after{
+                z-index: 10;
+                content: '';
+                position: absolute;
+                width: 4.5vw;
+                height: 4vh;
+                background-color: $Preto;
+                top: -2%;
+                left: 42%;
+                border-bottom-left-radius: 5vw;
+                border-bottom-right-radius: 5vw;
+            }
+            .notf{
+                position: absolute;
+                right: 0.5vw;
+                top: 1vh;
+                padding: 0 1vw;
+                height: 6vh;
+                width: 10vw;
+                animation: none;
+                display: flex;
+                align-items: center;
+                .notificacaoWhats{
+                    z-index: 10;
+                    position: absolute;
+                    height: 80%;
+                    right: 0;
+                    width: 25%;
+                    animation: none;
+                    background-color: $BrancoEscuro;
+                    background-color: none;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        animation: none;
+                        width: 75%;
+                        .notificaStar{
+                            fill: $VermelhoEscuro;
+                        }
+                    }
+                }
+                .whats{
+                    position: absolute;
+                    left: 0;
+                    height: 50%;
+                    width: 77%;
+                    display: flex;
+                    background-color: $BrancoEscuro;
+                    border-top-left-radius: 1vw;
+                    border-bottom-left-radius: 1vw;
+                    svg{
+                        width: 15%;
+                        position: relative;
+                        animation: none;
+                        padding-left: 0.25vw;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 0.65vw;
+                        font-weight: 800;
+                        height: 100%;
+                        width: 85%;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 0.2vw;
+                    }
+                }
+            }
+            .form{
+                width: 100%;
+                height: 100%;
+                padding: 1vh 1vw;
+                display: flex;
+                align-items: center;
+                .labels{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    position: relative;
+                    flex-wrap: wrap;
+                    padding: 6vh 1vw 0.5vh;
+                    .BlockBox{
+                        width: 90%;
+                        height: 5vh;
+                        display: flex;
+                        position: relative;
+                        background-color: $BrancoEscuro;
+                        border-radius: 1.5vw;
+                        margin: 0.75vh 0.5vw;
+                        &:nth-child(5){
+                            height: 13vh;
+                        }
+                        input, textarea{
+                            width: 100%;
+                            border: none;
+                            font-size: 1vw;
+                            font-weight: 500;
+                            color: $RoxoEscuro;
+                            background: none;
+                            outline: none;
+                            padding: 1vh 1vw;
+                            z-index: 10 !important;
+                        }
+                        textarea{
+                            min-height: 11vh !important;
+                            resize: none;
+                        }
+                        span{
+                            position: absolute;
+                            left: 1vw;
+                            top: 1.1vh;
+                            font-size: 1vw;
+                            color: $Roxo;
+                            font-weight: 800;
+                            transition: 0.5s;
+                            pointer-events: none;
+                        }
+                       
+                    }
+                    .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
+                        transform:translate(-0.8vw, -4.5vh);
+                        font-size: 1.2vw;
+                        color:$RoxoEscuro;
+                    }
+                    #Enviar_Contato{
+                        position: absolute;
+                        font-size: 0.9vw;
+                        background: $Roxo;
+                        color: $Branco;
+                        padding: 0.25vh 1.5vw;
+                        border-radius: 1vw;
+                        bottom: 0;
+                        right: 0;
+                        border: none;
+                        font-weight: 800;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        z-index: 10;
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+
+        img {
+            width: 12vw;
+            height: auto;
+            z-index: 3;
+            margin-bottom: 1vh;
+        }
+
+        .fundo {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        p {
+            z-index: 3;
+            color: $Branco;
+            margin: 0;
+            font-family: 'Jost';
+            font-weight: 800;
+            font-size: 0.75vw;
+        }
+
+        a {
+            position: absolute;
+            left: 1vw;
+            z-index: 3;
+            width: 4vw;
+            height: 75%;
+            padding: 0.5vh 0.5vw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
