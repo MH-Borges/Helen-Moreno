@@ -1,5 +1,3 @@
-
-
 function showluas(elem, numLua){
 
   const semLua = elem.parentNode.querySelector('.planetaLua.planetaSemLua');
@@ -82,11 +80,7 @@ function showluas(elem, numLua){
         }
         elem.parentNode.querySelector('.estrelinhaSubtag').classList.remove('menor');
       });
-
-
       return
     }
-
   }
-
 }
