@@ -8,14 +8,18 @@
     <link rel="icon" href="assets/logos/Lg_laranja.png" />
 
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Blog_script.js"></script>
+    
     <script src="js/svg-inject.min.js"></script>
 </head>
 
@@ -54,16 +58,280 @@
                 <li><a href="Serviços.html">Serviços</a></li>
                 <li><a href="Palestras.html">Minha voz</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li class="iconPerfil">
+                    <div class="ftPerfil"><img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3756168.jpg" alt=""></div>
+                    <div class="infosIconPerfil">
+                        <p>@mariana_moreno04</p>
+                        <span>Mariana Moreno Emerenciano</span>
+                        <a href="">Ver perfil</a>
+                    </div>
+
+                </li>
+
             </ul>
         </nav>
     </header>
 
     <section class="headerTags">
-        
+
+        <div class="nav nav-pills MenuBlog">
+            <a data-toggle="pill" href="#crescimentoPessoal" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag" onclick="showluas(this, '00')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                <div class="planeta">
+                    <h3>Crescimento pessoal</h3>
+                    <div class="planetaLua planetaSemLua">
+                        <img src="assets/imgs/Blog/Planeta01.svg" onload="SVGInject(this)">
+                        <h4 class="hide">Nenhuma subtag criada</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a data-toggle="pill" href="#gestaoNegocios" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '07')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                
+                <div class="planeta">
+                    <div class="planetaLua planetaLua07">
+                        <img src="assets/imgs/Blog/Planeta02.svg" onload="SVGInject(this)">
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome01</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome02</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome03</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua04.svg" onload="SVGInject(this)">
+                            <span>nome04</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua05.svg" onload="SVGInject(this)">
+                            <span>nome05</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua06.svg" onload="SVGInject(this)">
+                            <span>nome06</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome07</span>
+                        </div>
+                    </div>
+                    <h3>Gestão de negócios</h3>
+                </div>
+            </a>
+            
+            <a data-toggle="pill" href="#empreendedoraSucesso" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag" onclick="showluas(this, '03')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                <div class="planeta">
+                    <h3>Empreendedora sucesso</h3>
+                    <div class="planetaLua planetaLua03">
+                        <img src="assets/imgs/Blog/Planeta03.svg" onload="SVGInject(this)">
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome01</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome02</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome03</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a data-toggle="pill" href="#desenvolvimentoPessoal" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '09')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                <div class="planeta">
+                    <div class="planetaLua planetaLua09">
+                        <img src="assets/imgs/Blog/Planeta04.svg" onload="SVGInject(this)">
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome01</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome02</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome03</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua04.svg" onload="SVGInject(this)">
+                            <span>nome04</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua05.svg" onload="SVGInject(this)">
+                            <span>nome05</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua06.svg" onload="SVGInject(this)">
+                            <span>nome06</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome07</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome08</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome09</span>
+                        </div>
+                    </div>
+                    <h3>Desenvolvimento pessoal</h3>
+                </div>
+            </a>
+
+            <a data-toggle="pill" href="#cafeConexaoBagagens" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag" onclick="showluas(this, '12')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                
+                <div class="planeta">
+                    <h3>Café, conexão e bagagens</h3>
+                    <div class="planetaLua planetaLua12">
+                        <img src="assets/imgs/Blog/Planeta05.svg" onload="SVGInject(this)">
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome01</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome02</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome03</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua04.svg" onload="SVGInject(this)">
+                            <span>nome04</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua05.svg" onload="SVGInject(this)">
+                            <span>nome05</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua06.svg" onload="SVGInject(this)">
+                            <span>nome06</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome07</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome08</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome09</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua04.svg" onload="SVGInject(this)">
+                            <span>nome10</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua05.svg" onload="SVGInject(this)">
+                            <span>nome11</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua06.svg" onload="SVGInject(this)">
+                            <span>nome12</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a data-toggle="pill" href="#casaisSucesso" aria-selected="false" class="blockPlaneta">
+                <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '04')">
+                    <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
+                </button>
+                <div class="planeta">
+                    <div class="planetaLua planetaLua04">
+                        <img src="assets/imgs/Blog/Planeta06.svg" onload="SVGInject(this)">
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua01.svg" onload="SVGInject(this)">
+                            <span>nome01</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua02.svg" onload="SVGInject(this)">
+                            <span>nome02</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua03.svg" onload="SVGInject(this)">
+                            <span>nome03</span>
+                        </div>
+                        <div class="lua hide">
+                            <img src="assets/imgs/Blog/Lua04.svg" onload="SVGInject(this)">
+                            <span>nome04</span>
+                        </div>
+                    </div>
+                    <h3>Casais de sucesso</h3>
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="searchBar">
+            <input type="text" placeholder="Digite o título da postagem.">
+            <div class="search"></div>
+        </div>
+
+
     </section>
 
+
     <section class="blogCentro">
-        
+        <div class="tab-content TabsBlog">
+            <div class="tab-pane fade show active" id="padrao">
+                <h1>TODOS POSTS</h1>
+            </div>
+
+            <div class="tab-pane fade" id="crescimentoPessoal">
+               <h1>Crescismento pessoal Posts</h1> 
+            </div>
+
+            <div class="tab-pane fade" id="gestaoNegocios">
+                <h1>Gestão de negocios Posts</h1>
+            </div>
+
+            <div class="tab-pane fade" id="empreendedoraSucesso">
+                <h1>Empreendedora sucesso Posts</h1>
+            </div>
+
+            <div class="tab-pane fade" id="desenvolvimentoPessoal">
+                <h1>Desenvolvimento Pessoal Posts</h1>
+            </div>
+
+            <div class="tab-pane fade" id="cafeConexaoBagagens">
+                <h1>Cafe conexao e bagagens Posts</h1>
+            </div>
+
+            <div class="tab-pane fade" id="casaisSucesso">
+                <h1>casais sucesso Posts</h1>
+            </div>
+        </div>
+    
     </section>
 
     <section class="blogEsquerda">

@@ -15,6 +15,11 @@
   display: none;
 }
 
+.hide2 {
+  opacity: 0;
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 0.5vw;
   background: #ff9c69;
@@ -1928,17 +1933,865 @@ body footer a svg {
 .blog .StarBackground_blog svg:nth-child(3), .blog .StarBackground_blog svg:nth-child(5), .blog .StarBackground_blog svg:nth-child(6) {
   height: 50vh;
 }
+.blog header nav ul {
+  padding-right: 0;
+}
+.blog header nav ul .iconPerfil {
+  width: 15vw;
+  height: 12vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.blog header nav ul .iconPerfil .ftPerfil {
+  width: 27%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0 0.3vw;
+}
+.blog header nav ul .iconPerfil .ftPerfil img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.blog header nav ul .iconPerfil .infosIconPerfil {
+  width: 73%;
+  height: 100%;
+  color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vh 0.25vw;
+}
+.blog header nav ul .iconPerfil .infosIconPerfil p {
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+.blog header nav ul .iconPerfil .infosIconPerfil span {
+  width: 100%;
+  font-size: 0.75vw;
+  padding: 0;
+  margin-top: 0.5vh;
+  text-align: center;
+}
+.blog header nav ul .iconPerfil .infosIconPerfil a {
+  text-align: center;
+  width: 95%;
+  font-size: 1.1vw;
+  border-radius: 2vw;
+  margin-top: 1.5vh;
+  background: linear-gradient(90deg, #9300B2 0%, #D9662B 100%);
+}
+.blog header nav ul .iconPerfil .infosIconPerfil a:hover {
+  color: #D9D9D9;
+}
 .blog section {
   width: 75%;
   height: 100vh;
   z-index: 5;
 }
 .blog .headerTags {
-  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog {
+  display: flex;
+  margin-top: 16vh;
+  justify-content: space-between;
+}
+.blog .headerTags .MenuBlog .blockPlaneta {
+  width: 15%;
+  height: 35vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.25s all;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #D9D9D9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta h3 {
+  font-size: 1vw;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  transition: ease-in-out 0.5s all;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua svg {
+  width: 100%;
+  height: 100%;
+  animation: floater 10s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(2) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(5) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(8) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(11) svg {
+  animation: floaterLua 8s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(3) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(6) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(9) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(12) svg {
+  animation: floaterLua 10s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(4) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(7) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(10) svg, .blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua .lua:nth-child(13) svg {
+  animation: floaterLua 12s ease-in-out infinite;
+}
+@keyframes floaterLua {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaSemLua h4 {
+  font-size: 1vw;
+  position: absolute;
+  width: 100%;
+  bottom: -4%;
+  left: 0;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua01 svg {
+  animation: floaterLua 14s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua01 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  left: 40%;
+  top: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua01 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua01 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 svg {
+  animation: floaterLua 10s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 .lua:nth-child(2) {
+  left: 0%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua02 .lua:nth-child(3) {
+  left: 80%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 svg {
+  animation: floaterLua 12s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua:nth-child(2) {
+  left: 0%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua:nth-child(3) {
+  left: 80%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua03 .lua:nth-child(4) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 svg {
+  animation: floaterLua 14s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua:nth-child(2) {
+  left: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua:nth-child(3) {
+  left: 0%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua:nth-child(4) {
+  left: 80%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua04 .lua:nth-child(5) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 svg {
+  animation: floaterLua 12s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua:nth-child(2) {
+  left: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua:nth-child(3) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua:nth-child(4) {
+  left: 80%;
+  top: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua:nth-child(5) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua05 .lua:nth-child(6) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 svg {
+  animation: floaterLua 14s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(2) {
+  left: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(3) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(4) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(5) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(6) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua06 .lua:nth-child(7) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 svg {
+  animation: floaterLua 10s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(2) {
+  left: 20%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(3) {
+  left: 60%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(4) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(5) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(6) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(7) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua07 .lua:nth-child(8) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 svg {
+  animation: floaterLua 12s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua span {
+  border: solid green 1px;
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(2) {
+  left: 20%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(3) {
+  left: 60%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(4) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(5) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(6) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(7) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(8) {
+  left: 20%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua08 .lua:nth-child(9) {
+  left: 60%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 svg {
+  animation: floaterLua 14s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(3) {
+  left: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(4) {
+  left: 80%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(5) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(6) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(7) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(8) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(9) {
+  left: 20%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua09 .lua:nth-child(10) {
+  left: 60%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 svg {
+  animation: floaterLua 10s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(3) {
+  left: 40%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(4) {
+  left: 80%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(5) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(6) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(7) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(8) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(9) {
+  left: 0%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(10) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua10 .lua:nth-child(11) {
+  left: 80%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 svg {
+  animation: floaterLua 12s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(3) {
+  left: 26%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(4) {
+  left: 53%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(5) {
+  left: 80%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(6) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(7) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(8) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(9) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(10) {
+  left: 0%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(11) {
+  left: 40%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua11 .lua:nth-child(12) {
+  left: 80%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 svg {
+  animation: floaterLua 14s ease-in-out infinite;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua {
+  height: 25%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua svg {
+  width: 100%;
+  height: 70%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua span {
+  width: 100%;
+  height: 30%;
+  padding: 0;
+  margin: 0;
+  font-size: 0.65vw;
+  text-align: center;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(3) {
+  left: 26%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(4) {
+  left: 53%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(5) {
+  left: 80%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(6) {
+  left: 0%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(7) {
+  left: 80%;
+  top: 25%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(8) {
+  left: 0%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(9) {
+  left: 80%;
+  top: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(10) {
+  left: 0%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(11) {
+  left: 26%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(12) {
+  left: 53%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .planeta .planetaLua12 .lua:nth-child(13) {
+  left: 80%;
+  top: 75%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag {
+  position: absolute;
+  z-index: 5 !important;
+  border: none;
+  background: none;
+  width: 30%;
+  height: 18%;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  transition: ease-in-out 0.5s all;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.5vh 0.4vw;
+  border: #D9D9D9 1px solid;
+  border-radius: 50%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag svg:hover {
+  background-color: #3A008C;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .menor {
+  width: 25%;
+  height: 15%;
+}
+.blog .headerTags .MenuBlog .blockPlaneta .estrelaBot {
+  top: 62%;
+}
+.blog .headerTags .searchBar {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  margin: 5vh 0;
+}
+.blog .headerTags .searchBar .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 4.5vw;
+  height: 85%;
+  background: #080808;
+  border: solid 2px #D9D9D9;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+}
+.blog .headerTags .searchBar .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: #D9D9D9;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.blog .headerTags .searchBar .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #D9D9D9;
+  transition: all 0.5s;
+}
+.blog .headerTags .searchBar input {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 1vw;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 85%;
+  outline: none;
+  background: #080808;
+  border: solid 2px #D9D9D9;
+  color: #D9D9D9;
+  font-weight: 800;
+  padding: 1vh 2vw;
+  border-radius: 5vw;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+}
+.blog .headerTags .searchBar input:focus {
+  width: 90%;
+  opacity: 1;
+  cursor: text;
+}
+.blog .headerTags .searchBar input:focus ~ .search {
+  right: -85%;
+  z-index: 6;
+}
+.blog .headerTags .searchBar input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.blog .headerTags .searchBar input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: #D9D9D9;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.blog .headerTags .searchBar input::-moz-placeholder {
+  color: white;
+  opacity: 0.75;
+  font-weight: 800;
+}
+.blog .headerTags .searchBar input::placeholder {
+  color: white;
+  opacity: 0.75;
+  font-weight: 800;
 }
 .blog .blogCentro {
   border: solid 1px blue;
-  height: 150vh;
+  height: 179vh;
+  margin-top: -29vh;
+}
+.blog .blogCentro .TabsBlog {
+  margin-bottom: 1vh;
+  height: 70vh;
+}
+.blog .blogCentro .TabsBlog .tab-pane {
+  height: 100%;
+  color: #D9D9D9;
+}
+.blog .blogCentro .TabsBlog .tab-pane h1 {
+  text-align: center;
+  font-weight: 800;
 }
 .blog .blogEsquerda {
   border: solid green 1px;
@@ -1990,14 +2843,14 @@ body footer a svg {
 }
 .contato .blockInfosContato {
   width: 100%;
-  height: 133vh;
+  height: 130vh;
   position: relative;
   overflow-y: hidden;
 }
 .contato .blockInfosContato svg {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   pointer-events: none;
 }
 .contato .blockInfosContato svg:nth-child(1) {
@@ -2135,7 +2988,7 @@ body footer a svg {
   color: #000000;
   position: absolute;
   padding: 0 1vw;
-  bottom: 16.3%;
+  bottom: 14.5%;
   left: 20vw;
   animation: floater 8s ease-in-out infinite;
 }
@@ -2153,19 +3006,11 @@ body footer a svg {
 .contato .blockInfosContato .infos h4:nth-child(2) {
   margin: 6vh 0;
 }
-@media only screen and (min-width: 1300px) {
-  .contato .blockInfosContato .infos {
-    bottom: 17.3%;
-  }
-  .contato .blockInfosContato .infos h4:nth-child(2) {
-    margin: 5.8vh 0;
-  }
-}
 .contato .blockInfosContato .formBlock {
   animation: floater 8s ease-in-out infinite;
   z-index: 5;
   width: 25.2vw;
-  height: 63.8vh;
+  height: 65vh;
   position: absolute;
   right: 11.5vw;
   top: 26.5%;
@@ -2323,6 +3168,18 @@ body footer a svg {
   border: none;
   font-weight: 800;
   z-index: 10;
+}
+@media only screen and (min-width: 1300px) {
+  .contato .blockInfosContato .infos {
+    bottom: 16.5%;
+  }
+  .contato .blockInfosContato .infos h4:nth-child(2) {
+    margin: 5.8vh 0;
+  }
+  .contato .blockInfosContato .formBlock {
+    height: 63.5vh;
+    top: 26%;
+  }
 }
 .contato footer {
   z-index: 10;
