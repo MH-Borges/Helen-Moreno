@@ -23,7 +23,8 @@
         nav {
             ul {
                 padding-right: 0;
-                .iconPerfil{
+
+                .iconPerfil {
                     width: 15vw;
                     height: 12vh;
                     margin: 0;
@@ -31,7 +32,8 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0;
-                    .ftPerfil{
+
+                    .ftPerfil {
                         width: 27%;
                         height: 55%;
                         display: flex;
@@ -39,13 +41,15 @@
                         justify-content: center;
                         object-fit: cover;
                         padding: 0 0.3vw;
-                        img{
+
+                        img {
                             border-radius: 50%;
                             width: 100%;
                             height: 100%;
                         }
                     }
-                    .infosIconPerfil{
+
+                    .infosIconPerfil {
                         width: 73%;
                         height: 100%;
                         color: $Branco;
@@ -54,28 +58,32 @@
                         align-items: center;
                         justify-content: center;
                         padding: 0.5vh 0.25vw;
-                        p{
+
+                        p {
                             width: 100%;
                             font-size: 1vw;
                             font-weight: 800;
                             padding: 0;
                             margin: 0;
                         }
-                        span{
+
+                        span {
                             width: 100%;
                             font-size: 0.75vw;
                             padding: 0;
                             margin-top: 0.5vh;
                             text-align: center;
                         }
-                        a{
+
+                        a {
                             text-align: center;
                             width: 95%;
                             font-size: 1.1vw;
                             border-radius: 2vw;
                             margin-top: 1.5vh;
-                            background: linear-gradient(90deg, #9300B2 0%, #D9662B 100%); 
-                            &:hover{
+                            background: linear-gradient(90deg, #9300B2 0%, #D9662B 100%);
+
+                            &:hover {
                                 color: $Branco;
                             }
                         }
@@ -94,15 +102,17 @@
     .headerTags {
         display: flex;
         flex-direction: column;
+        border: solid green;
+
         .MenuBlog {
             display: flex;
             margin-top: 24vh;
             justify-content: space-between;
             position: relative;
-
+            z-index: 10;
             .blockPlaneta {
-                width: 15%;
-                height: 35vh;
+                width: 13%;
+                height: 30vh;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -398,7 +408,7 @@
 
                             &:nth-child(3) {
                                 left: 0%;
-                                top: 25%;
+                                top: 40%;
                             }
 
                             &:nth-child(4) {
@@ -407,12 +417,12 @@
                             }
 
                             &:nth-child(5) {
-                                left: 0%;
-                                top: 50%;
+                                left: 25%;
+                                top: 75%;
                             }
 
                             &:nth-child(6) {
-                                left: 40%;
+                                left: 55%;
                                 top: 75%;
                             }
                         }
@@ -560,7 +570,6 @@
                             }
 
                             span {
-                                border: solid green 1px;
                                 width: 100%;
                                 height: 30%;
                                 padding: 0;
@@ -639,40 +648,42 @@
 
                             &:nth-child(3) {
                                 left: 40%;
+                                top: -5%;
                             }
 
                             &:nth-child(4) {
                                 left: 80%;
+                                top: 0%;
                             }
 
                             &:nth-child(5) {
-                                left: 0%;
-                                top: 25%;
+                                left: -5%;
+                                top: 30%;
                             }
 
                             &:nth-child(6) {
-                                left: 80%;
-                                top: 25%;
+                                left: 85%;
+                                top: 30%;
                             }
 
                             &:nth-child(7) {
-                                left: 0%;
-                                top: 50%;
+                                left: -5%;
+                                top: 60%;
                             }
 
                             &:nth-child(8) {
-                                left: 80%;
-                                top: 50%;
+                                left: 85%;
+                                top: 60%;
                             }
 
                             &:nth-child(9) {
                                 left: 20%;
-                                top: 75%;
+                                top: 80%;
                             }
 
                             &:nth-child(10) {
                                 left: 60%;
-                                top: 75%;
+                                top: 80%;
                             }
                         }
                     }
@@ -707,29 +718,31 @@
 
                             &:nth-child(3) {
                                 left: 40%;
+                                top: -5%;
                             }
 
                             &:nth-child(4) {
                                 left: 80%;
+                                top: 0%;
                             }
 
                             &:nth-child(5) {
-                                left: 0%;
+                                left: -5%;
                                 top: 25%;
                             }
 
                             &:nth-child(6) {
-                                left: 80%;
+                                left: 85%;
                                 top: 25%;
                             }
 
                             &:nth-child(7) {
-                                left: 0%;
+                                left: -5%;
                                 top: 50%;
                             }
 
                             &:nth-child(8) {
-                                left: 80%;
+                                left: 85%;
                                 top: 50%;
                             }
 
@@ -740,7 +753,7 @@
 
                             &:nth-child(10) {
                                 left: 40%;
-                                top: 75%;
+                                top: 85%;
                             }
 
                             &:nth-child(11) {
@@ -780,10 +793,12 @@
 
                             &:nth-child(3) {
                                 left: 26%;
+                                top: -5%;
                             }
 
                             &:nth-child(4) {
                                 left: 53%;
+                                top: -5%;
                             }
 
                             &:nth-child(5) {
@@ -791,22 +806,22 @@
                             }
 
                             &:nth-child(6) {
-                                left: 0%;
+                                left: -10%;
                                 top: 25%;
                             }
 
                             &:nth-child(7) {
-                                left: 80%;
+                                left: 90%;
                                 top: 25%;
                             }
 
                             &:nth-child(8) {
-                                left: 0%;
+                                left: -10%;
                                 top: 50%;
                             }
 
                             &:nth-child(9) {
-                                left: 80%;
+                                left: 90%;
                                 top: 50%;
                             }
 
@@ -817,7 +832,7 @@
 
                             &:nth-child(11) {
                                 left: 40%;
-                                top: 75%;
+                                top: 85%;
                             }
 
                             &:nth-child(12) {
@@ -828,6 +843,8 @@
                     }
 
                     .planetaLua12 {
+
+
                         svg {
                             animation: floaterLua 14s ease-in-out infinite;
                         }
@@ -857,10 +874,12 @@
 
                             &:nth-child(3) {
                                 left: 26%;
+                                top: -5%;
                             }
 
                             &:nth-child(4) {
                                 left: 53%;
+                                top: -5%;
                             }
 
                             &:nth-child(5) {
@@ -868,22 +887,22 @@
                             }
 
                             &:nth-child(6) {
-                                left: 0%;
+                                left: -10%;
                                 top: 25%;
                             }
 
                             &:nth-child(7) {
-                                left: 80%;
+                                left: 90%;
                                 top: 25%;
                             }
 
                             &:nth-child(8) {
-                                left: 0%;
+                                left: -10%;
                                 top: 50%;
                             }
 
                             &:nth-child(9) {
-                                left: 80%;
+                                left: 90%;
                                 top: 50%;
                             }
 
@@ -894,12 +913,12 @@
 
                             &:nth-child(11) {
                                 left: 26%;
-                                top: 75%;
+                                top: 85%;
                             }
 
                             &:nth-child(12) {
                                 left: 53%;
-                                top: 75%;
+                                top: 85%;
                             }
 
                             &:nth-child(13) {
@@ -946,7 +965,8 @@
                 }
 
             }
-            .todosPosts{
+
+            .todosPosts {
                 position: absolute;
                 border: solid $Branco 1px;
                 border-radius: 5vw;
@@ -960,11 +980,14 @@
                 background: $Preto;
             }
         }
+
         .searchBar {
             width: 100%;
             height: 10vh;
             position: relative;
             margin: 5vh 0;
+            z-index: 10;
+
             .search {
                 position: absolute;
                 margin: auto;
@@ -979,6 +1002,7 @@
                 border-radius: 50%;
                 transition: all 1s;
                 z-index: 4;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -993,6 +1017,7 @@
                     transform: rotate(45deg);
                     transition: all .5s;
                 }
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -1028,6 +1053,7 @@
                 transition: all 1s;
                 opacity: 0;
                 z-index: 5;
+
                 &:focus {
                     width: 90%;
                     opacity: 1;
@@ -1057,9 +1083,10 @@
                 }
 
                 &::placeholder {
-                    color: white;
+                    color: $Branco;
                     opacity: 0.75;
-                    font-weight: 800;
+                    font-weight: 200;
+                    font-size: 1.25vw;
                 }
             }
         }
@@ -1069,19 +1096,23 @@
 
     .blogCentro {
         border: solid 1px blue;
-        height: 173vh;
-        margin-top: -23vh;
-
+        height: 225vh;
+        margin-top: -75vh;
+        z-index: 1;
         .TabsBlog {
-            margin-bottom: 1vh;
-            height: 70vh;
+            margin-bottom: 0;
+            height: 100%;
+            border: solid red;
 
             .tab-pane {
                 height: 100%;
                 color: $Branco;
-                h1{
+                padding-top: 75vh;
+
+                h1 {
                     text-align: center;
                     font-weight: 800;
+
                 }
             }
         }

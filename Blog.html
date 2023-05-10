@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,18 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- animejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
     <script defer src="js/Blog_script.js"></script>
-    
+
     <script src="js/svg-inject.min.js"></script>
 </head>
 
@@ -37,7 +42,7 @@
     <div class="toTop">
         <img class="foguete" src="assets/icones/Foguete.svg" onload="SVGInject(this)">
     </div>
-    
+
     <header>
         <nav>
             <ul>
@@ -59,7 +64,8 @@
                 <li><a href="Palestras.html">Minha voz</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li class="iconPerfil">
-                    <div class="ftPerfil"><img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3756168.jpg" alt=""></div>
+                    <div class="ftPerfil"><img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3756168.jpg" alt="">
+                    </div>
                     <div class="infosIconPerfil">
                         <p>@mariana_moreno04</p>
                         <span>Mariana Moreno Emerenciano</span>
@@ -76,7 +82,7 @@
 
         <div class="nav nav-pills MenuBlog">
 
-            <a data-toggle="pill" href="#todos" aria-selected="false" class="blockPlaneta todosPosts hide">
+            <a data-toggle="pill" href="#todos" aria-selected="true" class="blockPlaneta todosPosts hide">
                 Ver todos os posts
             </a>
 
@@ -97,7 +103,7 @@
                 <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '07')">
                     <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
                 </button>
-                
+
                 <div class="planeta">
                     <div class="planetaLua planetaLua07">
                         <img src="assets/imgs/Blog/Planeta02.svg" onload="SVGInject(this)">
@@ -133,7 +139,7 @@
                     <h3>Gestão de negócios</h3>
                 </div>
             </a>
-            
+
             <a data-toggle="pill" href="#empreendedoraSucesso" aria-selected="false" class="blockPlaneta">
                 <button class="estrelinhaSubtag" onclick="showluas(this, '03')">
                     <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
@@ -157,7 +163,7 @@
                     </div>
                 </div>
             </a>
-            
+
             <a data-toggle="pill" href="#desenvolvimentoPessoal" aria-selected="false" class="blockPlaneta">
                 <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '09')">
                     <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
@@ -210,7 +216,7 @@
                 <button class="estrelinhaSubtag" onclick="showluas(this, '12')">
                     <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
                 </button>
-                
+
                 <div class="planeta">
                     <h3>Café, conexão e bagagens</h3>
                     <div class="planetaLua planetaLua12">
@@ -266,7 +272,7 @@
                     </div>
                 </div>
             </a>
-            
+
             <a data-toggle="pill" href="#casaisSucesso" aria-selected="false" class="blockPlaneta">
                 <button class="estrelinhaSubtag estrelaBot" onclick="showluas(this, '04')">
                     <img src="assets/imgs/Blog/SubtagBlog_Estrelinha.svg" onload="SVGInject(this)">
@@ -294,7 +300,7 @@
                     <h3>Casais de sucesso</h3>
                 </div>
             </a>
-            
+
         </div>
 
         <div class="searchBar">
@@ -308,39 +314,39 @@
 
     <section class="blogCentro">
         <div class="tab-content TabsBlog">
-            <div class="tab-pane fade show active" id="todos">
+            <div class="tab-pane fade show active" id="todos" style="background-color:#38a8cc">
                 <h1>TODOS POSTS</h1>
             </div>
 
-            <div class="tab-pane fade" id="crescimentoPessoal">
-               <h1>Crescismento pessoal Posts</h1> 
+            <div class="tab-pane fade" id="crescimentoPessoal" style="background-color:#004444">
+                <h1>Crescismento pessoal Posts</h1>
             </div>
 
-            <div class="tab-pane fade" id="gestaoNegocios">
+            <div class="tab-pane fade" id="gestaoNegocios" style="background-color:#884444">
                 <h1>Gestão de negocios Posts</h1>
             </div>
 
-            <div class="tab-pane fade" id="empreendedoraSucesso">
+            <div class="tab-pane fade" id="empreendedoraSucesso" style="background-color:#555588">
                 <h1>Empreendedora sucesso Posts</h1>
             </div>
 
-            <div class="tab-pane fade" id="desenvolvimentoPessoal">
+            <div class="tab-pane fade" id="desenvolvimentoPessoal" style="background-color:#a84466">
                 <h1>Desenvolvimento Pessoal Posts</h1>
             </div>
 
-            <div class="tab-pane fade" id="cafeConexaoBagagens">
+            <div class="tab-pane fade" id="cafeConexaoBagagens" style="background-color:purple">
                 <h1>Cafe conexao e bagagens Posts</h1>
             </div>
 
-            <div class="tab-pane fade" id="casaisSucesso">
+            <div class="tab-pane fade" id="casaisSucesso" style="background-color:red">
                 <h1>casais sucesso Posts</h1>
             </div>
         </div>
-    
+
     </section>
 
     <section class="blogEsquerda">
-        
+
     </section>
 
     <section class="contatoBlog">
@@ -348,7 +354,7 @@
         <h4>
             Gostou do que viu por aqui? Tem muito mais de onde veio.
         </h4>
- 
+
         <h3>Faça parte deste universo você também!</h3>
 
         <a class="botao" href="contato.html">Entre em contato comigo!</a>
