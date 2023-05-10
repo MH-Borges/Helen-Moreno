@@ -96,8 +96,9 @@
         flex-direction: column;
         .MenuBlog {
             display: flex;
-            margin-top: 16vh;
+            margin-top: 24vh;
             justify-content: space-between;
+            position: relative;
 
             .blockPlaneta {
                 width: 15%;
@@ -945,6 +946,19 @@
                 }
 
             }
+            .todosPosts{
+                position: absolute;
+                border: solid $Branco 1px;
+                border-radius: 5vw;
+                width: 13vw;
+                height: 4vh;
+                top: -7.5vh;
+                left: 40%;
+                color: $Branco;
+                font-weight: 800;
+                font-size: 1vw;
+                background: $Preto;
+            }
         }
         .searchBar {
             width: 100%;
@@ -1055,8 +1069,8 @@
 
     .blogCentro {
         border: solid 1px blue;
-        height: 179vh;
-        margin-top: -29vh;
+        height: 173vh;
+        margin-top: -23vh;
 
         .TabsBlog {
             margin-bottom: 1vh;
