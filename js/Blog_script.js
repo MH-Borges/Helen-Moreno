@@ -109,24 +109,24 @@ function showluas(elem, numLua){
   }
 }
 
-$('.tab-pane').each(function(i,e){
-  $('.blockPlaneta').click(function(event){
-    var x = event.pageX;
-    var y = event.pageY;
+// $('.tab-pane').each(function(i,e){
+//   $('.blockPlaneta').click(function(event){
+//     var x = event.pageX;
+//     var y = event.pageY;
     
-    var nextItem = i + 1;
-    if (nextItem >= $('.tab-pane').length){
-      nextItem = 0;
-    }
+//     var nextItem = i + 1;
+//     if (nextItem >= $('.tab-pane').length){
+//       nextItem = 0;
+//     }
     
-    $('.tab-pane:eq('+ nextItem +')').css('z-index', parseInt($(this).css('z-index')) + 1);
-    $('.tab-pane:eq('+ nextItem +')').css('clip-path', 'circle(0% at '+ x +'px '+ y +'px)');
+//     $('.tab-pane:eq('+ nextItem +')').css('z-index', parseInt($(this).css('z-index')) + 1);
+//     $('.tab-pane:eq('+ nextItem +')').css('clip-path', 'circle(0% at '+ x +'px '+ y +'px)');
     
-    anime({
-      targets: $('.tab-pane')[nextItem],
-      update: function(anim) {
-        $('.tab-pane:eq('+ nextItem +')').css('clip-path', 'circle('+ (anim.progress*2) +'% at '+ x +'px '+ y +'px)');
-      }
-    });
-  });
-});
+//     anime({
+//       targets: $('.tab-pane')[nextItem],
+//       update: function(anim) {
+//         $('.tab-pane:eq('+ nextItem +')').css('clip-path', 'circle('+ (anim.progress*2) +'% at '+ x +'px '+ y +'px)');
+//       }
+//     });
+//   });
+// });

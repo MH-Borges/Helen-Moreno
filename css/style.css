@@ -1946,14 +1946,14 @@ body footer a svg {
   padding: 0;
 }
 .blog header nav ul .iconPerfil .ftPerfil {
-  width: 27%;
-  height: 55%;
+  width: 30%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0 0.3vw;
+  padding: 0 0.5vw;
 }
 .blog header nav ul .iconPerfil .ftPerfil img {
   border-radius: 50%;
@@ -1961,7 +1961,7 @@ body footer a svg {
   height: 100%;
 }
 .blog header nav ul .iconPerfil .infosIconPerfil {
-  width: 73%;
+  width: 70%;
   height: 100%;
   color: #D9D9D9;
   display: flex;
@@ -2003,14 +2003,13 @@ body footer a svg {
 .blog .headerTags {
   display: flex;
   flex-direction: column;
-  border: solid green;
+  z-index: 5;
 }
 .blog .headerTags .MenuBlog {
   display: flex;
-  margin-top: 24vh;
+  margin-top: 25vh;
   justify-content: space-between;
   position: relative;
-  z-index: 10;
 }
 .blog .headerTags .MenuBlog .blockPlaneta {
   width: 13%;
@@ -2689,7 +2688,7 @@ body footer a svg {
   border-radius: 5vw;
   width: 13vw;
   height: 4vh;
-  top: -7.5vh;
+  top: -8vh;
   left: 40%;
   color: #D9D9D9;
   font-weight: 800;
@@ -2700,8 +2699,7 @@ body footer a svg {
   width: 100%;
   height: 10vh;
   position: relative;
-  margin: 5vh 0;
-  z-index: 10;
+  margin: 7vh 0;
 }
 .blog .headerTags .searchBar .search {
   position: absolute;
@@ -2722,12 +2720,12 @@ body footer a svg {
   content: "";
   position: absolute;
   margin: auto;
-  top: 22px;
+  top: 1.35vw;
   right: 0;
   bottom: 0;
-  left: 22px;
-  width: 12px;
-  height: 2px;
+  left: 1.35vw;
+  width: 0.9vw;
+  height: 0.25vh;
   background: #D9D9D9;
   transform: rotate(45deg);
   transition: all 0.5s;
@@ -2778,12 +2776,12 @@ body footer a svg {
 .blog .headerTags .searchBar input:focus ~ .search::before {
   top: 0;
   left: 0;
-  width: 25px;
+  width: 1.5vw;
 }
 .blog .headerTags .searchBar input:focus ~ .search::after {
   top: 0;
   left: 0;
-  width: 25px;
+  width: 1.5vw;
   height: 2px;
   border: none;
   background: #D9D9D9;
@@ -2802,29 +2800,398 @@ body footer a svg {
   font-weight: 200;
   font-size: 1.25vw;
 }
-.blog .blogCentro {
-  border: solid 1px blue;
-  height: 225vh;
-  margin-top: -75vh;
-  z-index: 1;
+.blog .postagens {
+  height: auto;
+  min-height: 325vh;
+  margin-top: -25vh;
+  z-index: 10;
 }
-.blog .blogCentro .TabsBlog {
+.blog .postagens .TabsBlog {
   margin-bottom: 0;
   height: 100%;
-  border: solid red;
 }
-.blog .blogCentro .TabsBlog .tab-pane {
+.blog .postagens .TabsBlog .tab-pane {
   height: 100%;
   color: #D9D9D9;
-  padding-top: 75vh;
 }
-.blog .blogCentro .TabsBlog .tab-pane h1 {
+.blog .postagens .TabsBlog .tab-pane h2 {
   text-align: center;
   font-weight: 800;
+  font-size: 2.5vw;
+  padding: 1vh 0;
+  margin: 0;
 }
-.blog .blogEsquerda {
-  border: solid green 1px;
+.blog .postagens .TabsBlog .tab-pane p {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2vw;
+  padding: 1.5vh 6vw 2vh;
+  line-height: 4.5vh;
+  margin: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro {
+  width: 100%;
   height: 150vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral {
+  padding: 5vh 0;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost {
+  width: 100%;
+  height: 49%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2vw;
+  color: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: -1;
+  border-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos {
+  border: 1px solid #D9D9D9;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3vw;
+  height: 19vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .tag {
+  padding: 0.2vh 0.75vw;
+  z-index: 5 !important;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .tag svg {
+  width: 100%;
+  height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .like svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .comment svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .visu svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .tag svg path {
+  fill: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .tag span {
+  display: none;
+  opacity: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .like {
+  margin-top: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos .tag {
+  margin-bottom: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .iconesInfos::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .subTags {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .imgCard {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost .imgCard img {
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost p {
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 200;
+  padding: 0.5vh 0;
+  line-height: auto;
+  margin: 0vh 0 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost p button {
+  font-weight: 500;
+  margin-right: 0.75vw;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost p button:hover {
+  color: #BFBFBF;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost h2 {
+  font-size: 1.6vw;
+  text-align: left;
+  padding: 0.25vh 1vw 2.5vh 1.5vw;
+  line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos {
+  width: 7vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .tag {
+  width: 100%;
+  display: flex;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .tag svg {
+  width: 25%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .tag span {
+  width: 75%;
+  display: flex;
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .tag span {
+  font-size: 0.7vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos::before {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .subTags {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 28.5%;
+  right: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .subTags .subtag {
+  text-align: right;
+  margin: 0.35vh 0;
+  padding: 0.5vh 0.3vw;
+  width: 6.5vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .subTags .subtag:first-child {
+  margin-top: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .subTags .subtag:last-child {
+  margin-bottom: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost {
+  width: 100%;
+  height: 93.5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2vw;
+  color: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: -1;
+  border-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos {
+  border: 1px solid #D9D9D9;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3vw;
+  height: 19vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag {
+  padding: 0.2vh 0.75vw;
+  z-index: 5 !important;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag svg {
+  width: 100%;
+  height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu svg path, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag svg path {
+  fill: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag span {
+  display: none;
+  opacity: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like {
+  margin-top: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag {
+  margin-bottom: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .subTags {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .imgCard {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .imgCard img {
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p {
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 200;
+  padding: 0.5vh 0;
+  line-height: auto;
+  margin: 0.5vh 0 2vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p button {
+  font-weight: 500;
+  margin-right: 0.75vw;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p button:hover {
+  color: #BFBFBF;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost h2 {
+  font-size: 1.6vw;
+  text-align: left;
+  padding: 1vh 1vw 2.5vh 1.5vw;
+  line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos {
+  width: 7vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag {
+  width: 100%;
+  display: flex;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag svg {
+  width: 25%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag span {
+  width: 75%;
+  display: flex;
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag span {
+  font-size: 0.7vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos::before {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 14.5%;
+  right: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag {
+  text-align: right;
+  margin: 0.35vh 0;
+  padding: 0.5vh 0.3vw;
+  width: 6.5vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag:first-child {
+  margin-top: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag:last-child {
+  margin-bottom: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda {
+  width: 100%;
+  height: 138.5vh;
+}
+.blog .postagens .TabsBlog .tab-pane .botao {
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  padding: 0.5vh 3vw;
+  text-align: center;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1.55vw;
+  border-radius: 3vw;
+  transition: ease-in-out 0.2s;
+  font-weight: 500;
+  margin: 3vh 0 3vh 27vw;
+  border: none;
+}
+.blog .postagens .TabsBlog .tab-pane .botao:hover {
+  transform: translateY(5px);
 }
 .blog .contatoBlog {
   height: 50vh;
