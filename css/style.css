@@ -404,6 +404,7 @@ body .blog .TabsBlog .tab-pane .boxCards .cardPostBlog .icons .iconInfo {
 }
 body .blog .TabsBlog .tab-pane .boxCards .cardPostBlog .icons .iconInfo svg {
   width: 1.25vw;
+  height: auto;
   padding: 0;
 }
 body .blog .TabsBlog .tab-pane .boxCards .cardPostBlog .icons .iconInfo svg path {
