@@ -1954,12 +1954,44 @@ body footer a svg {
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0 0.5vw;
+  padding: 0 0.7vw;
+  position: relative;
 }
 .blog header nav ul .iconPerfil .ftPerfil img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+}
+.blog header nav ul .iconPerfil .ftPerfil a {
+  display: none;
+}
+.blog header nav ul .iconPerfil .ftPerfil:hover a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.blog header nav ul .iconPerfil .ftPerfil:hover a svg {
+  z-index: 10;
+  width: 45%;
+  height: auto;
+}
+.blog header nav ul .iconPerfil .ftPerfil:hover a svg path {
+  fill: #D9D9D9;
+}
+.blog header nav ul .iconPerfil .ftPerfil:hover a::before {
+  content: "";
+  position: absolute;
+  top: -2.5%;
+  right: 15%;
+  width: 70%;
+  height: 105%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: 1;
+  border-radius: 50%;
 }
 .blog header nav ul .iconPerfil .infosIconPerfil {
   width: 70%;
@@ -2739,8 +2771,8 @@ body footer a svg {
   right: 0;
   bottom: 0;
   left: -5px;
-  width: 25px;
-  height: 25px;
+  width: 1.8vw;
+  height: 1.8vw;
   border-radius: 50%;
   border: 2px solid #D9D9D9;
   transition: all 0.5s;
@@ -2835,6 +2867,7 @@ body footer a svg {
   height: 150vh;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral {
   padding: 5vh 0;
@@ -3039,8 +3072,8 @@ body footer a svg {
   position: absolute;
   right: 0;
   top: 0;
-  width: 3vw;
-  height: 19vh;
+  width: 5vw;
+  height: 37vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3049,7 +3082,7 @@ body footer a svg {
   border-bottom-left-radius: 2vw;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag {
-  padding: 0.2vh 0.75vw;
+  padding: 0.2vh 1vw;
   z-index: 5 !important;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost .iconesInfos .tag svg {
@@ -3101,11 +3134,12 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p {
   width: 100%;
-  font-size: 1vw;
+  text-align: left;
+  font-size: 1.5vw;
   font-weight: 200;
-  padding: 0.5vh 0;
+  padding: 2vh 2.5vw 1vh;
   line-height: auto;
-  margin: 0.5vh 0 2vh;
+  margin: 0.5vh 0 1vh;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p button {
   font-weight: 500;
@@ -3118,13 +3152,13 @@ body footer a svg {
   color: #BFBFBF;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost h2 {
-  font-size: 1.6vw;
+  font-size: 2.8vw;
   text-align: left;
-  padding: 1vh 1vw 2.5vh 1.5vw;
+  padding: 1vh 2.5vw 2.5vh;
   line-height: auto;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos {
-  width: 7vw;
+  width: 12vw;
   background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag {
@@ -3141,11 +3175,11 @@ body footer a svg {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 0.9vw;
+  font-size: 1.2vw;
   font-weight: 800;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag span {
-  font-size: 0.7vw;
+  font-size: 1vw;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos::before {
   display: none;
@@ -3154,15 +3188,15 @@ body footer a svg {
   display: flex;
   position: absolute;
   flex-direction: column;
-  top: 14.5%;
+  top: 27.5%;
   right: 0;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag {
   text-align: right;
-  margin: 0.35vh 0;
-  padding: 0.5vh 0.3vw;
-  width: 6.5vw;
-  font-size: 0.8vw;
+  margin: 0.65vh 0;
+  padding: 0.75vh 0.3vw;
+  width: 11.5vw;
+  font-size: 1.2vw;
   font-weight: 500;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
@@ -3174,9 +3208,369 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag:last-child {
   margin-bottom: 0;
 }
+.blog .postagens .TabsBlog .tab-pane .blogCentro::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 10vw;
+  height: 20vh;
+  background: #3A008C;
+  top: 35%;
+  left: -5%;
+  border-radius: 50%;
+  filter: blur(5vw);
+}
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda {
   width: 100%;
-  height: 138.5vh;
+  height: 138vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 1vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2vw;
+  color: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: -1;
+  border-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos {
+  border: 1px solid #D9D9D9;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5vw;
+  height: 37vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .tag {
+  padding: 0.2vh 1vw;
+  z-index: 5 !important;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .tag svg {
+  width: 100%;
+  height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .like svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .comment svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .visu svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .tag svg path {
+  fill: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .tag span {
+  display: none;
+  opacity: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .like {
+  margin-top: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos .tag {
+  margin-bottom: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .iconesInfos::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .subTags {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .imgCard {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost .imgCard img {
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5vw;
+  font-weight: 200;
+  padding: 2vh 2.5vw 1vh;
+  line-height: auto;
+  margin: 0.5vh 0 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost p button {
+  font-weight: 500;
+  margin-right: 0.75vw;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost p button:hover {
+  color: #BFBFBF;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost h2 {
+  font-size: 2.8vw;
+  text-align: left;
+  padding: 1vh 2.5vw 2.5vh;
+  line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos {
+  width: 12vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .tag {
+  width: 100%;
+  display: flex;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .tag svg {
+  width: 25%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .tag span {
+  width: 75%;
+  display: flex;
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  font-weight: 800;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .tag span {
+  font-size: 1vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos::before {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .subTags {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 28.5%;
+  right: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .subTags .subtag {
+  text-align: right;
+  margin: 0.65vh 0;
+  padding: 0.75vh 0.3vw;
+  width: 11.5vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .subTags .subtag:first-child {
+  margin-top: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .subTags .subtag:last-child {
+  margin-bottom: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1vh 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost {
+  width: 48.5%;
+  height: 48.5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2vw;
+  color: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: -1;
+  border-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos {
+  border: 1px solid #D9D9D9;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3vw;
+  height: 19vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .tag {
+  padding: 0.2vh 0.75vw;
+  z-index: 5 !important;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .tag svg {
+  width: 100%;
+  height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .like svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .comment svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .visu svg path, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .tag svg path {
+  fill: #D9D9D9;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .tag span {
+  display: none;
+  opacity: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .like {
+  margin-top: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos .tag {
+  margin-bottom: 1vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .iconesInfos::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .subTags {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .imgCard {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost .imgCard img {
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost p {
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 200;
+  padding: 1vh 0;
+  line-height: auto;
+  margin: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost p button {
+  font-weight: 500;
+  margin-right: 0.75vw;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost p button:hover {
+  color: #BFBFBF;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost h2 {
+  font-size: 1.5vw;
+  text-align: left;
+  padding: 0.25vh 1vw 2.5vh;
+  line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos {
+  width: 7vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .tag {
+  width: 100%;
+  display: flex;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .like svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .comment svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .visu svg, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .tag svg {
+  width: 25%;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .like span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .comment span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .visu span, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .tag span {
+  width: 75%;
+  display: flex;
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .tag span {
+  font-size: 0.7vw;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos::before {
+  display: none;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .subTags {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 29.5%;
+  right: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .subTags .subtag {
+  text-align: right;
+  margin: 0.35vh 0;
+  padding: 0.5vh 0.3vw;
+  width: 6.5vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .subTags .subtag:first-child {
+  margin-top: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .subTags .subtag:last-child {
+  margin-bottom: 0;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(1), .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(2) {
+  margin-bottom: 1.75vh;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(3), .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(4) {
+  margin-top: 2vh;
 }
 .blog .postagens .TabsBlog .tab-pane .botao {
   background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);

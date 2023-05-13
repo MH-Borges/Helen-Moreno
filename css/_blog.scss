@@ -38,13 +38,48 @@
                         align-items: center;
                         justify-content: center;
                         object-fit: cover;
-                        padding: 0 0.5vw;
+                        padding: 0 0.7vw;
+                        position: relative;
 
                         img {
                             border-radius: 50%;
                             width: 100%;
                             height: 100%;
                         }
+                        a{
+                            display: none;
+                        }
+
+                        &:hover{
+                            a{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;                            position: absolute;
+
+                                svg{
+                                    z-index: 10;
+                                    width: 45%;
+                                    height: auto;
+                                    path{
+                                        fill: $Branco;
+                                    }
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: -2.5%;
+                                    right: 15%;
+                                    width: 70%;
+                                    height: 105%;
+                                    background: rgba(33, 33, 33, 0.8);
+                                    backdrop-filter: blur(0.05vw);
+                                    z-index: 1;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                        
                     }
 
                     .infosIconPerfil {
@@ -1019,8 +1054,8 @@
                     right: 0;
                     bottom: 0;
                     left: -5px;
-                    width: 25px;
-                    height: 25px;
+                    width: 1.8vw;
+                    height: 1.8vw;
                     border-radius: 50%;
                     border: 2px solid $Branco;
                     transition: all .5s;
@@ -1121,6 +1156,7 @@
                     height: 150vh;
                     display: flex;
                     flex-wrap: wrap;
+                    position: relative;
                     .postLateral{
                         padding: 5vh 0;
                         width: 25%;
@@ -1317,8 +1353,8 @@
                                 position: absolute;
                                 right: 0;
                                 top: 0;
-                                width: 3vw;
-                                height: 19vh;
+                                width: 5vw;
+                                height: 37vh;
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
@@ -1326,7 +1362,7 @@
                                 border-top-right-radius: 2vw;
                                 border-bottom-left-radius: 2vw;
                                 .like, .comment, .visu, .tag{
-                                    padding: 0.2vh 0.75vw;
+                                    padding: 0.2vh 1vw;
                                     z-index: 5 !important;
                                     svg{
                                         width: 100%;
@@ -1377,11 +1413,12 @@
                             }
                             p{
                                 width: 100%;
-                                font-size: 1vw;
+                                text-align: left;
+                                font-size: 1.5vw;
                                 font-weight: 200;
-                                padding: 0.5vh 0;
+                                padding: 2vh 2.5vw 1vh;
                                 line-height: auto;
-                                margin: 0.5vh 0 2vh;
+                                margin: 0.5vh 0 1vh;
                                 button{
                                     font-weight: 500;
                                     margin-right: 0.75vw;
@@ -1394,9 +1431,361 @@
                                 }
                             }
                             h2{
-                                font-size: 1.6vw;
+                                font-size: 2.8vw;
                                 text-align: left;
-                                padding: 1vh 1vw 2.5vh 1.5vw;
+                                padding: 1vh 2.5vw 2.5vh;
+                                line-height: auto;
+                            }
+                            &:hover{
+                                .iconesInfos{
+                                    width: 12vw;
+                                    background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+                                    .like, .comment, .visu, .tag{
+                                        width: 100%;
+                                        display: flex;
+                                        svg{
+                                            width: 25%;
+                                        }
+                                        span{
+                                            width: 75%;
+                                            display: flex;
+                                            opacity: 1;
+                                            text-align: center;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 1.2vw;
+                                            font-weight: 800;
+                                        }
+                                    }
+                                    .tag{
+                                        span{
+                                            font-size: 1vw; 
+                                        }
+                                    }
+                                    &::before{
+                                        display: none;
+                                    }
+                                }  
+                                .subTags{
+                                    display: flex;
+                                    position: absolute;
+                                    flex-direction: column;
+                                    top: 27.5%;
+                                    right: 0;
+                                    .subtag{
+                                        text-align: right;
+                                        margin: 0.65vh 0;
+                                        padding: 0.75vh 0.3vw;
+                                        width: 11.5vw;
+                                        font-size: 1.2vw;
+                                        font-weight: 500;
+                                        border-top-left-radius: 1.5vw;
+                                        border-bottom-left-radius: 1.5vw;
+                                        background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+                                        &:first-child{margin-top: 0;} 
+                                        &:last-child{margin-bottom: 0;}   
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &::before{
+                        z-index: -1;
+                        content: '';
+                        position: absolute;
+                        width: 10vw;
+                        height: 20vh;
+                        background: $RoxoEscuro;
+                        top: 35%;
+                        left: -5%;
+                        border-radius: 50%;
+                        filter: blur(5vw);
+                    }
+                }
+
+                .blogEsquerda{
+                    width: 100%;
+                    height: 138vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .postMaior{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 1vh 1vw;
+                        .BlockPost{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            object-fit: cover;
+                            border-radius: 2vw;
+                            color: $Branco;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(33, 33, 33, 0.8);
+                                backdrop-filter: blur(0.05vw);
+                                z-index: -1;
+                                border-radius: 2vw;
+                            }
+                            .iconesInfos{
+                                border: 1px solid $Branco;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: 5vw;
+                                height: 37vh;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+                                border-top-right-radius: 2vw;
+                                border-bottom-left-radius: 2vw;
+                                .like, .comment, .visu, .tag{
+                                    padding: 0.2vh 1vw;
+                                    z-index: 5 !important;
+                                    svg{
+                                        width: 100%;
+                                        height: auto;
+                                        path{
+                                            fill: $Branco;
+                                        }
+                                    }
+                                    span{
+                                        display: none;
+                                        opacity: 0;
+                                    }
+                                }
+                                .like{
+                                    margin-top: 1vh;
+                                }
+                                .tag{
+                                    margin-bottom: 1vh;
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    z-index: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-top-right-radius: 2vw;
+                                    border-bottom-left-radius: 2vw;
+                                    background: rgba(33, 33, 33, 0.5);
+                                    backdrop-filter: blur(0.05vw);
+                                }
+                            }
+                            .subTags{
+                                display: none;
+                            }
+                            .imgCard{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    border-top-left-radius: 2vw;
+                                    border-top-right-radius: 2vw;
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            p{
+                                width: 100%;
+                                text-align: left;
+                                font-size: 1.5vw;
+                                font-weight: 200;
+                                padding: 2vh 2.5vw 1vh;
+                                line-height: auto;
+                                margin: 0.5vh 0 1vh;
+                                button{
+                                    font-weight: 500;
+                                    margin-right: 0.75vw;
+                                    color: $Branco;
+                                    background: none;
+                                    border: none;
+                                    &:hover{
+                                        color:$BrancoEscuro;
+                                    }
+                                }
+                            }
+                            h2{
+                                font-size: 2.8vw;
+                                text-align: left;
+                                padding: 1vh 2.5vw 2.5vh;
+                                line-height: auto;
+                            }
+                            &:hover{
+                                .iconesInfos{
+                                    width: 12vw;
+                                    background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+                                    .like, .comment, .visu, .tag{
+                                        width: 100%;
+                                        display: flex;
+                                        svg{
+                                            width: 25%;
+                                        }
+                                        span{
+                                            width: 75%;
+                                            display: flex;
+                                            opacity: 1;
+                                            text-align: center;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 1.2vw;
+                                            font-weight: 800;
+                                        }
+                                    }
+                                    .tag{
+                                        span{
+                                            font-size: 1vw; 
+                                        }
+                                    }
+                                    &::before{
+                                        display: none;
+                                    }
+                                }  
+                                .subTags{
+                                    display: flex;
+                                    position: absolute;
+                                    flex-direction: column;
+                                    top: 28.5%;
+                                    right: 0;
+                                    .subtag{
+                                        text-align: right;
+                                        margin: 0.65vh 0;
+                                        padding: 0.75vh 0.3vw;
+                                        width: 11.5vw;
+                                        font-size: 1.2vw;
+                                        font-weight: 500;
+                                        border-top-left-radius: 1.5vw;
+                                        border-bottom-left-radius: 1.5vw;
+                                        background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
+                                        &:first-child{margin-top: 0;} 
+                                        &:last-child{margin-bottom: 0;}   
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .postsMenores{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        padding: 1vh 0;
+                        .BlockPost{
+                            width: 48.5%;
+                            height: 48.5%;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            object-fit: cover;
+                            border-radius: 2vw;
+                            color: $Branco;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(33, 33, 33, 0.8);
+                                backdrop-filter: blur(0.05vw);
+                                z-index: -1;
+                                border-radius: 2vw;
+                            }
+                            .iconesInfos{
+                                border: 1px solid $Branco;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: 3vw;
+                                height: 19vh;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+                                border-top-right-radius: 2vw;
+                                border-bottom-left-radius: 2vw;
+                                .like, .comment, .visu, .tag{
+                                    padding: 0.2vh 0.75vw;
+                                    z-index: 5 !important;
+                                    svg{
+                                        width: 100%;
+                                        height: auto;
+                                        path{
+                                            fill: $Branco;
+                                        }
+                                    }
+                                    span{
+                                        display: none;
+                                        opacity: 0;
+                                    }
+                                }
+                                .like{
+                                    margin-top: 1vh;
+                                }
+                                .tag{
+                                    margin-bottom: 1vh;
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    z-index: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-top-right-radius: 2vw;
+                                    border-bottom-left-radius: 2vw;
+                                    background: rgba(33, 33, 33, 0.5);
+                                    backdrop-filter: blur(0.05vw);
+                                }
+                            }
+                            .subTags{
+                                display: none;
+                            }
+                            .imgCard{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                
+                                img{
+                                    border-top-left-radius: 2vw;
+                                    border-top-right-radius: 2vw;
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            p{
+                                width: 100%;
+                                font-size: 1vw;
+                                font-weight: 200;
+                                padding: 1vh 0;
+                                line-height: auto;
+                                margin: 0;
+                                button{
+                                    font-weight: 500;
+                                    margin-right: 0.75vw;
+                                    color: $Branco;
+                                    background: none;
+                                    border: none;
+                                    &:hover{
+                                        color:$BrancoEscuro;
+                                    }
+                                }
+                            }
+                            h2{
+                                font-size: 1.5vw;
+                                text-align: left;
+                                padding: 0.25vh 1vw 2.5vh;
                                 line-height: auto;
                             }
                             &:hover{
@@ -1433,7 +1822,7 @@
                                     display: flex;
                                     position: absolute;
                                     flex-direction: column;
-                                    top: 14.5%;
+                                    top: 29.5%;
                                     right: 0;
                                     .subtag{
                                         text-align: right;
@@ -1450,13 +1839,15 @@
                                     }
                                 }
                             }
+                            &:nth-child(1), &:nth-child(2){
+                                margin-bottom: 1.75vh;
+                            }
+                            &:nth-child(3), &:nth-child(4){
+                                margin-top: 2vh;
+                            }
                         }
                     }
-                }
-
-                .blogEsquerda{
-                    width: 100%;
-                    height: 138.5vh; 
+                    
                 }
 
                 .botao {
