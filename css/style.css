@@ -191,43 +191,6 @@ body header nav ul .logo img {
   width: 100%;
   height: auto;
 }
-body header nav ul .blogDrop {
-  position: relative;
-  padding-right: 3vw;
-  display: flex;
-  align-items: center;
-}
-body header nav ul .blogDrop a:nth-child(2) {
-  position: absolute;
-  right: 0;
-  padding: 0 0.25vw 0 1.5vw;
-}
-body header nav ul .blogDrop a:nth-child(2) svg {
-  width: 1.4vw;
-}
-body header nav ul .blogDrop .dropdown-menu {
-  background: none;
-  border: solid 1px #D9D9D9;
-  padding: 1vh 0.5vw;
-  border-radius: 1vw;
-  margin-left: -8vw;
-  margin-top: 1.5vh;
-  background-color: #212121;
-}
-body header nav ul .blogDrop .dropdown-menu .dropdown-item {
-  padding: 0.75vh 0.5vw;
-  color: #D9D9D9;
-  border-radius: 1vw;
-}
-body header nav ul .blogDrop .dropdown-menu .dropdown-item:nth-child(2) {
-  position: relative;
-}
-body header nav ul .blogDrop .dropdown-menu .dropdown-item:hover {
-  background-color: #080808;
-}
-body header nav ul .blogDrop:hover a:nth-child(2) svg path {
-  fill: #D9662B;
-}
 body section {
   width: 75%;
   height: 100vh;
@@ -1934,6 +1897,13 @@ body footer a svg {
 .blog .StarBackground_blog svg:nth-child(3), .blog .StarBackground_blog svg:nth-child(5), .blog .StarBackground_blog svg:nth-child(6) {
   height: 50vh;
 }
+.blog .StarBackground_blog .newBlock {
+  width: 100%;
+  height: auto;
+}
+.blog .StarBackground_blog .newBlock svg:nth-child(2) {
+  height: 50vh;
+}
 .blog header nav ul {
   padding-right: 0;
 }
@@ -1991,6 +1961,11 @@ body footer a svg {
   -webkit-backdrop-filter: blur(0.05vw);
           backdrop-filter: blur(0.05vw);
   z-index: 1;
+  border-radius: 50%;
+}
+.blog header nav ul .iconPerfil .semLogin {
+  width: 25% !important;
+  height: 60%;
   border-radius: 50%;
 }
 .blog header nav ul .iconPerfil .infosIconPerfil {
@@ -2053,6 +2028,7 @@ body footer a svg {
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.25s all;
+  z-index: 5;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .planeta {
   text-align: center;
@@ -2687,15 +2663,15 @@ body footer a svg {
 }
 .blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag {
   position: absolute;
-  z-index: 5 !important;
+  z-index: 10 !important;
   border: none;
-  background: none;
   width: 30%;
   height: 18%;
   top: 20%;
   display: flex;
   justify-content: center;
   transition: ease-in-out 0.5s all;
+  border-radius: 50%;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag svg {
   position: absolute;
@@ -2704,9 +2680,6 @@ body footer a svg {
   padding: 0.5vh 0.4vw;
   border: #D9D9D9 1px solid;
   border-radius: 50%;
-}
-.blog .headerTags .MenuBlog .blockPlaneta .estrelinhaSubtag svg:hover {
-  background-color: #3A008C;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .menor {
   width: 25%;
@@ -2846,6 +2819,7 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane {
   height: 100%;
   color: #D9D9D9;
+  position: relative;
 }
 .blog .postagens .TabsBlog .tab-pane h2 {
   text-align: center;
@@ -2990,7 +2964,6 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos {
   width: 7vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .iconesInfos .tag {
   width: 100%;
@@ -3031,7 +3004,6 @@ body footer a svg {
   font-weight: 500;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postLateral .BlockPost:hover .subTags .subtag:first-child {
   margin-top: 0;
@@ -3159,7 +3131,6 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos {
   width: 12vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos .tag {
   width: 100%;
@@ -3200,7 +3171,6 @@ body footer a svg {
   font-weight: 500;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag:first-child {
   margin-top: 0;
@@ -3208,23 +3178,38 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .subTags .subtag:last-child {
   margin-bottom: 0;
 }
-.blog .postagens .TabsBlog .tab-pane .blogCentro::before {
-  z-index: -1;
-  content: "";
+.blog .postagens .TabsBlog .tab-pane .blogCentro .backgroungBallBlur {
+  z-index: -2 !important;
   position: absolute;
+  top: -10vh;
+  left: -5vw;
+  border-radius: 50%;
+  width: 12vw;
+  height: 23vh;
+  opacity: 0.75;
+  animation: movingspace 10s ease-in-out infinite;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .secondBall {
+  top: 40%;
+  left: 90%;
   width: 10vw;
   height: 20vh;
-  background: #3A008C;
-  top: 35%;
-  left: -5%;
-  border-radius: 50%;
-  filter: blur(5vw);
+  animation: movingspace2 12s ease-in-out infinite;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .thirdBall {
+  top: 75%;
+  left: 35%;
+  width: 20vw;
+  height: 40vh;
+  animation: movingspace3 8s ease-in-out infinite;
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda {
   width: 100%;
-  height: 138vh;
+  height: 150vh;
   display: flex;
   flex-wrap: wrap;
+  padding: 5vh 0;
+  position: relative;
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior {
   width: 50%;
@@ -3347,7 +3332,6 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos {
   width: 12vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos .tag {
   width: 100%;
@@ -3388,7 +3372,6 @@ body footer a svg {
   font-weight: 500;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .subTags .subtag:first-child {
   margin-top: 0;
@@ -3517,7 +3500,6 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos {
   width: 7vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .like, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .comment, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .visu, .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .iconesInfos .tag {
   width: 100%;
@@ -3558,7 +3540,6 @@ body footer a svg {
   font-weight: 500;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:hover .subTags .subtag:first-child {
   margin-top: 0;
@@ -3572,8 +3553,69 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(3), .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postsMenores .BlockPost:nth-child(4) {
   margin-top: 2vh;
 }
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .backgroungBallBlur {
+  z-index: -2 !important;
+  position: absolute;
+  top: 20%;
+  right: -5vw;
+  border-radius: 50%;
+  width: 12vw;
+  height: 23vh;
+  opacity: 0.75;
+  animation: movingspace3 10s ease-in-out infinite;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .secondBall {
+  top: 65%;
+  right: 85%;
+  width: 15vw;
+  height: 30vh;
+  animation: movingspace4 7s ease-in-out infinite;
+}
+@keyframes movingspace {
+  0% {
+    filter: blur(5vw);
+  }
+  50% {
+    filter: blur(10vw);
+  }
+  100% {
+    filter: blur(5vw);
+  }
+}
+@keyframes movingspace2 {
+  0% {
+    filter: blur(1vw);
+  }
+  50% {
+    filter: blur(3vw);
+  }
+  100% {
+    filter: blur(1vw);
+  }
+}
+@keyframes movingspace3 {
+  0% {
+    filter: blur(3vw);
+  }
+  50% {
+    filter: blur(8vw);
+  }
+  100% {
+    filter: blur(3vw);
+  }
+}
+@keyframes movingspace4 {
+  0% {
+    filter: blur(2vw);
+  }
+  50% {
+    filter: blur(6vw);
+  }
+  100% {
+    filter: blur(2vw);
+  }
+}
 .blog .postagens .TabsBlog .tab-pane .botao {
-  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
   padding: 0.5vh 3vw;
   text-align: center;
   color: #D9D9D9;
@@ -3584,6 +3626,9 @@ body footer a svg {
   font-weight: 500;
   margin: 3vh 0 3vh 27vw;
   border: none;
+  position: absolute;
+  bottom: -6vh;
+  z-index: 10;
 }
 .blog .postagens .TabsBlog .tab-pane .botao:hover {
   transform: translateY(5px);
@@ -3623,6 +3668,209 @@ body footer a svg {
 }
 .blog .contatoBlog .botao:hover {
   transform: translateY(5px);
+}
+.blog .transition {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 9999 !important;
+  height: 100vh;
+  width: 100vw;
+  background: #080808;
+  animation: zoom ease-in-out 1.3s infinite;
+  overflow: hidden;
+}
+.blog .transition .transit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+  font-size: 1vmin;
+  width: 3em;
+  height: 3em;
+  background: #BFBFBF;
+  border-radius: 90% 95% 85% 105%;
+  mix-blend-mode: screen;
+  filter: hue-rotate(0deg);
+  animation: wobble calc(150ms * var(--t)) linear infinite;
+  transform-origin: -var(--y) -var(--x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .transition .transit::after {
+  font-size: 1em;
+  white-space: nowrap;
+}
+.blog .transition .transit:nth-child(1) {
+  --x: -53%;
+  --y: -53%;
+  --t: 37;
+}
+.blog .transition .transit:nth-child(2) {
+  --x: -47%;
+  --y: -52%;
+  --t: 58;
+}
+.blog .transition .transit:nth-child(3) {
+  --x: -45%;
+  --y: -50%;
+  --t: 46;
+}
+.blog .transition .transit:nth-child(4) {
+  --x: -53%;
+  --y: -45%;
+  --t: 72;
+}
+.blog .transition .transit:nth-child(5) {
+  --x: -55%;
+  --y: -45%;
+  --t: 62;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes wobble {
+  to {
+    filter: hue-rotate(360deg);
+    transform: translate(var(-50%), var(-50%)) rotate(360deg);
+  }
+}
+
+.postagem_Blog {
+  position: relative;
+}
+.postagem_Blog .StarBackground_blog {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.postagem_Blog .StarBackground_blog svg {
+  width: 100%;
+  height: 100vh;
+}
+.postagem_Blog .StarBackground_blog svg:nth-child(3), .postagem_Blog .StarBackground_blog svg:nth-child(5), .postagem_Blog .StarBackground_blog svg:nth-child(6) {
+  height: 50vh;
+}
+.postagem_Blog .StarBackground_blog .newBlock {
+  width: 100%;
+  height: auto;
+}
+.postagem_Blog .StarBackground_blog .newBlock svg:nth-child(2) {
+  height: 50vh;
+}
+.postagem_Blog header nav ul {
+  padding-right: 0;
+}
+.postagem_Blog header nav ul .iconPerfil {
+  width: 15vw;
+  height: 12vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0 0.7vw;
+  position: relative;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil a {
+  display: none;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil:hover a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil:hover a svg {
+  z-index: 10;
+  width: 45%;
+  height: auto;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil:hover a svg path {
+  fill: #D9D9D9;
+}
+.postagem_Blog header nav ul .iconPerfil .ftPerfil:hover a::before {
+  content: "";
+  position: absolute;
+  top: -2.5%;
+  right: 15%;
+  width: 70%;
+  height: 105%;
+  background: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(0.05vw);
+          backdrop-filter: blur(0.05vw);
+  z-index: 1;
+  border-radius: 50%;
+}
+.postagem_Blog header nav ul .iconPerfil .semLogin {
+  width: 25% !important;
+  height: 60%;
+  border-radius: 50%;
+}
+.postagem_Blog header nav ul .iconPerfil .infosIconPerfil {
+  width: 70%;
+  height: 100%;
+  color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vh 0.25vw;
+}
+.postagem_Blog header nav ul .iconPerfil .infosIconPerfil p {
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+.postagem_Blog header nav ul .iconPerfil .infosIconPerfil span {
+  width: 100%;
+  font-size: 0.75vw;
+  padding: 0;
+  margin-top: 0.5vh;
+  text-align: center;
+}
+.postagem_Blog header nav ul .iconPerfil .infosIconPerfil a {
+  text-align: center;
+  width: 95%;
+  font-size: 1.1vw;
+  border-radius: 2vw;
+  margin-top: 1.5vh;
+  background: linear-gradient(90deg, #9300B2 0%, #D9662B 100%);
+}
+.postagem_Blog header nav ul .iconPerfil .infosIconPerfil a:hover {
+  color: #D9D9D9;
+}
+.postagem_Blog section {
+  width: 75%;
+  height: 100vh;
+  z-index: 5;
 }
 
 .contato {

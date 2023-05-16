@@ -45,9 +45,3 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar2.render();
 
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  
-});
-
-//
