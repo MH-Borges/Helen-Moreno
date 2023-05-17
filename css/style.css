@@ -2665,8 +2665,8 @@ body footer a svg {
   position: absolute;
   z-index: 10 !important;
   border: none;
-  width: 3.25vw;
-  height: 6vh;
+  width: 3vw;
+  height: 3vw;
   top: 20%;
   display: flex;
   justify-content: center;
@@ -2677,13 +2677,13 @@ body footer a svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 0.5vh 0.4vw;
+  padding: 0.75vh 0.4vw;
   border: #D9D9D9 1px solid;
   border-radius: 50%;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .menor {
-  width: 2.5vw;
-  height: 4.5vh;
+  width: 2.25vw;
+  height: 2.25vw;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .estrelaBot {
   top: 62%;
@@ -2715,7 +2715,7 @@ body footer a svg {
   bottom: 0;
   left: 0;
   width: 4.5vw;
-  height: 8.5vh;
+  height: 4.5vw;
   background: #080808;
   border: solid 2px #D9D9D9;
   border-radius: 50%;
@@ -2726,11 +2726,11 @@ body footer a svg {
   content: "";
   position: absolute;
   margin: auto;
-  top: 1.35vw;
+  top: 2vh;
   right: 0;
   bottom: 0;
-  left: 1.4vw;
-  width: 0.9vw;
+  left: 1.25vw;
+  width: 1vw;
   height: 0.25vh;
   background: #D9D9D9;
   transform: rotate(45deg);
@@ -2740,14 +2740,14 @@ body footer a svg {
   content: "";
   position: absolute;
   margin: auto;
-  top: -5px;
+  top: -1vh;
   right: 0;
   bottom: 0;
-  left: -5px;
-  width: 1.8vw;
-  height: 1.8vw;
+  left: -0.75vw;
+  width: 1.75vw;
+  height: 1.75vw;
   border-radius: 50%;
-  border: 2px solid #D9D9D9;
+  border: 0.3vh solid #D9D9D9;
   transition: all 0.5s;
 }
 .blog .headerTags .searchBar input {
@@ -2788,7 +2788,7 @@ body footer a svg {
   top: 0;
   left: 0;
   width: 1.5vw;
-  height: 0.2vh;
+  height: 0.3vh;
   border: none;
   background: #D9D9D9;
   border-radius: 0%;
@@ -3013,13 +3013,14 @@ body footer a svg {
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral {
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 2vw;
+  padding: 5vh 2vw;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost {
   width: 100%;
-  height: 93.5%;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3107,9 +3108,9 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost p {
   width: 100%;
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   font-weight: 200;
-  padding: 2vh 2.5vw 1vh;
+  padding: 1vh 2vw 1vh;
   line-height: auto;
   margin: 0.5vh 0 1vh;
 }
@@ -3124,10 +3125,15 @@ body footer a svg {
   color: #BFBFBF;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost h2 {
-  font-size: 2.8vw;
+  font-size: 1.8vw;
   text-align: left;
-  padding: 1vh 2.5vw 2.5vh;
+  padding: 1vh 1vw 1vh 2vw;
   line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost h3 {
+  font-size: 1.25vw;
+  font-weight: 200;
+  padding: 1vh 1.5vw 1vh 2vw;
 }
 .blog .postagens .TabsBlog .tab-pane .blogCentro .postCentral .BlockPost:hover .iconesInfos {
   width: 12vw;
@@ -3216,7 +3222,7 @@ body footer a svg {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 1vh 1vw;
+  padding: 1vh 2vw 1vh 0;
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost {
   width: 100%;
@@ -3308,9 +3314,9 @@ body footer a svg {
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost p {
   width: 100%;
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   font-weight: 200;
-  padding: 2vh 2.5vw 1vh;
+  padding: 1vh 2vw 1vh;
   line-height: auto;
   margin: 0.5vh 0 1vh;
 }
@@ -3325,10 +3331,15 @@ body footer a svg {
   color: #BFBFBF;
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost h2 {
-  font-size: 2.8vw;
+  font-size: 1.8vw;
   text-align: left;
-  padding: 1vh 2.5vw 2.5vh;
+  padding: 1vh 1vw 1vh 2vw;
   line-height: auto;
+}
+.blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost h3 {
+  font-size: 1.25vw;
+  font-weight: 200;
+  padding: 1vh 3.5vw 1vh 2vw;
 }
 .blog .postagens .TabsBlog .tab-pane .blogEsquerda .postMaior .BlockPost:hover .iconesInfos {
   width: 12vw;
