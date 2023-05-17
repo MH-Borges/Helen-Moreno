@@ -980,8 +980,8 @@
                     position: absolute;
                     z-index: 10 !important;
                     border: none;
-                    width: 30%;
-                    height: 18%;
+                    width: 3.25vw;
+                    height: 6vh;
                     top: 20%;
                     display: flex;
                     justify-content: center;
@@ -999,8 +999,8 @@
                 }
 
                 .menor {
-                    width: 25%;
-                    height: 15%;
+                    width: 2.5vw;
+                    height: 4.5vh;
                 }
 
                 .estrelaBot {
@@ -1036,7 +1036,7 @@
                 bottom: 0;
                 left: 0;
                 width: 4.5vw;
-                height: 85%;
+                height: 8.5vh;
                 background: $Preto;
                 border: solid 2px $Branco;
                 border-radius: 50%;
@@ -1050,7 +1050,7 @@
                     top: 1.35vw;
                     right: 0;
                     bottom: 0;
-                    left: 1.35vw;
+                    left: 1.4vw;
                     width: 0.9vw;
                     height: 0.25vh;
                     background: $Branco;
@@ -1114,7 +1114,7 @@
                         top: 0;
                         left: 0;
                         width: 1.5vw;
-                        height: 2px;
+                        height: 0.2vh;
                         border: none;
                         background: $Branco;
                         border-radius: 0%;

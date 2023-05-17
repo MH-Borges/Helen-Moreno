@@ -2665,8 +2665,8 @@ body footer a svg {
   position: absolute;
   z-index: 10 !important;
   border: none;
-  width: 30%;
-  height: 18%;
+  width: 3.25vw;
+  height: 6vh;
   top: 20%;
   display: flex;
   justify-content: center;
@@ -2682,8 +2682,8 @@ body footer a svg {
   border-radius: 50%;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .menor {
-  width: 25%;
-  height: 15%;
+  width: 2.5vw;
+  height: 4.5vh;
 }
 .blog .headerTags .MenuBlog .blockPlaneta .estrelaBot {
   top: 62%;
@@ -2715,7 +2715,7 @@ body footer a svg {
   bottom: 0;
   left: 0;
   width: 4.5vw;
-  height: 85%;
+  height: 8.5vh;
   background: #080808;
   border: solid 2px #D9D9D9;
   border-radius: 50%;
@@ -2729,7 +2729,7 @@ body footer a svg {
   top: 1.35vw;
   right: 0;
   bottom: 0;
-  left: 1.35vw;
+  left: 1.4vw;
   width: 0.9vw;
   height: 0.25vh;
   background: #D9D9D9;
@@ -2788,7 +2788,7 @@ body footer a svg {
   top: 0;
   left: 0;
   width: 1.5vw;
-  height: 2px;
+  height: 0.2vh;
   border: none;
   background: #D9D9D9;
   border-radius: 0%;
@@ -3882,25 +3882,15 @@ body footer a svg {
 }
 .contato .blockInfosContato {
   width: 100%;
-  height: 130vh;
+  height: 115vh;
   position: relative;
   overflow-y: hidden;
 }
 .contato .blockInfosContato svg {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 135%;
   pointer-events: none;
-}
-.contato .blockInfosContato svg:nth-child(1) {
-  animation: floater 12s ease-in-out infinite;
-}
-.contato .blockInfosContato svg:nth-child(2) {
-  animation: floater 8s ease-in-out infinite;
-}
-.contato .blockInfosContato svg:nth-child(3) {
-  animation: floater 8s ease-in-out infinite;
-  z-index: 10;
 }
 .contato .blockInfosContato svg .moon {
   animation: floater 10s ease-in-out infinite;
@@ -4022,65 +4012,138 @@ body footer a svg {
     filter: drop-shadow(0px 0px 10px rgb(204, 16, 29));
   }
 }
-.contato .blockInfosContato .infos {
+.contato .blockInfosContato .planetasFundo {
+  animation: floater 12s ease-in-out infinite;
+  margin-top: -15vh;
+}
+.contato .blockInfosContato .naveFundo {
+  margin-top: -25vh;
+}
+.contato .blockInfosContato .maoFundo {
+  z-index: 10;
+  margin-top: -25vh;
+}
+.contato .blockInfosContato .infosBlock {
   z-index: 5;
   color: #000000;
   position: absolute;
+  padding: 0;
+  bottom: 17vh;
+  left: 16.5vw;
+  width: 24vw;
+  height: 31vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contato .blockInfosContato .infosBlock .infos {
+  width: 100%;
+  height: 10.25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contato .blockInfosContato .infosBlock .infos .iconInfos {
+  width: 20%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.25vw;
+  background-color: #A8A8A8;
+  z-index: 5;
+}
+.contato .blockInfosContato .infosBlock .infos .iconInfos svg {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  border-radius: 50%;
+  padding: 0 0.75vw;
+  background-color: #212121;
+}
+.contato .blockInfosContato .infosBlock .infos .iconInfos svg path {
+  fill: #D9D9D9;
+}
+.contato .blockInfosContato .infosBlock .infos .iconInfos .svgIcon {
   padding: 0 1vw;
-  bottom: 14.5%;
-  left: 20vw;
-  animation: floater 8s ease-in-out infinite;
 }
-.contato .blockInfosContato .infos h4 {
-  font-size: 1.25vw;
+.contato .blockInfosContato .infosBlock .infos h4 {
+  z-index: 2 !important;
+  width: 85%;
+  background-color: #A8A8A8;
+  font-size: 1.2vw;
   font-weight: 500;
-  padding: 1vh 0.75vw;
+  padding: 1.5vh 0.5vw 1.5vh 1.5vw;
+  margin: 0;
+  margin-left: -5%;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
 }
-.contato .blockInfosContato .infos h4 a {
+.contato .blockInfosContato .infosBlock .infos h4 a {
   color: #000000;
 }
-.contato .blockInfosContato .infos h4 a:hover {
+.contato .blockInfosContato .infosBlock .infos h4 a:hover {
   color: #D9662B;
 }
-.contato .blockInfosContato .infos h4:nth-child(2) {
-  margin: 6vh 0;
-}
-.contato .blockInfosContato .formBlock {
-  animation: floater 8s ease-in-out infinite;
+.contato .blockInfosContato .tabletBlock {
   z-index: 5;
-  width: 25.2vw;
-  height: 65vh;
+  width: 28vw;
+  height: 72vh;
   position: absolute;
-  right: 11.5vw;
-  top: 26.5%;
-  background-color: #D9D9D9;
-  border-radius: 1.5vw;
+  right: 9.8vw;
+  top: 17vh;
+  background-color: #000000;
+  border-radius: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contato .blockInfosContato .formBlock::before {
-  z-index: 10;
-  width: 100%;
-  height: 100%;
+.contato .blockInfosContato .tabletBlock::before {
   content: "";
   position: absolute;
-  border-radius: 1.5vw;
-  background: rgba(93, 177, 255, 0.1);
-  -webkit-backdrop-filter: blur(0.02vw);
-          backdrop-filter: blur(0.02vw);
-  border: 1px solid rgb(191, 191, 191);
+  width: 26vw;
+  height: 68vh;
+  right: 1vw;
+  top: 2vh;
+  background-color: #212121;
+  border-radius: 1vw;
 }
-.contato .blockInfosContato .formBlock::after {
+.contato .blockInfosContato .tabletBlock::after {
   z-index: 10;
   content: "";
   position: absolute;
   width: 4.5vw;
   height: 4vh;
-  background-color: #080808;
-  top: -2%;
-  left: 42%;
+  background-color: #000000;
+  top: 1.5vh;
+  left: 12vw;
   border-bottom-left-radius: 5vw;
   border-bottom-right-radius: 5vw;
 }
-.contato .blockInfosContato .formBlock .notf {
+.contato .blockInfosContato .tabletBlock .formBlock {
+  z-index: 5;
+  width: 25vw;
+  height: 66vh;
+  background-color: #D9D9D9;
+  border-radius: 0.5vw;
+  position: relative;
+}
+.contato .blockInfosContato .tabletBlock .formBlock::before {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  border-radius: 0.5vw;
+  background: rgba(93, 177, 255, 0.1);
+  -webkit-backdrop-filter: blur(0.02vw);
+          backdrop-filter: blur(0.02vw);
+  border: 1px solid rgb(191, 191, 191);
+}
+.contato .blockInfosContato .tabletBlock .formBlock .notf {
   position: absolute;
   right: 0.5vw;
   top: 1vh;
@@ -4091,7 +4154,7 @@ body footer a svg {
   display: flex;
   align-items: center;
 }
-.contato .blockInfosContato .formBlock .notf .notificacaoWhats {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .notificacaoWhats {
   z-index: 10;
   position: absolute;
   height: 80%;
@@ -4105,14 +4168,14 @@ body footer a svg {
   align-items: center;
   justify-content: center;
 }
-.contato .blockInfosContato .formBlock .notf .notificacaoWhats svg {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .notificacaoWhats svg {
   animation: none;
   width: 75%;
 }
-.contato .blockInfosContato .formBlock .notf .notificacaoWhats svg .notificaStar {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .notificacaoWhats svg .notificaStar {
   fill: #CC101D;
 }
-.contato .blockInfosContato .formBlock .notf .whats {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .whats {
   position: absolute;
   left: 0;
   height: 50%;
@@ -4122,13 +4185,14 @@ body footer a svg {
   border-top-left-radius: 1vw;
   border-bottom-left-radius: 1vw;
 }
-.contato .blockInfosContato .formBlock .notf .whats svg {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .whats svg {
   width: 15%;
+  height: 100%;
   position: relative;
   animation: none;
   padding-left: 0.25vw;
 }
-.contato .blockInfosContato .formBlock .notf .whats p {
+.contato .blockInfosContato .tabletBlock .formBlock .notf .whats p {
   text-align: center;
   font-size: 0.65vw;
   font-weight: 800;
@@ -4138,14 +4202,14 @@ body footer a svg {
   align-items: center;
   padding: 0 0.2vw;
 }
-.contato .blockInfosContato .formBlock .form {
+.contato .blockInfosContato .tabletBlock .formBlock .form {
   width: 100%;
   height: 100%;
   padding: 1vh 1vw;
   display: flex;
   align-items: center;
 }
-.contato .blockInfosContato .formBlock .form .labels {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels {
   width: 100%;
   height: 100%;
   display: flex;
@@ -4153,8 +4217,8 @@ body footer a svg {
   flex-wrap: wrap;
   padding: 6vh 1vw 0.5vh;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox {
-  width: 90%;
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox {
+  width: 95%;
   height: 5vh;
   display: flex;
   position: relative;
@@ -4162,10 +4226,10 @@ body footer a svg {
   border-radius: 1.5vw;
   margin: 0.75vh 0.5vw;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox:nth-child(5) {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox:nth-child(5) {
   height: 13vh;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox input, .contato .blockInfosContato .formBlock .form .labels .BlockBox textarea {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox input, .contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox textarea {
   width: 100%;
   border: none;
   font-size: 1vw;
@@ -4176,11 +4240,11 @@ body footer a svg {
   padding: 1vh 1vw;
   z-index: 10 !important;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox textarea {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox textarea {
   min-height: 11vh !important;
   resize: none;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox span {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox span {
   position: absolute;
   left: 1vw;
   top: 1.1vh;
@@ -4190,35 +4254,23 @@ body footer a svg {
   transition: 0.5s;
   pointer-events: none;
 }
-.contato .blockInfosContato .formBlock .form .labels .BlockBox input:focus ~ span, .contato .blockInfosContato .formBlock .form .labels textarea:focus ~ span, .contato .blockInfosContato .formBlock .form .labels input:valid ~ span, .contato .blockInfosContato .formBlock .form .labels textarea:valid ~ span {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels .BlockBox input:focus ~ span, .contato .blockInfosContato .tabletBlock .formBlock .form .labels textarea:focus ~ span, .contato .blockInfosContato .tabletBlock .formBlock .form .labels input:valid ~ span, .contato .blockInfosContato .tabletBlock .formBlock .form .labels textarea:valid ~ span {
   transform: translate(-0.8vw, -4.5vh);
   font-size: 1.2vw;
   color: #3A008C;
 }
-.contato .blockInfosContato .formBlock .form .labels #Enviar_Contato {
+.contato .blockInfosContato .tabletBlock .formBlock .form .labels #Enviar_Contato {
   position: absolute;
-  font-size: 0.9vw;
+  font-size: 1vw;
   background: #4B0AA6;
   color: #D9D9D9;
-  padding: 0.25vh 1.5vw;
+  padding: 0.5vh 1.5vw;
   border-radius: 1vw;
   bottom: 0;
   right: 0;
   border: none;
   font-weight: 800;
   z-index: 10;
-}
-@media only screen and (min-width: 1300px) {
-  .contato .blockInfosContato .infos {
-    bottom: 16.5%;
-  }
-  .contato .blockInfosContato .infos h4:nth-child(2) {
-    margin: 5.8vh 0;
-  }
-  .contato .blockInfosContato .formBlock {
-    height: 63.5vh;
-    top: 26%;
-  }
 }
 .contato footer {
   z-index: 10;

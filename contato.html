@@ -41,52 +41,70 @@
     </header>
 
     <section class="blockInfosContato">
-        <img src="assets/imgs/Ilustracoes/areaContato_Planetas.svg" onload="SVGInject(this)">
-        <img src="assets/imgs/Ilustracoes/areaContato.svg" onload="SVGInject(this)">
-        <img src="assets/imgs/Ilustracoes/areaContato_Mao.svg" onload="SVGInject(this)">
+        <img class="planetasFundo" src="assets/imgs/Ilustracoes/areaContato_Planetas.svg" onload="SVGInject(this)">
+        <img class="naveFundo" src="assets/imgs/Ilustracoes/areaContato.svg" onload="SVGInject(this)">
+        <img class="maoFundo" src="assets/imgs/Ilustracoes/areaContato_Mao.svg" onload="SVGInject(this)">
 
+        <div class="infosBlock">
+            <div class="infos">
+                <a href="https://www.instagram.com/helen_moreno_e/" target="_blank" class="iconInfos">
+                    <img src="assets/icones/insta.svg" onload="SVGInject(this)">
+                </a>
+                <h4><a href="https://www.instagram.com/helen_moreno_e/" target="_blank">@helen_moreno_e</a></h4>
+            </div>
 
-        <div class="infos">
-            <h4><a href="https://www.instagram.com/helen_moreno_e/" target="_blank">@helen_moreno_e</a></h4>
-            <h4><a href="mailto:contato@helenmoreno.com.br" target="_blank" >contato@helenmoreno.com.br</a></h4>
-            <h4>Seg - Sex / 09:00 - 18:00</h4>
+            <div class="infos">
+                <a href="mailto:contato@helenmoreno.com.br" target="_blank" class="iconInfos">
+                    <img class="svgIcon" src="assets/icones/email.svg" onload="SVGInject(this)">
+                </a>
+                <h4><a href="mailto:contato@helenmoreno.com.br" target="_blank" >contato@helenmoreno.com.br</a></h4>
+            </div>
+            <div class="infos">
+                <div class="iconInfos">
+                    <img src="assets/icones/relogio.svg" onload="SVGInject(this)">
+                </div>
+                <h4>Seg - Sex / 09:00 - 18:00</h4>
+            </div>
         </div>
 
-        <div class="formBlock">
-            <div class="notf">
-                <div class="notificacaoWhats"><img src="assets/icones/comNotificação.svg" onload="SVGInject(this)"></div>
-                <div class="whats">
-                    <img src="assets/icones/whats.svg" onload="SVGInject(this)">
-                    <p>(41) 99839 - 1191</p>
+        <div class="tabletBlock">
+            <div class="formBlock">
+                <div class="notf">
+                    <div class="notificacaoWhats"><img src="assets/icones/comNotificação.svg" onload="SVGInject(this)"></div>
+                    <div class="whats">
+                        <img src="assets/icones/whats.svg" onload="SVGInject(this)">
+                        <p>(41) 99839 - 1191</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <form class="labels" method="POST">
+                        <div class="BlockBox">
+                            <input type="text" name="nome" id="nome" required>
+                            <span>Nome completo:</span>
+                        </div>
+                        <div class="BlockBox">
+                            <input type="text" name="telefone" id="telefone" required>
+                            <span>Telefone:</span>
+                        </div>
+                        <div class="BlockBox">
+                            <input type="text" name="email" id="email" required>
+                            <span>E-mail:</span>
+                        </div>
+                        <div class="BlockBox">
+                            <input type="text" name="assunto" id="assunto" required>
+                            <span>Assunto:</span>
+                        </div>
+                        <div class="BlockBox">
+                            <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                            <span>Como podemos te ajudar?</span>
+                        </div>
+                        <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
+                        <div class="col-md-12 text-right" id="Alertmsg"></div>
+                    </form>
                 </div>
             </div>
-            <div class="form">
-                <form class="labels" method="POST">
-                    <div class="BlockBox">
-                        <input type="text" name="nome" id="nome" required>
-                        <span>Nome completo:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="telefone" id="telefone" required>
-                        <span>Telefone:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="email" id="email" required>
-                        <span>E-mail:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="assunto" id="assunto" required>
-                        <span>Assunto:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
-                        <span>Como podemos te ajudar?</span>
-                    </div>
-                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
-                    <div class="col-md-12 text-right" id="Alertmsg"></div> 
-                </form>
-            </div>
         </div>
+
     </section>
 
     <footer>
