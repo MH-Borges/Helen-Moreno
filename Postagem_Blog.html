@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,16 +16,21 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
-    
+
     <script src="js/svg-inject.min.js"></script>
 </head>
 
 <body class="postagem_Blog">
 
-    <div class="StarBackground">
+    <div class="StarBackground_Postblog">
         <img src="assets/imgs/estrelas.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/estrelas.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/estrelas_Metade.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/estrelas.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/estrelas.svg" onload="SVGInject(this)">
+        <img src="assets/imgs/estrelas_Metade.svg" onload="SVGInject(this)">
     </div>
-    
+
     <div class="toTop">
         <img class="foguete" src="assets/icones/Foguete.svg" onload="SVGInject(this)">
     </div>
@@ -53,15 +59,182 @@
         </nav>
     </header>
 
-    <section>
+    <section class="post">
+
+        <div class="postagem_Comentario">
+            <div class="Postagem">
+                <div class="banner">
+                    <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3756168.jpg" alt="">
+                </div>
+                <div class="tag">
+                    <h2>Gestão de negocios</h2>
+                </div>
+                <div class="subtags">
+                    <div class="subtag">Contatos</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Organização</div>
+                    <div class="subtag">Em ação</div>
+                    <div class="subtag">Como fazer</div>
+                </div>
+                <div class="header">
+                    <div class="imgPerfil">
+                        <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                    </div>
+                    <div class="nomeTag">
+                        <p>Helen Cristina Moreno Emerenciano</p>
+                        <span>administradora</span>
+                    </div>
+                    <div class="data">
+                        <p>99 de janeiro de 9999</p>
+                    </div>
+                </div>
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                <div class="blockContent">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper ut sem at pretium. Etiam in
+                        nisl in enim sagittis congue. Nulla tincidunt iaculis feugiat. Aliquam tempor sem risus, et
+                        iaculis dolor pellentesque sit amet. Quisque dapibus volutpat velit, vel faucibus nibh tempor
+                        nec. Curabitur eu faucibus dui. Aenean scelerisque est aliquet eros ornare, mattis auctor mauris
+                        malesuada.
+                        <br><br>
+                        Mauris at pulvinar sapien. Mauris faucibus ullamcorper purus id aliquam. Nulla at consectetur
+                        erat. Nam quis viverra libero. Fusce suscipit velit ultrices blandit mattis. Integer egestas,
+                        erat ac porta vehicula, ex diam dictum nunc, id rutrum nulla ante ac lorem. Nunc et nibh ante.
+                        Sed id urna gravida, vehicula metus quis, placerat lorem. Donec vestibulum feugiat congue. Morbi
+                        rhoncus semper viverra. Cras in ipsum et felis euismod tempus at ut arcu. Vestibulum
+                        pellentesque, magna in molestie congue, ex nisi porta ante, ut luctus leo leo id magna.
+                        <br><br>
+                        Morbi nec neque quis neque sodales consectetur. Proin volutpat fermentum nibh. Nam vestibulum
+                        turpis lectus, ac rhoncus elit fringilla vel. Phasellus tempor quis lectus ut fringilla. Nullam
+                        elementum malesuada vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                        aliquam sit amet enim quis congue. Suspendisse viverra viverra leo a viverra.
+                        <br><br>
+                        Morbi nec neque quis neque sodales consectetur. Proin volutpat fermentum nibh. Nam vestibulum
+                        turpis lectus, ac rhoncus elit fringilla vel. Phasellus tempor quis lectus ut fringilla. Nullam
+                        elementum malesuada vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                        aliquam sit amet enim quis congue. Suspendisse viverra viverra leo a viverra.</p>
+                </div>
+                <div class="reacoes">
+                    <div class="like">
+                        <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                        <p>9999</p>
+                    </div>
+                    <div class="comentario">
+                        <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
+                        <p>9999</p>
+                    </div>
+                    <div class="view">
+                        <img src="assets/icones/visualizacao.svg" onload="SVGInject(this)">
+                        <p>9999</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="comentarios">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <div class="commentBlock">
+                    <div class="imgPerfil">
+                        <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                    </div>
+                    <div class="infoscomment">
+                        <h5>Mariana Moreno Emerenciano</h5>
+                        <span>@mariana_moreno04</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                        <div class="reacoes">
+                            <button class="comentario">
+                                <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
+                                <p>999 Respostas</p>
+                            </button>
+                            <div class="likes">
+                                <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                <p>999 likes</p>
+                            </div>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div class="comentariosInside">
+                            <div class="subcomment">
+                                <div class="imgPerfil">
+                                    <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                                </div>
+                                <div class="infosSubcomment">
+                                    <h6>Julia vitoria Moreno Emerenciano</h6>
+                                    <span>@Julias.vit</span>
+                                    <p>Sua bobona, eu sou a melhor a irmã :D</p>
+                                    <div class="reacoes">
+                                        <div class="like">
+                                            <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                            <p>999 likes</p>
+                                        </div>
+                                        <button>Responder</button>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <aside>
+            <!-- <div class="searchBar">
+                <input type="text" placeholder="Digite o título da postagem.">
+                <div class="search"></div>
+            </div>
+
+            <h4>Confira os últimos posts do blog:</h4>
+            <div class="miniBlockPost">
+                <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
+                <p><a href="">por Helen Moreno</a>| 99/99/9999</p>
+                <h5>Lorem ipsum dolon adgfvsdg sdfashgsdfbasvc hasdfa</h5>
+            </div>
+            <a href="">Ver tudo</a> -->
+        </aside>
+
+    </section>
+
+    <!-- <section class="recomendacoes">
+        <h4>Eai, gostou?</h4>
+        <h5>Conheça mais posts com a mesma tag:</h5>
+
+        <div class="postagens">
+            <div class="post">
+                <img src="assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
+                <div style="background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);" class="iconesInfos">
+                    <div class="like"><img src="assets/icones/like.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="comment"><img src="assets/icones/comentarios.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="visu"><img src="assets/icones/visualizacao.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="tag"><img src="assets/icones/estrela4pontas.svg"
+                            onload="SVGInject(this)"><span>Gestão de negocios</span></div>
+                </div>
+                <div class="subTags">
+                    <div class="subtag">Do zero</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Organização</div>
+                    <div class="subtag">Ação</div>
+                </div>
+                <p><a href=""></a> | 99/99/9999</p>
+                <h2>lorem ipdfsdnbgf hdfsbasjhfdb asfbasfbashdb sdfagbsdhafg</h2>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="contatoPostBlog">
+        <h4>Gostou? Quer mais? <br> Me mande uma mensagem</h4>
+        <h3>Conheça mais deste universo!</h3>
+        <a class="botao btncontato" href="contato.html">Entre em contato comigo!</a>
     </section>
 
     <footer>
         <img class="fundo" src="assets/imgs/rodape.png" alt="">
         <img src="assets/logos/Lg_branca_H.png" alt="">
         <p>Todos os direitos reservados &copy; 2023.</p>
-        <a href="https://www.universofarol.com.br"><img src="assets/logos/UniversoFarol_logo.svg" onload="SVGInject(this)"></a>
+        <a href="https://www.universofarol.com.br"><img src="assets/logos/UniversoFarol_logo.svg"
+                onload="SVGInject(this)"></a>
     </footer>
 
 </body>
+
 </html>
