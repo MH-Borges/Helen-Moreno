@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/Postagem_script.js"></script>
 
     <script src="js/svg-inject.min.js"></script>
 </head>
@@ -67,14 +68,14 @@
                     <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3756168.jpg" alt="">
                 </div>
                 <div class="tag">
-                    <h2>Gestão de negocios</h2>
+                    <h2 style="background: #4B0AA6;">Gestão de negocios</h2>
                 </div>
                 <div class="subtags">
-                    <div class="subtag">Contatos</div>
-                    <div class="subtag">Mulheres</div>
-                    <div class="subtag">Organização</div>
-                    <div class="subtag">Em ação</div>
-                    <div class="subtag">Como fazer</div>
+                    <div class="subtag" style="background: #4B0AA6;">Contatos</div>
+                    <div class="subtag" style="background: #4B0AA6;">Mulheres</div>
+                    <div class="subtag" style="background: #4B0AA6;">Organização</div>
+                    <div class="subtag" style="background: #4B0AA6;">Em ação</div>
+                    <div class="subtag" style="background: #4B0AA6;">Como fazer</div>
                 </div>
                 <div class="header">
                     <div class="imgPerfil">
@@ -116,7 +117,7 @@
                 <div class="reacoes">
                     <div class="like">
                         <img src="assets/icones/like.svg" onload="SVGInject(this)">
-                        <p>9999</p>
+                        <p class="likesNumber">0</p>
                     </div>
                     <div class="comentario">
                         <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
@@ -124,13 +125,54 @@
                     </div>
                     <div class="view">
                         <img src="assets/icones/visualizacao.svg" onload="SVGInject(this)">
-                        <p>9999</p>
+                        <p class="visitNumber">0</p>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="comentarios">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="comentarios">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Deixe um comentario"></textarea>
+
+                <div class="commentBlock">
+                    <div class="imgPerfil">
+                        <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                    </div>
+                    <div class="infoscomment">
+                        <h5>Mariana Moreno Emerenciano</h5>
+                        <span>@mariana_moreno04</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                        <div class="reacoes">
+                            <button class="comentario">
+                                <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
+                                <p>9999 Respostas</p>
+                            </button>
+                            <div class="likes">
+                                <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                <p>9999 likes</p>
+                            </div>
+                        </div>
+                        <!-- <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div class="comentariosInside">
+                            <div class="subcomment">
+                                <div class="imgPerfil">
+                                    <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                                </div>
+                                <div class="infosSubcomment">
+                                    <h6>Julia vitoria Moreno Emerenciano</h6>
+                                    <span>@Julias.vit</span>
+                                    <p>Sua bobona, eu sou a melhor a irmã :D</p>
+                                    <div class="reacoes">
+                                        <div class="like">
+                                            <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                            <p>999 likes</p>
+                                        </div>
+                                        <button>Responder</button>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div> -->
+                    </div>
+                </div>
 
                 <div class="commentBlock">
                     <div class="imgPerfil">
@@ -150,54 +192,138 @@
                                 <p>999 likes</p>
                             </div>
                         </div>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <div class="comentariosInside">
-                            <div class="subcomment">
-                                <div class="imgPerfil">
-                                    <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
-                                </div>
-                                <div class="infosSubcomment">
-                                    <h6>Julia vitoria Moreno Emerenciano</h6>
-                                    <span>@Julias.vit</span>
-                                    <p>Sua bobona, eu sou a melhor a irmã :D</p>
-                                    <div class="reacoes">
-                                        <div class="like">
-                                            <img src="assets/icones/like.svg" onload="SVGInject(this)">
-                                            <p>999 likes</p>
-                                        </div>
-                                        <button>Responder</button>
-                                    </div>
-                                </div>
-                            </div>            
+                    </div>
+                </div>
+
+                <div class="commentBlock">
+                    <div class="imgPerfil">
+                        <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                    </div>
+                    <div class="infoscomment">
+                        <h5>Mariana Moreno Emerenciano</h5>
+                        <span>@mariana_moreno04</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                        <div class="reacoes">
+                            <button class="comentario">
+                                <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
+                                <p>999 Respostas</p>
+                            </button>
+                            <div class="likes">
+                                <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                <p>999 likes</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+
+                <div class="commentBlock">
+                    <div class="imgPerfil">
+                        <img src="assets/imgs/Blog/helenPerfil.jpeg" alt="">
+                    </div>
+                    <div class="infoscomment">
+                        <h5>Mariana Moreno Emerenciano</h5>
+                        <span>@mariana_moreno04</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                        <div class="reacoes">
+                            <button class="comentario">
+                                <img src="assets/icones/comentarios.svg" onload="SVGInject(this)">
+                                <p>999 Respostas</p>
+                            </button>
+                            <div class="likes">
+                                <img src="assets/icones/like.svg" onload="SVGInject(this)">
+                                <p>999 likes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="verMaisComment">Ver todos os 51 comentários</button>
+            </div>
         </div>
 
         <aside>
-            <!-- <div class="searchBar">
+            <div class="searchBar">
                 <input type="text" placeholder="Digite o título da postagem.">
                 <div class="search"></div>
             </div>
 
             <h4>Confira os últimos posts do blog:</h4>
-            <div class="miniBlockPost">
+            
+            <a class="miniBlockPost">
                 <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
-                <p><a href="">por Helen Moreno</a>| 99/99/9999</p>
-                <h5>Lorem ipsum dolon adgfvsdg sdfashgsdfbasvc hasdfa</h5>
-            </div>
-            <a href="">Ver tudo</a> -->
+                <div class="subtags">
+                    <div class="tag">
+                        <img src="assets/icones/estrela4pontas.svg" onload="SVGInject(this)">
+                        <p>gestão de negocios</p>
+                    </div>
+                    <div class="subtag">Ação</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Como faz</div>
+                    <div class="subtag">Inspiração</div>
+                </div>
+                <p><button onclick="perfilHelen()">por Helen Moreno</button>| 99/99/9999</p>
+                <h5>Lorem ipsum dolon adgfvsdg sdfashg fbasvc hasdfa</h5>
+            </a>
+
+            <a class="miniBlockPost">
+                <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
+                <div class="subtags">
+                    <div class="tag">
+                        <img src="assets/icones/estrela4pontas.svg" onload="SVGInject(this)">
+                        <p>gestão de negocios</p>
+                    </div>
+                    <div class="subtag">Ação</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Como faz</div>
+                    <div class="subtag">Inspiração</div>
+                </div>
+                <p><button onclick="perfilHelen()">por Helen Moreno</button>| 99/99/9999</p>
+                <h5>Lorem ipsum dolon adgfvsdg sdfashg fbasvc hasdfa</h5>
+            </a>
+
+            <a class="miniBlockPost">
+                <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
+                <div class="subtags">
+                    <div class="tag">
+                        <img src="assets/icones/estrela4pontas.svg" onload="SVGInject(this)">
+                        <p>gestão de negocios</p>
+                    </div>
+                    <div class="subtag">Ação</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Como faz</div>
+                    <div class="subtag">Inspiração</div>
+                </div>
+                <p><button onclick="perfilHelen()">por Helen Moreno</button>| 99/99/9999</p>
+                <h5>Lorem ipsum dolon adgfvsdg sdfashg fbasvc hasdfa</h5>
+            </a>
+
+            <a class="miniBlockPost">
+                <img src="assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
+                <div class="subtags">
+                    <div class="tag">
+                        <img src="assets/icones/estrela4pontas.svg" onload="SVGInject(this)">
+                        <p>gestão de negocios</p>
+                    </div>
+                    <div class="subtag">Ação</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Como faz</div>
+                    <div class="subtag">Inspiração</div>
+                </div>
+                <p><button onclick="perfilHelen()">por Helen Moreno</button>| 99/99/9999</p>
+                <h5>Lorem ipsum dolon adgfvsdg sdfashg fbasvc hasdfa</h5>
+            </a>
+
+            <a class="verMais" href="Blog.html">Ver todas</a>
         </aside>
 
     </section>
 
-    <!-- <section class="recomendacoes">
+    <section class="recomendacoes">
         <h4>Eai, gostou?</h4>
         <h5>Conheça mais posts com a mesma tag:</h5>
 
         <div class="postagens">
-            <div class="post">
+            <a class="postRecommend">
                 <img src="assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
                 <div style="background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);" class="iconesInfos">
                     <div class="like"><img src="assets/icones/like.svg"
@@ -215,11 +341,77 @@
                     <div class="subtag">Organização</div>
                     <div class="subtag">Ação</div>
                 </div>
-                <p><a href=""></a> | 99/99/9999</p>
-                <h2>lorem ipdfsdnbgf hdfsbasjhfdb asfbasfbashdb sdfagbsdhafg</h2>
-            </div>
+                <p><button href="">por Helen Moreno</button> | 99/99/9999</p>
+                <h2>lorem ipdfsdnbgf hdfsba sjhfdb asfbasb ashdb sdfagbsdhafg</h2>
+            </a>
+
+            <a class="postRecommend">
+                <img src="assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
+                <div style="background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);" class="iconesInfos">
+                    <div class="like"><img src="assets/icones/like.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="comment"><img src="assets/icones/comentarios.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="visu"><img src="assets/icones/visualizacao.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="tag"><img src="assets/icones/estrela4pontas.svg"
+                            onload="SVGInject(this)"><span>Gestão de negocios</span></div>
+                </div>
+                <div class="subTags">
+                    <div class="subtag">Do zero</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Organização</div>
+                    <div class="subtag">Ação</div>
+                </div>
+                <p><button href="">por Helen Moreno</button> | 99/99/9999</p>
+                <h2>lorem ipdfsdnbgf hdfsba sjhfdb asfbasb ashdb sdfagbsdhafg</h2>
+            </a>
+
+            <a class="postRecommend">
+                <img src="assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
+                <div style="background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);" class="iconesInfos">
+                    <div class="like"><img src="assets/icones/like.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="comment"><img src="assets/icones/comentarios.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="visu"><img src="assets/icones/visualizacao.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="tag"><img src="assets/icones/estrela4pontas.svg"
+                            onload="SVGInject(this)"><span>Gestão de negocios</span></div>
+                </div>
+                <div class="subTags">
+                    <div class="subtag">Do zero</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Organização</div>
+                    <div class="subtag">Ação</div>
+                </div>
+                <p><button href="">por Helen Moreno</button> | 99/99/9999</p>
+                <h2>lorem ipdfsdnbgf hdfsba sjhfdb asfbasb ashdb sdfagbsdhafg</h2>
+            </a>
+
+            <a class="postRecommend">
+                <img src="assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
+                <div style="background: linear-gradient(154.27deg, #9300B2 10.91%, #D9662B 100%);" class="iconesInfos">
+                    <div class="like"><img src="assets/icones/like.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="comment"><img src="assets/icones/comentarios.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="visu"><img src="assets/icones/visualizacao.svg"
+                            onload="SVGInject(this)"><span>999</span></div>
+                    <div class="tag"><img src="assets/icones/estrela4pontas.svg"
+                            onload="SVGInject(this)"><span>Gestão de negocios</span></div>
+                </div>
+                <div class="subTags">
+                    <div class="subtag">Do zero</div>
+                    <div class="subtag">Mulheres</div>
+                    <div class="subtag">Organização</div>
+                    <div class="subtag">Ação</div>
+                </div>
+                <p><button href="">por Helen Moreno</button> | 99/99/9999</p>
+                <h2>lorem ipdfsdnbgf hdfsba sjhfdb asfbasb ashdb sdfagbsdhafg</h2>
+            </a>
         </div>
-    </section> -->
+    </section>
 
     <section class="contatoPostBlog">
         <h4>Gostou? Quer mais? <br> Me mande uma mensagem</h4>
