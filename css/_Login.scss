@@ -1,0 +1,358 @@
+.Login{
+    display: flex;
+    position: relative;
+    background: $PretoEscuro;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    height: 100vh;
+    width: 100%;
+    transition: 0.5s;
+
+    .StarBackground_login {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        svg {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    .login_sreen{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 65vw;
+        height: 80vh;
+        border-radius: 3vw;
+        overflow: hidden;
+        position: relative;
+        .signIn{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            .formBx{
+                width: 60%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: 0.5s ease-in-out;
+                .labels{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10vh 2vw;
+                    h2{
+                        color: $Branco;
+                        width: 100%;
+                        height: 6vh;
+                        text-align: center;
+                        font-size: 2.5vw;
+                        font-weight: 800;
+                        margin-bottom: 5vh;
+                    }
+                    .BlockBox{
+                        width: 90%;
+                        height: 6vh;
+                        display: flex;
+                        position: relative;
+                        border: solid 1px $Branco;
+                        border-radius: 1.5vw;
+                        margin: 2vh 5%;
+                        input{
+                            width: 100%;
+                            border: none;
+                            font-size: 1.25vw;
+                            font-weight: 200;
+                            color: $Branco;
+                            background: none;
+                            outline: none;
+                            padding: 1vh 1.5vw;
+                            z-index: 10 !important;
+                        }
+                        span{
+                            position: absolute;
+                            left: 1vw;
+                            top: 1.1vh;
+                            font-size: 1.25vw;
+                            color: $Branco;
+                            font-weight: 800;
+                            transition: 0.5s;
+                            pointer-events: none;
+                        }
+                        .hide-show{
+                            width: 4vw;
+                            height: 100%;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            z-index: 20 !important;
+                            svg{
+                                padding: 0 1vw;
+                                width: 100%;
+                                height: 100%;
+                                path{
+                                    fill: $Branco;
+                                }
+                            }
+                        }
+                    }
+                    .BlockBox input:focus ~ span, input:valid ~ span{
+                        transform:translate(-0.8vw, -5vh);
+                        font-size: 1.2vw;
+                    }
+                    #loginBt{
+                        width: 90%;
+                        font-size: 1.5vw;
+                        background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+                        color: $Branco;
+                        padding: 0.75vh 1.5vw;
+                        border-radius: 2vw;
+                        border: none;
+                        font-weight: 800;
+                        margin-top: 2.5vh;
+                    }
+                    p{
+                        color: $Branco;
+                        padding: 0 1vw;
+                        font-size: 1.25vw;
+                        font-weight: 500;
+                        position: absolute;
+                        width: 50%;
+                        height: 8vh;
+                        bottom: 1vh;
+                        left: 0;
+                        z-index: 10;
+                        margin: 0;
+                        span{
+                            background: none;
+                            border: none;
+                            font-weight: 800;
+                            color: $RoxoEscuro;
+                            &:hover{
+                                color: $RoxoClaro;
+                            }
+                        }
+                    }
+                    a{
+                        position: absolute;
+                        width: 50%;
+                        height: 8vh;
+                        color: $RoxoEscuro;
+                        font-weight: 800;
+                        font-size: 1.25vw;
+                        bottom: 1vh;
+                        right: 0;
+                        padding: 0 1vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        z-index: 10;
+                        &:hover{
+                            color: $RoxoClaro;
+                        }
+                    }
+
+                }
+            }
+            .imgBx{
+                width: 40%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s ease-in-out;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(58, 0, 140, 0.25);
+                    border-radius: 3vw;
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(8, 8, 8, 0.75);
+                backdrop-filter: blur(0.15vw);
+                z-index: -1;
+            }
+        }
+
+        .signUp{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            .imgBx{
+                width: 40%;
+                height: 100%;
+                position: absolute;
+                top: -100%;
+                right: 0;
+                transition: 0.5s ease-in-out;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background:rgba(217, 102, 43, 0.5);
+                    border-radius: 3vw;
+                }
+            }
+            .formBx{
+                width: 60%;
+                height: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                transition: 0.5s ease-in-out;
+                .labels{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 4vh 2vw;
+                    h2{
+                        color: $Branco;
+                        width: 100%;
+                        height: 5vh;
+                        text-align: center;
+                        font-size: 2.5vw;
+                        font-weight: 800;
+                        margin-bottom: 2vh;
+                    }
+                    .BlockBox{
+                        width: 90%;
+                        height: 6vh;
+                        display: flex;
+                        position: relative;
+                        border: solid 1px $Branco;
+                        border-radius: 1.5vw;
+                        margin: 2vh 5%;
+                        input{
+                            width: 100%;
+                            border: none;
+                            font-size: 1.25vw;
+                            font-weight: 200;
+                            color: $Branco;
+                            background: none;
+                            outline: none;
+                            padding: 1vh 1.5vw;
+                            z-index: 10 !important;
+                        }
+                        span{
+                            position: absolute;
+                            left: 1vw;
+                            top: 1.1vh;
+                            font-size: 1.25vw;
+                            color: $Branco;
+                            font-weight: 800;
+                            transition: 0.5s;
+                            pointer-events: none;
+                        }
+                        .hide-showCad{
+                            width: 4vw;
+                            height: 100%;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            z-index: 75 !important;
+                            svg{
+                                padding: 0 1vw;
+                                width: 100%;
+                                height: 100%;
+                                path{
+                                    fill: $Branco;
+                                }
+                            }
+                        }
+                    }
+                    .BlockBox input:focus ~ span, input:valid ~ span{
+                        transform:translate(-0.8vw, -5vh);
+                        font-size: 1.2vw;
+                    }
+                    #cadastroBt{
+                        width: 90%;
+                        font-size: 1.5vw;
+                        background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+                        color: $Branco;
+                        padding: 0.75vh 1.5vw;
+                        border-radius: 2vw;
+                        border: none;
+                        font-weight: 800;
+                        margin-top: 2.5vh;
+                    }
+                    p{
+                        color: $Branco;
+                        padding: 0 2vw;
+                        font-size: 1.25vw;
+                        font-weight: 500;
+                        position: absolute;
+                        width: 100%;
+                        height: 4vh;
+                        bottom: 2vh;
+                        left: 0;
+                        z-index: 10;
+                        margin: 0;
+                        span{
+                            margin-left: 0.5vw;
+                            background: none;
+                            border: none;
+                            font-weight: 800;
+                            color: $LaranjaEscuro;
+                            &:hover{
+                                color: $LaranjaClaro;
+                            }
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(8, 8, 8, 0.75);
+                backdrop-filter: blur(0.15vw);
+                z-index: -1;
+            }
+        }
+    }
+
+    .active{
+        .signIn{
+            .formBx{
+                top: 100%;
+                right: 0;
+            }
+            .imgBx{
+                top: -100%;
+                left: 0;
+            }
+        }
+
+        .signUp{
+            .imgBx{
+                top: 0;
+                right: 0;
+            }
+            .formBx{
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

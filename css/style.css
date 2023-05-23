@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D9662B;
+  background: rgb(217, 102, 43);
   border-radius: 5vw;
 }
 
@@ -182,7 +182,7 @@ body header nav ul li a {
   font-size: 1.4vw;
 }
 body header nav ul li a:hover {
-  color: #D9662B;
+  color: rgb(217, 102, 43);
 }
 body header nav ul .logo {
   width: 5.5vw;
@@ -232,7 +232,7 @@ body .banner .infos h2 b {
   font-weight: 800;
 }
 body .banner .infos .botao {
-  background-color: #D9662B;
+  background-color: rgb(217, 102, 43);
   padding: 0.5vh 0;
   text-align: center;
   color: #D9D9D9;
@@ -581,13 +581,13 @@ body .depos .carousel .carousel__list .carousel__item {
   padding: 0 2vw;
 }
 body .depos .carousel .carousel__list .carousel__item:nth-child(1) {
-  background: #D9662B;
+  background: rgb(217, 102, 43);
 }
 body .depos .carousel .carousel__list .carousel__item:nth-child(2) {
   background: #3A008C;
 }
 body .depos .carousel .carousel__list .carousel__item:nth-child(3) {
-  background: #D9662B;
+  background: rgb(217, 102, 43);
 }
 body .depos .carousel .carousel__list .carousel__item:nth-child(4) {
   background: #9300B3;
@@ -1133,7 +1133,7 @@ body footer a svg {
   fill: #E8E8E8;
 }
 .servicos .servicos .carousel .splide__arrows .splide__arrow--next svg:hover path {
-  fill: #D9662B;
+  fill: rgb(217, 102, 43);
 }
 .servicos .servicos .carousel .splide__arrows .splide__arrow--prev {
   left: -7vw;
@@ -1154,7 +1154,7 @@ body footer a svg {
   fill: #E8E8E8;
 }
 .servicos .servicos .carousel .splide__arrows .splide__arrow--prev svg:hover path {
-  fill: #D9662B;
+  fill: rgb(217, 102, 43);
 }
 .servicos .servicos .TabsBlog {
   height: 100vh;
@@ -1408,7 +1408,7 @@ body footer a svg {
   width: 5%;
 }
 .Palestra .verPalest .textInfo .divisor .line {
-  border: solid #D9662B 1px;
+  border: solid rgb(217, 102, 43) 1px;
   height: 2.2vh;
   width: 1.2vw;
   border-radius: 50%;
@@ -1424,7 +1424,7 @@ body footer a svg {
   height: 1.15vh;
   width: 0.65vw;
   border-radius: 50%;
-  background-color: #D9662B;
+  background-color: rgb(217, 102, 43);
   z-index: 5;
 }
 .Palestra .verPalest .textInfo .divisor .line::after {
@@ -1434,7 +1434,7 @@ body footer a svg {
   left: 41%;
   height: 15vh;
   width: 0.2vw;
-  background-color: #D9662B;
+  background-color: rgb(217, 102, 43);
   z-index: -2;
 }
 .Palestra .verPalest img {
@@ -1646,7 +1646,7 @@ body footer a svg {
 }
 .Palestra .calendario .calendarBlock #calendarList .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button {
   background: #F9884E;
-  border: #D9662B 1px solid;
+  border: rgb(217, 102, 43) 1px solid;
   border-top-left-radius: 1vw;
   border-bottom-left-radius: 1vw;
 }
@@ -1668,7 +1668,7 @@ body footer a svg {
           backdrop-filter: blur(0.05vw);
 }
 .Palestra .calendario .calendarBlock #calendarList .fc-cell-shaded a {
-  color: #D9662B;
+  color: rgb(217, 102, 43);
   font-size: 1.1vw;
 }
 .Palestra .calendario .calendarBlock #calendarList .fc-event {
@@ -1692,7 +1692,7 @@ body footer a svg {
   background-color: #D9D9D9;
 }
 .Palestra .calendario .calendarBlock #calendarList .fc-event:hover td {
-  color: #D9662B;
+  color: rgb(217, 102, 43);
 }
 .Palestra .calendario .calendarBlock #calendar {
   width: 70%;
@@ -1710,7 +1710,7 @@ body footer a svg {
 }
 .Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(1) button {
   background: #F9884E;
-  border: #D9662B 1px solid;
+  border: rgb(217, 102, 43) 1px solid;
   border-radius: 1vw;
 }
 .Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(2) h2 {
@@ -1727,7 +1727,7 @@ body footer a svg {
 }
 .Palestra .calendario .calendarBlock #calendar .fc-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group button {
   background: #F9884E;
-  border: #D9662B 1px solid;
+  border: rgb(217, 102, 43) 1px solid;
   border-top-left-radius: 1vw;
   border-bottom-left-radius: 1vw;
 }
@@ -4524,9 +4524,6 @@ body footer a svg {
 .postagem_Blog .recomendacoes .postagens .postRecommend .iconesInfos .like span, .postagem_Blog .recomendacoes .postagens .postRecommend .iconesInfos .comment span, .postagem_Blog .recomendacoes .postagens .postRecommend .iconesInfos .visu span, .postagem_Blog .recomendacoes .postagens .postRecommend .iconesInfos .tag span {
   display: none;
 }
-.postagem_Blog .recomendacoes .postagens .postRecommend .subTags {
-  display: none;
-}
 .postagem_Blog .recomendacoes .postagens .postRecommend p {
   font-size: 0.9vw;
   text-align: center;
@@ -4543,9 +4540,47 @@ body footer a svg {
   color: #BFBFBF;
 }
 .postagem_Blog .recomendacoes .postagens .postRecommend h2 {
-  font-size: 1.25vw;
+  font-size: 1.2vw;
   font-weight: 800;
-  padding: 0 0.5vw;
+  padding: 0 1vw;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos {
+  position: absolute;
+  width: 8vw;
+  height: 20vh;
+  border: 1px solid #D9D9D9;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5vh 0.75vw;
+  border-top-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos::before {
+  display: none;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .like, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .comment, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .visu, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .tag {
+  z-index: 5 !important;
+  display: flex;
+  align-items: center;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .like svg, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .comment svg, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .visu svg, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .tag svg {
+  width: 30%;
+  height: 3vh;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .like span, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .comment span, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .visu span, .postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .tag span {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 800;
+  text-align: center;
+}
+.postagem_Blog .recomendacoes .postagens .postRecommend:hover .iconesInfos .tag span {
+  font-size: 0.8vw;
 }
 .postagem_Blog .contatoPostBlog {
   height: 50vh;
@@ -4677,7 +4712,7 @@ body footer a svg {
     transform: translate(0, 0);
   }
   50% {
-    fill: #D9662B;
+    fill: rgb(217, 102, 43);
     transform: translate(-0.5vw, 2.5vh);
   }
   100% {
@@ -4798,7 +4833,7 @@ body footer a svg {
   color: #000000;
 }
 .contato .blockInfosContato .infosBlock .infos h4 a:hover {
-  color: #D9662B;
+  color: rgb(217, 102, 43);
 }
 .contato .blockInfosContato .tabletBlock {
   z-index: 5;
@@ -5028,4 +5063,353 @@ body footer a svg {
 .contato footer a svg {
   width: 100%;
   height: 100%;
+}
+
+.Login {
+  display: flex;
+  position: relative;
+  background: #000000;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  height: 100vh;
+  width: 100%;
+  transition: 0.5s;
+}
+.Login .StarBackground_login {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.Login .StarBackground_login svg {
+  width: 100%;
+  height: 100vh;
+}
+.Login .login_sreen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 65vw;
+  height: 80vh;
+  border-radius: 3vw;
+  overflow: hidden;
+  position: relative;
+}
+.Login .login_sreen .signIn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.Login .login_sreen .signIn .formBx {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.Login .login_sreen .signIn .formBx .labels {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 2vw;
+}
+.Login .login_sreen .signIn .formBx .labels h2 {
+  color: #D9D9D9;
+  width: 100%;
+  height: 6vh;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: 800;
+  margin-bottom: 5vh;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox {
+  width: 90%;
+  height: 6vh;
+  display: flex;
+  position: relative;
+  border: solid 1px #D9D9D9;
+  border-radius: 1.5vw;
+  margin: 2vh 5%;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox input {
+  width: 100%;
+  border: none;
+  font-size: 1.25vw;
+  font-weight: 200;
+  color: #D9D9D9;
+  background: none;
+  outline: none;
+  padding: 1vh 1.5vw;
+  z-index: 10 !important;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox span {
+  position: absolute;
+  left: 1vw;
+  top: 1.1vh;
+  font-size: 1.25vw;
+  color: #D9D9D9;
+  font-weight: 800;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox .hide-show {
+  width: 4vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20 !important;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox .hide-show svg {
+  padding: 0 1vw;
+  width: 100%;
+  height: 100%;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox .hide-show svg path {
+  fill: #D9D9D9;
+}
+.Login .login_sreen .signIn .formBx .labels .BlockBox input:focus ~ span, .Login .login_sreen .signIn .formBx .labels input:valid ~ span {
+  transform: translate(-0.8vw, -5vh);
+  font-size: 1.2vw;
+}
+.Login .login_sreen .signIn .formBx .labels #loginBt {
+  width: 90%;
+  font-size: 1.5vw;
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  color: #D9D9D9;
+  padding: 0.75vh 1.5vw;
+  border-radius: 2vw;
+  border: none;
+  font-weight: 800;
+  margin-top: 2.5vh;
+}
+.Login .login_sreen .signIn .formBx .labels p {
+  color: #D9D9D9;
+  padding: 0 1vw;
+  font-size: 1.25vw;
+  font-weight: 500;
+  position: absolute;
+  width: 50%;
+  height: 8vh;
+  bottom: 1vh;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+}
+.Login .login_sreen .signIn .formBx .labels p span {
+  background: none;
+  border: none;
+  font-weight: 800;
+  color: #3A008C;
+}
+.Login .login_sreen .signIn .formBx .labels p span:hover {
+  color: #621FBF;
+}
+.Login .login_sreen .signIn .formBx .labels a {
+  position: absolute;
+  width: 50%;
+  height: 8vh;
+  color: #3A008C;
+  font-weight: 800;
+  font-size: 1.25vw;
+  bottom: 1vh;
+  right: 0;
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  z-index: 10;
+}
+.Login .login_sreen .signIn .formBx .labels a:hover {
+  color: #621FBF;
+}
+.Login .login_sreen .signIn .imgBx {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.Login .login_sreen .signIn .imgBx::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 0, 140, 0.25);
+  border-radius: 3vw;
+}
+.Login .login_sreen .signIn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.75);
+  -webkit-backdrop-filter: blur(0.15vw);
+          backdrop-filter: blur(0.15vw);
+  z-index: -1;
+}
+.Login .login_sreen .signUp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.Login .login_sreen .signUp .imgBx {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.Login .login_sreen .signUp .imgBx::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 102, 43, 0.5);
+  border-radius: 3vw;
+}
+.Login .login_sreen .signUp .formBx {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.Login .login_sreen .signUp .formBx .labels {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 2vw;
+}
+.Login .login_sreen .signUp .formBx .labels h2 {
+  color: #D9D9D9;
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: 800;
+  margin-bottom: 2vh;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox {
+  width: 90%;
+  height: 6vh;
+  display: flex;
+  position: relative;
+  border: solid 1px #D9D9D9;
+  border-radius: 1.5vw;
+  margin: 2vh 5%;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox input {
+  width: 100%;
+  border: none;
+  font-size: 1.25vw;
+  font-weight: 200;
+  color: #D9D9D9;
+  background: none;
+  outline: none;
+  padding: 1vh 1.5vw;
+  z-index: 10 !important;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox span {
+  position: absolute;
+  left: 1vw;
+  top: 1.1vh;
+  font-size: 1.25vw;
+  color: #D9D9D9;
+  font-weight: 800;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox .hide-showCad {
+  width: 4vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 75 !important;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox .hide-showCad svg {
+  padding: 0 1vw;
+  width: 100%;
+  height: 100%;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox .hide-showCad svg path {
+  fill: #D9D9D9;
+}
+.Login .login_sreen .signUp .formBx .labels .BlockBox input:focus ~ span, .Login .login_sreen .signUp .formBx .labels input:valid ~ span {
+  transform: translate(-0.8vw, -5vh);
+  font-size: 1.2vw;
+}
+.Login .login_sreen .signUp .formBx .labels #cadastroBt {
+  width: 90%;
+  font-size: 1.5vw;
+  background: linear-gradient(270deg, #D9662B 15%, #9300B2 90%);
+  color: #D9D9D9;
+  padding: 0.75vh 1.5vw;
+  border-radius: 2vw;
+  border: none;
+  font-weight: 800;
+  margin-top: 2.5vh;
+}
+.Login .login_sreen .signUp .formBx .labels p {
+  color: #D9D9D9;
+  padding: 0 2vw;
+  font-size: 1.25vw;
+  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  height: 4vh;
+  bottom: 2vh;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+}
+.Login .login_sreen .signUp .formBx .labels p span {
+  margin-left: 0.5vw;
+  background: none;
+  border: none;
+  font-weight: 800;
+  color: rgb(217, 102, 43);
+}
+.Login .login_sreen .signUp .formBx .labels p span:hover {
+  color: #ff9c69;
+}
+.Login .login_sreen .signUp::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.75);
+  -webkit-backdrop-filter: blur(0.15vw);
+          backdrop-filter: blur(0.15vw);
+  z-index: -1;
+}
+.Login .active .signIn .formBx {
+  top: 100%;
+  right: 0;
+}
+.Login .active .signIn .imgBx {
+  top: -100%;
+  left: 0;
+}
+.Login .active .signUp .imgBx {
+  top: 0;
+  right: 0;
+}
+.Login .active .signUp .formBx {
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

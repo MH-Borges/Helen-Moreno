@@ -780,9 +780,6 @@
                         
                     }
                 }
-                .subTags{
-                    display: none;
-                }
                 p{
                     font-size: 0.9vw;
                     text-align: center;
@@ -799,9 +796,51 @@
                     }
                 }
                 h2{
-                    font-size: 1.25vw;
+                    font-size: 1.2vw;
                     font-weight: 800;
-                    padding: 0 0.5vw;
+                    padding: 0 1vw;
+                }
+                &:hover{
+                    .iconesInfos{
+                        position: absolute;
+                        width: 8vw;
+                        height: 20vh;
+                        border: 1px solid $Branco;
+                        top: 0;
+                        right: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        padding: 0.5vh 0.75vw;
+                        border-top-right-radius: 1vw;
+                        border-bottom-left-radius: 1vw;
+                        &::before{
+                            display: none;
+                        }
+                        .like, .comment, .visu, .tag{
+                            z-index: 5 !important;
+                            display: flex;
+                            align-items: center;
+                            svg{
+                                width: 30%;
+                                height: 3vh;
+                            }
+                            span{
+                                width: 70%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 1vw;
+                                font-weight: 800;
+                                text-align: center;
+                            }
+                        }
+                        .tag{
+                            span{
+                                font-size: 0.8vw;
+                            }
+                        }
+                    }
                 }
             }
         }
