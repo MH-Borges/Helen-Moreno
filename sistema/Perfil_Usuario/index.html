@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../css/style.css">
 
     <script defer src="../../js/script.js"></script>
-    <!-- <script defer src="js/script.js"></script> -->
+    <script defer src="js/script.js"></script>
 
     <script src="../../js/svg-inject.min.js"></script>
 </head>
@@ -38,11 +38,21 @@
     </div>
 
     <div class="menu">
-        <div class="home"> 
+        <a href="../../Blog.html" class="home">
             <img src="../../assets/icones/home.svg" onload="SVGInject(this)">
-        </div>
-        <div class="config">
+        </a>
+        <div class="config" onclick="ShowBlockModal()">
             <img src="../../assets/icones/engrenagem.svg" onload="SVGInject(this)">
+        </div>
+        <div class="modalConfig hide">
+            <button type="button" class="EditPerfilBtn" data-toggle="modal" data-target="#ModalEditPerfil">
+                Editar perfil
+            </button>
+
+            <button type="button" class="LogoutBtn" data-toggle="modal" data-target="#ModalLogout">
+                Sair
+                <img src="../../assets/icones/sair.svg" onload="SVGInject(this)">
+            </button>
         </div>
     </div>
 
@@ -51,12 +61,16 @@
         <div class="banner"><img src="assets/misty-mountain-ranges-at-sunrise.jpg" alt=""></div>
         <div class="imgPerfil"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
 
-        <span>Editar perfil</span>
+        <button type="button" class="EditPerfilBtn" data-toggle="modal" data-target="#ModalEditPerfil">
+            Editar perfil
+        </button>
 
         <h1 class="nomeUser">Mariana Moreno Emerenciano</h1>
         <span class="nickUser">@mariana_moreno04</span>
 
-        <p class="descriUser">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat blandit aliquam etiam erat velit scelerisque. Et egestas quis ipsum.</p>
+        <p class="descriUser">Lorem ipsum dol fasdfafrfgfeg g ergfedgs fg tgsdfgsetgh dghsgdjsghjsdgf sfgjhsdf dsfa dsaf
+            dasfor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Volutpat blandit aliquam etiam erat velit scelerisque. Et egestas quis ipsum.</p>
 
         <div class="iconsInfoUser">
             <div class="local">
@@ -78,117 +92,399 @@
         </div>
 
         <div class="AbasBlock">
-            <div class="nav nav-pills MenuBlog">
+            <div class="nav nav-pills MenuPerfil">
                 <a class="active" data-toggle="pill" href="#ultimosComentarios">Últimos comentários</a>
                 <a data-toggle="pill" href="#Conexoes">Conexões</a>
+                <a data-toggle="pill" href="#MeusPosts">Meus posts</a>
             </div>
-            <div class="tab-content TabsBlog">
+            <div class="tab-content TabsPerfil">
                 <div class="tab-pane fade show active" id="ultimosComentarios">
-                    <div class="comentBlock">
-                        <div class="imgPerfilComment"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
+                    <div class="inicio comentBlock">
+                        <div class="imgPerfilComment">
+                            <img src="assets/AdobeStock_491155758.jpg" alt="">
+                        </div>
                         <div class="infosComment">
-                            <h2 class="nomeUserComment"></h2>
-                            <span class="nickUserComment"></span>
-                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                            <h2 class="nomeUserComment">Mariana Moreno Emerenciano</h2>
+                            <span class="nickUserComment">@mariana_moreno04</span>
+                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum
+                                sagittis vitae.</p>
                             <div class="actions">
                                 <div class="respostas">
-                                    <img src="../../assets/icones/comentarios.svg">
+                                    <img src="../../assets/icones/comentarios.svg" onload="SVGInject(this)">
                                     <span>999 Respostas</span>
                                 </div>
                                 <div class="likes">
-                                    <img src="../../assets/icones/like.svg">
+                                    <img src="../../assets/icones/like.svg" onload="SVGInject(this)">
                                     <span>999 Likes</span>
                                 </div>
                             </div>
                         </div>
                         <div class="PostActions">
-                            <img src="../../assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
-                            <span class="actions">...</span>
-                            <a href="" class="ToPost"></a>
+                            <div class="bannerPostagem"><img
+                                    src="../../assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt=""></div>
+                            <div class="actions">
+                                <span onclick="ShowBlockCommentModal(this)">...</span>
+                                <div class="modalComment hide">
+                                    <button type="button" class="EditCommentBtn" data-toggle="modal" data-target="#ModalEditComment">
+                                        Editar
+                                    </button>
+                        
+                                    <button type="button" class="DeletCommentBtn" data-toggle="modal" data-target="#ModalDeletComment">
+                                        Excluir
+                                        <img src="../../assets/icones/lixeira.svg" onload="SVGInject(this)">
+                                    </button>
+                                </div>
+                            </div>
+                            <a class="seta">
+                                <img src="../../assets/icones/seta.svg" onload="SVGInject(this)">
+                            </a>
                         </div>
                     </div>
 
-                    <div class="comentBlock">
-                        <div class="imgPerfilComment"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
+                    <div class="centro comentBlock">
+                        <div class="imgPerfilComment">
+                            <img src="assets/AdobeStock_491155758.jpg" alt="">
+                        </div>
                         <div class="infosComment">
-                            <h2 class="nomeUserComment"></h2>
-                            <span class="nickUserComment"></span>
-                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                            <h2 class="nomeUserComment">Mariana Moreno Emerenciano</h2>
+                            <span class="nickUserComment">@mariana_moreno04</span>
+                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum
+                                sagittis vitae.</p>
                             <div class="actions">
                                 <div class="respostas">
-                                    <img src="../../assets/icones/comentarios.svg">
+                                    <img src="../../assets/icones/comentarios.svg" onload="SVGInject(this)">
                                     <span>999 Respostas</span>
                                 </div>
                                 <div class="likes">
-                                    <img src="../../assets/icones/like.svg">
+                                    <img src="../../assets/icones/like.svg" onload="SVGInject(this)">
                                     <span>999 Likes</span>
                                 </div>
                             </div>
                         </div>
                         <div class="PostActions">
-                            <img src="../../assets/imgs/Home/blog/pexels-andre-moura-2747553.jpg" alt="">
-                            <span class="actions">...</span>
-                            <a href="" class="ToPost"></a>
+                            <div class="bannerPostagem"><img
+                                    src="../../assets/imgs/Home/blog/pexels-cottonbro-4753926.jpg" alt=""></div>
+                            <div class="actions">
+                                <span onclick="ShowBlockCommentModal(this)">...</span>
+
+                                <div class="modalComment hide">
+                                    <button type="button" class="EditCommentBtn" data-toggle="modal" data-target="#ModalEditComment">
+                                        Editar
+                                    </button>
+                        
+                                    <button type="button" class="DeletCommentBtn" data-toggle="modal" data-target="#ModalDeletComment">
+                                        Excluir
+                                        <img src="../../assets/icones/lixeira.svg" onload="SVGInject(this)">
+                                    </button>
+                                </div>
+                            </div>
+                            <a class="seta">
+                                <img src="../../assets/icones/seta.svg" onload="SVGInject(this)">
+                            </a>
                         </div>
+
                     </div>
 
-                    <div class="comentBlock">
-                        <div class="imgPerfilComment"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
+                    <div class="final comentBlock">
+                        <div class="imgPerfilComment">
+                            <img src="assets/AdobeStock_491155758.jpg" alt="">
+                        </div>
                         <div class="infosComment">
-                            <h2 class="nomeUserComment"></h2>
-                            <span class="nickUserComment"></span>
-                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                            <h2 class="nomeUserComment">Mariana Moreno Emerenciano</h2>
+                            <span class="nickUserComment">@mariana_moreno04</span>
+                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum
+                                sagittis vitae.</p>
                             <div class="actions">
                                 <div class="respostas">
-                                    <img src="../../assets/icones/comentarios.svg">
+                                    <img src="../../assets/icones/comentarios.svg" onload="SVGInject(this)">
                                     <span>999 Respostas</span>
                                 </div>
                                 <div class="likes">
-                                    <img src="../../assets/icones/like.svg">
+                                    <img src="../../assets/icones/like.svg" onload="SVGInject(this)">
                                     <span>999 Likes</span>
                                 </div>
                             </div>
                         </div>
                         <div class="PostActions">
-                            <img src="../../assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt="">
-                            <span class="actions">...</span>
-                            <a href="" class="ToPost"></a>
-                        </div>
-                    </div>
-
-                    <div class="comentBlock">
-                        <div class="imgPerfilComment"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
-                        <div class="infosComment">
-                            <h2 class="nomeUserComment"></h2>
-                            <span class="nickUserComment"></span>
-                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae.</p>
+                            <div class="bannerPostagem"><img
+                                    src="../../assets/imgs/Home/blog/pexels-boris-ulzibat-4281932.jpg" alt=""></div>
                             <div class="actions">
-                                <div class="respostas">
-                                    <img src="../../assets/icones/comentarios.svg">
-                                    <span>999 Respostas</span>
-                                </div>
-                                <div class="likes">
-                                    <img src="../../assets/icones/like.svg">
-                                    <span>999 Likes</span>
+                                <span onclick="ShowBlockCommentModal(this)">...</span>
+                                <div class="modalComment hide">
+                                    <button type="button" class="EditCommentBtn" data-toggle="modal" data-target="#ModalEditComment">
+                                        Editar
+                                    </button>
+                        
+                                    <button type="button" class="DeletCommentBtn" data-toggle="modal" data-target="#ModalDeletComment">
+                                        Excluir
+                                        <img src="../../assets/icones/lixeira.svg" onload="SVGInject(this)">
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="PostActions">
-                            <img src="../../assets/imgs/Home/blog/pexels-cottonbro-4753926.jpg" alt="">
-                            <span class="actions">...</span>
-                            <a href="" class="ToPost"></a>
+                            <a class="seta">
+                                <img src="../../assets/icones/seta.svg" onload="SVGInject(this)">
+                            </a>
                         </div>
                     </div>
 
-                    <button>Ver outros comentarios</button>
+                    <button>Ver outros comentários</button>
                 </div>
 
                 <div class="tab-pane fade" id="Conexoes">
-            
+                    <div class="searchNumbers">
+                        <span>999/500</span>
+
+                        <div class="searchBar">
+                            <input type="text" id="filter" placeholder="Qual a conexão você procura?">
+                            <div class="search"></div>
+                        </div>
+                    </div>
+
+                    <div class="perfilConections">
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-alexander-suhorucov-6457563.png">
+                            <h4>@HelenM</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-andrea-piacquadio-3756168 1.png">
+                            <h4>@Amar_42</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@PedroBD</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-christina-morillo-1181684 1.png">
+                            <h4>@Carlinha</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@Roberta10</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-engin-akyurt-1677275.png">
+                            <h4>@Angelica</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-guilherme-rossi-1668928 1.png">
+                            <h4>@JuliaDots</h4>
+                        </div>
+
+                        <!-- sete -->
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@PedroBD</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-anna-shvets-5324960.png">
+                            <h4>@HelenM</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-cottonbro-4045588 1.png">
+                            <h4>@Amar_42</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-cottonbro-4045607.png">
+                            <h4>@Carlinha</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@Roberta10</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-hakeem-james-hausley-4024732.png">
+                            <h4>@Angelica</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-ivan-samkov-7901757 1.png">
+                            <h4>@JuliaDots</h4>
+                        </div>
+
+                        <!-- sete -->
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-alexander-suhorucov-6457563.png">
+                            <h4>@HelenM</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-andrea-piacquadio-3756168 1.png">
+                            <h4>@Amar_42</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@PedroBD</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-christina-morillo-1181684 1.png">
+                            <h4>@Carlinha</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-ruvim-3622517 1.png">
+                            <h4>@Roberta10</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-engin-akyurt-1677275.png">
+                            <h4>@Angelica</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-guilherme-rossi-1668928 1.png">
+                            <h4>@JuliaDots</h4>
+                        </div>
+
+                        <!-- sete -->
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@PedroBD</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-anna-shvets-5324960.png">
+                            <h4>@HelenM</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-cottonbro-4045588 1.png">
+                            <h4>@Amar_42</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-cottonbro-4045607.png">
+                            <h4>@Carlinha</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                            <h4>@Roberta10</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-hakeem-james-hausley-4024732.png">
+                            <h4>@Angelica</h4>
+                        </div>
+
+                        <div class="perfilImgName">
+                            <img src="assets/Fotos_Perfil/pexels-ivan-samkov-7901757 1.png">
+                            <h4>@JuliaDots</h4>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modal Logout-->
+    <div class="modal fade" id="ModalLogout" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    logout
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editar perfil-->
+    <div class="modal fade" id="ModalEditPerfil" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    edição de perfil
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editar comentario-->
+    <div class="modal fade" id="ModalEditComment" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    edit comentario
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Excluir comentario-->
+    <div class="modal fade" id="ModalDeletComment" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Delete comentario
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

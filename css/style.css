@@ -5188,6 +5188,8 @@ body footer a svg {
   border: none;
   font-weight: 800;
   margin-top: 2.5vh;
+  position: relative;
+  justify-content: center;
 }
 .Login .login_sreen .signIn .formBx .labels p {
   color: #D9D9D9;
@@ -5435,17 +5437,616 @@ body footer a svg {
 .TelaPerfil .StarBackground_Perfil svg {
   width: 100%;
   height: 100vh;
-  border: solid red 1px;
 }
 .TelaPerfil .menu {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 10vw;
-  height: 25vh;
+  top: 2vh;
+  right: 1.5vw;
+  width: 5vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+.TelaPerfil .menu .home, .TelaPerfil .menu .config {
+  width: 100%;
+  height: 45%;
+  border: solid 1px #D9D9D9;
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.TelaPerfil .menu .home svg, .TelaPerfil .menu .config svg {
+  width: 100%;
+  height: 100%;
+  padding: 1vh 0 1vh 0.75vw;
+  pointer-events: none;
+}
+.TelaPerfil .menu .home svg path, .TelaPerfil .menu .config svg path {
+  fill: #D9D9D9;
+}
+.TelaPerfil .menu .home:hover, .TelaPerfil .menu .config:hover {
+  background-color: #3A008C;
+}
+.TelaPerfil .menu .home {
+  margin-bottom: 10%;
+}
+.TelaPerfil .menu .modalConfig {
+  border: solid #D9D9D9 1px;
+  margin-top: 1.5vh;
+  margin-left: -10vw;
+  width: 15vw;
+  height: 15vh;
+  padding: 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background-color: #000000;
+  border-radius: 1vw;
+}
+.TelaPerfil .menu .modalConfig button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+  font-size: 1.25vw;
+  font-weight: 500;
+}
+.TelaPerfil .menu .modalConfig button svg {
+  margin-left: 0.5vw;
+  height: 75%;
+}
+.TelaPerfil .menu .modalConfig button svg path {
+  fill: #D9D9D9;
+}
+.TelaPerfil .menu .modalConfig button:hover {
+  background-color: #212121;
+}
+.TelaPerfil .menu .modalConfig .LogoutBtn {
+  border-top: 1px solid #D9D9D9;
 }
 .TelaPerfil section {
   width: 75%;
   height: 100vh;
   z-index: 5;
+}
+.TelaPerfil .perfilBlock {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 5vh 0 3vh;
+  border-radius: 2.5vw;
+  align-items: center;
+  position: relative;
+}
+.TelaPerfil .perfilBlock::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(0.1vw);
+          backdrop-filter: blur(0.1vw);
+  z-index: -1;
+  border-radius: 2.5vw;
+}
+.TelaPerfil .perfilBlock .banner {
+  padding: 0;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TelaPerfil .perfilBlock .banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.5vw;
+}
+.TelaPerfil .perfilBlock .imgPerfil {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -7.5vw;
+}
+.TelaPerfil .perfilBlock .imgPerfil img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.TelaPerfil .perfilBlock .EditPerfilBtn {
+  color: #D9D9D9;
+  font-size: 1.25vw;
+  border: solid 1px #D9D9D9;
+  padding: 0.25vh 3vw;
+  border-radius: 3vw;
+  margin-top: 2.5vh;
+  background: none;
+}
+.TelaPerfil .perfilBlock .nomeUser {
+  color: #D9D9D9;
+  font-size: 2.5vw;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  padding: 1vh 10vw;
+  margin: 5vh 0 2vh;
+}
+.TelaPerfil .perfilBlock .nickUser {
+  border-radius: 0;
+  margin: 0 0 1vh 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5vw;
+  border: none;
+  color: #D9D9D9;
+}
+.TelaPerfil .perfilBlock .descriUser {
+  color: #D9D9D9;
+  font-size: 1.3vw;
+  font-weight: 200;
+  padding: 0.5vh 7.5vw;
+  text-align: center;
+  width: 100%;
+  height: 12vh;
+  margin: 2vh 0 4vh;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh 0 2vh;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser .local, .TelaPerfil .perfilBlock .iconsInfoUser .emailContato, .TelaPerfil .perfilBlock .iconsInfoUser .site, .TelaPerfil .perfilBlock .iconsInfoUser .entrou {
+  width: 22%;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser .local svg, .TelaPerfil .perfilBlock .iconsInfoUser .emailContato svg, .TelaPerfil .perfilBlock .iconsInfoUser .site svg, .TelaPerfil .perfilBlock .iconsInfoUser .entrou svg {
+  width: 25%;
+  height: 100%;
+  padding: 0.5vh 0.5vw;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser .local svg path, .TelaPerfil .perfilBlock .iconsInfoUser .emailContato svg path, .TelaPerfil .perfilBlock .iconsInfoUser .site svg path, .TelaPerfil .perfilBlock .iconsInfoUser .entrou svg path {
+  fill: #D9D9D9;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser .local span, .TelaPerfil .perfilBlock .iconsInfoUser .local a, .TelaPerfil .perfilBlock .iconsInfoUser .emailContato span, .TelaPerfil .perfilBlock .iconsInfoUser .emailContato a, .TelaPerfil .perfilBlock .iconsInfoUser .site span, .TelaPerfil .perfilBlock .iconsInfoUser .site a, .TelaPerfil .perfilBlock .iconsInfoUser .entrou span, .TelaPerfil .perfilBlock .iconsInfoUser .entrou a {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  width: 75%;
+  height: 100%;
+  font-size: 1vw;
+  color: #D9D9D9;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+}
+.TelaPerfil .perfilBlock .iconsInfoUser .entrou {
+  width: 26%;
+}
+.TelaPerfil .perfilBlock .AbasBlock {
+  width: 100%;
+  margin: 0;
+  margin-top: 5.25vh;
+}
+.TelaPerfil .perfilBlock .AbasBlock .MenuPerfil {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.TelaPerfil .perfilBlock .AbasBlock .MenuPerfil a {
+  border: solid 1px #D9D9D9;
+  width: 32%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75vw;
+  font-weight: 800;
+  color: #D9D9D9;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 2.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .MenuPerfil a:nth-child(3) {
+  opacity: 0;
+  pointer-events: none;
+}
+.TelaPerfil .perfilBlock .AbasBlock .MenuPerfil .active {
+  background-color: #3A008C;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil {
+  width: 100%;
+  height: 97vh;
+  margin: 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios {
+  width: 100%;
+  height: 100%;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock {
+  border: solid 1px #D9D9D9;
+  width: 100%;
+  height: 28vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 0;
+  margin: 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .imgPerfilComment {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .imgPerfilComment img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 6vh 2vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment {
+  width: 65%;
+  height: 100%;
+  color: #D9D9D9;
+  display: flex;
+  flex-wrap: wrap;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .nomeUserComment {
+  width: 70%;
+  height: 20%;
+  margin: 0;
+  font-size: 1.5vw;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .nickUserComment {
+  border: none;
+  width: 30%;
+  height: 20%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1.25vw;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .comment {
+  width: 100%;
+  height: 60%;
+  font-size: 1.25vw;
+  padding: 0.5vh 1vw;
+  margin: 0;
+  font-weight: 200;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .respostas, .TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .likes {
+  display: flex;
+  margin: 0 1vw 0 0;
+  width: 30%;
+  height: 100%;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .respostas svg, .TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .likes svg {
+  width: 25%;
+  height: 100%;
+  padding: 0.75vh 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .respostas span, .TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .infosComment .actions .likes span {
+  margin: 0;
+  padding: 0 0 0 0.5vw;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  font-size: 1.15vw;
+  font-weight: 200;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .bannerPostagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75%;
+  padding: 2.5vh 3.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .bannerPostagem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions span {
+  margin: 0;
+  padding: 0 0 2.5vh 0.5vw;
+  width: 40%;
+  height: 3.5vh;
+  font-size: 2.5vw;
+  font-weight: 800;
+  letter-spacing: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9D9D9;
+  border: solid 1px #D9D9D9;
+  border-radius: 2vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment {
+  position: absolute;
+  left: -7vw;
+  width: 10vw;
+  height: 11vh;
+  background-color: #000000;
+  border: 1px solid #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vh 1vw;
+  border-radius: 1vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 1.15vw;
+  font-weight: 500;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment button svg {
+  height: 70%;
+  margin-left: 0.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment button svg path {
+  fill: #D9D9D9;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment button:hover {
+  background-color: #212121;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .actions .modalComment .DeletCommentBtn {
+  border-top: 1px solid #D9D9D9;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .seta {
+  position: absolute;
+  width: 2vw;
+  height: 8vh;
+  top: 23%;
+  right: 0.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .comentBlock .PostActions .seta svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .inicio {
+  margin: 0 0 1vh;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .centro {
+  margin: 3vh 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios .final {
+  margin: 1vh 0 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #ultimosComentarios button {
+  width: 100%;
+  height: 7vh;
+  color: #D9D9D9;
+  background: none;
+  border: none;
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes {
+  border: solid 1px #D9D9D9;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  overflow: auto;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers span {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  width: 10vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-size: 500;
+  color: #D9D9D9;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar {
+  width: 18vw;
+  height: 100%;
+  position: relative;
+  margin: 1vh 1.5vw 0 0;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+  background: #080808;
+  border: solid 1px #D9D9D9;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 5;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 1.25vh;
+  right: 0;
+  bottom: 0;
+  left: 0.75vw;
+  width: 0.75vw;
+  height: 0.25vh;
+  background: #D9D9D9;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -1vh;
+  right: 0;
+  bottom: 0;
+  left: -0.5vw;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: 0.3vh solid #D9D9D9;
+  transition: all 0.5s;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  outline: none;
+  background: #080808;
+  border: solid 2px #D9D9D9;
+  color: #D9D9D9;
+  font-weight: 500;
+  padding: 0.5vh 1vw;
+  border-radius: 5vw;
+  transition: all 1s;
+  opacity: 1;
+  z-index: 5;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input:focus ~ .search {
+  z-index: 6;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 1.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 1.5vw;
+  height: 0.3vh;
+  border: none;
+  background: #D9D9D9;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input::-moz-placeholder {
+  color: #D9D9D9;
+  opacity: 1;
+  font-weight: 200;
+  font-size: 1vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .searchNumbers .searchBar input::placeholder {
+  color: #D9D9D9;
+  opacity: 1;
+  font-weight: 200;
+  font-size: 1vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections {
+  width: 100%;
+  height: 90vh;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName {
+  display: flex;
+  height: 25%;
+  width: 14%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName::before {
+  content: "";
+  position: absolute;
+  height: 75%;
+  width: 80%;
+  background: rgba(33, 33, 33, 0.5);
+  z-index: 5;
+  border-radius: 1vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName img, .TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName svg {
+  border-radius: 1vw;
+  height: 75%;
+  width: 80%;
+  z-index: 4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName svg {
+  background-color: rgb(217, 102, 43);
+  padding: 3vh 0.5vw 0 0.5vw;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName svg path {
+  fill: #D9D9D9;
+}
+.TelaPerfil .perfilBlock .AbasBlock .TabsPerfil #Conexoes .perfilConections .perfilImgName h4 {
+  position: absolute;
+  color: #D9D9D9;
+  font-weight: 500;
+  font-size: 1vw;
+  z-index: 6;
 }/*# sourceMappingURL=style.css.map */

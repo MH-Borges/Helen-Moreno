@@ -7,21 +7,610 @@
         svg {
             width: 100%;
             height: 100vh;
-            border: solid red 1px;
         }
     }
 
     .menu{
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 10vw;
-        height: 25vh;
+        top: 2vh;
+        right: 1.5vw;
+        width: 5vw;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        .home, .config{
+            width: 100%;
+            height: 45%;
+            border: solid 1px $Branco;
+            border-top-left-radius: 2vw;
+            border-bottom-left-radius: 2vw;
+            svg{
+                width: 100%;
+                height: 100%;
+                padding: 1vh 0 1vh 0.75vw;
+                pointer-events: none;
+                path{
+                    fill: $Branco;
+                }
+            }
+            &:hover{
+                background-color: $RoxoEscuro;
+            }
+        }
+        .home{
+            margin-bottom: 10%;
+        }
+        .modalConfig{
+            border: solid $Branco 1px;
+            margin-top: 1.5vh;
+            margin-left: -10vw;
+            width: 15vw;
+            height: 15vh;
+            padding: 1vh 1vw;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            background-color: $PretoEscuro;
+            border-radius: 1vw;
+            button{
+                height: 50%;
+                display: flex;
+                align-items: center;
+                color: $Branco;
+                background: none;
+                border: none;
+                font-size: 1.25vw;
+                font-weight: 500;
+                svg{
+                    margin-left: 0.5vw;
+                    height: 75%;
+                    path{
+                        fill: $Branco;
+                    }
+                }
+                &:hover{
+                    background-color: $PretoClaro;
+                }
+            }
+            .LogoutBtn{
+                border-top: 1px solid $Branco;
+            }
+        }
     }
 
     section {
         width: 75%;
         height: 100vh;
         z-index: 5;
+    }
+
+    .perfilBlock{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 5vh 0 3vh;
+        border-radius: 2.5vw;
+        align-items: center;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(33, 33, 33, 0.5);
+            backdrop-filter: blur(0.1vw);
+            z-index: -1;
+            border-radius: 2.5vw;
+        }
+        .banner{
+            padding: 0;
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 2.5vw;
+            }
+        }
+        .imgPerfil{
+            width: 10vw;
+            height: 10vw;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -7.5vw;
+            img{
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .EditPerfilBtn{
+            color: $Branco;
+            font-size: 1.25vw;
+            border: solid 1px $Branco;
+            padding: 0.25vh 3vw;
+            border-radius: 3vw;
+            margin-top: 2.5vh;
+            background: none;
+        }
+        .nomeUser{
+            color: $Branco;
+            font-size: 2.5vw;
+            font-weight: 800;
+            width: 100%;
+            text-align: center;
+            padding: 1vh 10vw;
+            margin: 5vh 0 2vh;
+        }
+        .nickUser{
+            border-radius: 0;
+            margin: 0 0 1vh 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5vw;
+            border: none;
+            color: $Branco;
+        }
+        .descriUser{
+            color: $Branco;
+            font-size: 1.3vw;
+            font-weight: 200;
+            padding: 0.5vh 7.5vw;
+            text-align: center;
+            width: 100%;
+            height: 12vh;
+            margin: 2vh 0 4vh;
+        }
+        .iconsInfoUser{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            margin: 1vh 0 2vh;
+            .local, .emailContato, .site, .entrou{
+                width: 22%;
+                height: 7vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{
+                    width: 25%;
+                    height: 100%;
+                    padding: 0.5vh 0.5vw;
+                    path{
+                        fill: $Branco;
+                    }
+                }
+                span, a{
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 75%;
+                    height: 100%;
+                    font-size: 1vw;
+                    color: $Branco;
+                    font-weight: 200;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .entrou{
+                width: 26%;
+            }
+        }
+        .AbasBlock{
+            width: 100%;
+            margin: 0;
+            margin-top: 5.25vh;
+            .MenuPerfil{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                a{
+                    border: solid 1px $Branco;
+                    width: 32%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.75vw;
+                    font-weight: 800;
+                    color: $Branco;
+                    border-top-left-radius: 2.5vw;
+                    border-top-right-radius: 2.5vw;
+                    &:nth-child(3){
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                .active{
+                    background-color: $RoxoEscuro;
+                }
+            }
+            .TabsPerfil{
+                width: 100%;
+                height: 97vh;
+                margin: 0;
+                #ultimosComentarios{
+                    width: 100%;
+                    height: 100%;
+                    .comentBlock{
+                        border: solid 1px $Branco;
+                        width: 100%;
+                        height: 28vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1vh 0;
+                        margin: 0;
+                        .imgPerfilComment{
+                            width: 15%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img{
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                padding: 6vh 2vw;
+                            }
+                        }
+                        .infosComment{
+                            width: 65%;
+                            height: 100%;
+                            color: $Branco;
+                            display: flex;
+                            flex-wrap: wrap;
+                            .nomeUserComment{
+                                width: 70%;
+                                height: 20%;
+                                margin: 0;
+                                font-size: 1.5vw;
+                                font-weight: 800;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .nickUserComment{
+                                border: none;
+                                width: 30%;
+                                height: 20%;
+                                margin: 0;
+                                padding: 0;
+                                border-radius: 0;
+                                font-size: 1.25vw;
+                                font-weight: 500;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .comment{
+                                width: 100%;
+                                height: 60%;
+                                font-size: 1.25vw;
+                                padding: 0.5vh 1vw;
+                                margin: 0;
+                                font-weight: 200;
+                            }
+                            .actions{
+                                width: 100%;
+                                height: 20%;
+                                display: flex;
+                                .respostas, .likes{
+                                    display: flex;
+                                    margin: 0 1vw 0 0;
+                                    width: 30%;
+                                    height: 100%;
+                                    svg{
+                                        width: 25%;
+                                        height: 100%;
+                                        padding: 0.75vh 0;
+                                    }
+                                    span{
+                                        margin: 0;
+                                        padding: 0 0 0 0.5vw;
+                                        border: none;
+                                        border-radius: 0;
+                                        width: 75%;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 1.15vw;
+                                        font-weight: 200;
+                                    }
+                                }
+                            }
+                        }
+                        .PostActions{
+                            width: 20%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            position: relative;
+                            .bannerPostagem{
+                                display: flex; 
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 75%;
+                                padding: 2.5vh 3.5vw;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 1.5vw;
+                                }
+                            }
+                            .actions{
+                                width: 100%;
+                                height: 25%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                span{
+                                   margin: 0;
+                                   padding: 0 0 2.5vh 0.5vw;
+                                   width: 40%;
+                                   height: 3.5vh;
+                                   font-size: 2.5vw;
+                                   font-weight: 800;
+                                   letter-spacing: 0.5vw;
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                                   color: $Branco;
+                                   border: solid 1px $Branco;
+                                   border-radius: 2vw;
+                                }
+                                .modalComment{
+                                    position: absolute;
+                                    left: -7vw;
+                                    width: 10vw;
+                                    height: 11vh;
+                                    background-color: $PretoEscuro;
+                                    border: 1px solid $Branco;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    padding: 1vh 1vw;
+                                    border-radius: 1vw;
+                                    button{
+                                        height: 50%;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 1.15vw;
+                                        font-weight: 500;
+                                        svg{
+                                            height: 70%;
+                                            margin-left: 0.5vw;
+                                            path{
+                                                fill: $Branco;
+                                            }
+                                        }
+                                        &:hover{
+                                            background-color: $PretoClaro;
+                                        }
+                                    }
+                                    .DeletCommentBtn{
+                                        border-top: 1px solid $Branco;
+                                    }
+                                }
+                            }
+                            .seta{
+                                position: absolute;
+                                width: 2vw;
+                                height: 8vh;
+                                top: 23%;
+                                right: 0.5vw;
+                                svg{
+                                    width: 100%;
+                                    height: 100%;
+                                    transform: rotate(-90deg);
+                                }
+                            }
+                        }
+                    }
+                    .inicio{margin: 0 0 1vh;}
+                    .centro{margin: 3vh 0}
+                    .final{margin: 1vh 0 0;}
+                    button{
+                        width: 100%;
+                        height: 7vh;
+                        color: $Branco;
+                        background: none;
+                        border: none;
+                        font-size: 1.5vw;
+                        font-weight: 200;
+                    }
+                }
+                #Conexoes{
+                    border: solid 1px $Branco;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom-left-radius: 2vw;
+                    border-bottom-right-radius: 2vw;
+                    overflow: auto;
+                    .searchNumbers{
+                        width: 100%;
+                        height: 6vh;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0;
+                        span{
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            border-radius: 0;
+                            width: 10vw;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 1.5vw;
+                            font-size: 500;
+                            color: $Branco;
+                        }
+                        .searchBar {
+                            width: 18vw;
+                            height: 100%;
+                            position: relative;
+                            margin: 1vh 1.5vw 0 0;
+                            .search {
+                                position: absolute;
+                                margin: auto;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                width: 2.5vw;
+                                height: 2.5vw;
+                                background: $Preto;
+                                border: solid 1px $Branco;
+                                border-radius: 50%;
+                                transition: all 1s;
+                                z-index: 5;
+                    
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    margin: auto;
+                                    top: 1.25vh;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: 0.75vw;
+                                    width: 0.75vw;
+                                    height: 0.25vh;
+                                    background: $Branco;
+                                    transform: rotate(45deg);
+                                    transition: all .5s;
+                                }
+                    
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    margin: auto;
+                                    top: -1vh;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: -0.5vw;
+                                    width: 1vw;
+                                    height: 1vw;
+                                    border-radius: 50%;
+                                    border: 0.3vh solid $Branco;
+                                    transition: all .5s;
+                                }
+                            }
+                    
+                            input {
+                                position: absolute;
+                                margin: auto;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 85%;
+                                outline: none;
+                                background: $Preto;
+                                border: solid 2px $Branco;
+                                color: $Branco;
+                                font-weight: 500;
+                                padding: 0.5vh 1vw;
+                                border-radius: 5vw;
+                                transition: all 1s;
+                                opacity: 1;
+                                z-index: 5;
+                                &:focus~.search {
+                                    z-index: 6;
+                    
+                                    &::before {
+                                        top: 0;
+                                        left: 0;
+                                        width: 1.5vw;
+                                    }
+                    
+                                    &::after {
+                                        top: 0;
+                                        left: 0;
+                                        width: 1.5vw;
+                                        height: 0.3vh;
+                                        border: none;
+                                        background: $Branco;
+                                        border-radius: 0%;
+                                        transform: rotate(-45deg);
+                                    }
+                                }
+                    
+                                &::placeholder {
+                                    color: $Branco;
+                                    opacity: 1;
+                                    font-weight: 200;
+                                    font-size: 1vw;
+                                }
+                            }
+                        }
+                    }
+                    .perfilConections{
+                        width: 100%;
+                        height: 90vh;
+                        padding: 5vh 5vw;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: start;
+                        .perfilImgName{
+                            display: flex;
+                            height: 25%;
+                            width: 14%;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                height: 75%;
+                                width: 80%;
+                                background: rgba(33, 33, 33, 0.5);
+                                z-index: 5;
+                                border-radius: 1vw;
+                            }
+                            img, svg{
+                                border-radius: 1vw;
+                                height: 75%;
+                                width: 80%;
+                                z-index: 4;
+                                object-fit: cover;
+                            }
+                            svg{
+                                background-color: $LaranjaEscuro;
+                                padding: 3vh 0.5vw 0 0.5vw;
+                                path{
+                                    fill: $Branco;
+                                }
+                            }
+                            h4{
+                                position: absolute;
+                                color: $Branco;
+                                font-weight: 500;
+                                font-size: 1vw;
+                                z-index: 6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
