@@ -57,7 +57,6 @@
     </div>
 
     <section class="perfilBlock">
-
         <div class="banner"><img src="assets/misty-mountain-ranges-at-sunrise.jpg" alt=""></div>
         <div class="imgPerfil"><img src="assets/AdobeStock_491155758.jpg" alt=""></div>
 
@@ -184,7 +183,6 @@
                                 <img src="../../assets/icones/seta.svg" onload="SVGInject(this)">
                             </a>
                         </div>
-
                     </div>
 
                     <div class="final comentBlock">
@@ -400,20 +398,18 @@
     <!-- Modal Logout-->
     <div class="modal fade" id="ModalLogout" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog ModalLogout">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <button type="button" class="CloseBtn" data-dismiss="modal" aria-label="Close">
+                    <img src="../../assets/icones/Close.svg" onload="SVGInject(this)">
+                </button>
                 <div class="modal-body">
-                    logout
+                    <h5>Já vai embora?</h5>
+                    <h6>Tem certeza que gostaria de sair da sa conta?</h6>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button class="CancelaBtnModal" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="LogoutBtnModal" type="button">Sair</button>
                 </div>
             </div>
         </div>
@@ -422,20 +418,119 @@
     <!-- Modal Editar perfil-->
     <div class="modal fade" id="ModalEditPerfil" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog ModalEditPerfil">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <button type="button" class="CloseBtn" data-dismiss="modal" aria-label="Close">
+                    <img src="../../assets/icones/Close.svg" onload="SVGInject(this)">
+                </button>
                 <div class="modal-body">
-                    edição de perfil
+                    <div class="nav nav-pills MenuEditPerfil">
+                        <a class="active" data-toggle="pill" href="#EditarPerfil">Informações gerais</a>
+                        <a data-toggle="pill" href="#AlterarSenha">Alterar e-mail e senha</a>
+                    </div>
+                    <div class="tab-content TabsEditPerfil">
+                        <div class="tab-pane fade show active" id="EditarPerfil">
+
+                            <div class="editPerfilBlock">
+                               
+                                <!-- <form class="labels" method="POST">
+                                    <div class="BlockBox">
+                                        <input id="file-upload" type="file" name="fileUpload"  />
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input id="file-upload" type="file" name="fileUpload"  />
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="nome" id="nome" required>
+                                        <span>Nome completo:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="telefone" id="telefone" required>
+                                        <span>Telefone:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="email" id="email" required>
+                                        <span>E-mail:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox inputMetade">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox inputMetade">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox inputMetade">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox inputMetade">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                                        <span>Como podemos te ajudar?</span>
+                                    </div>
+
+                                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
+                                    <div class="col-md-12 text-right" id="Alertmsg"></div>
+                                </form>  -->
+
+                            </div>
+                        
+                        </div>
+        
+                        <div class="tab-pane fade" id="AlterarSenha">
+                        
+                            <div class="trocaSenhaEmailBlock">
+                                <form class="labelsEmail" method="POST">
+                                    <div class="BlockBox">
+                                        <input type="text" name="telefone" id="telefone" required>
+                                        <span>Telefone:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="email" id="email" required>
+                                        <span>E-mail:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="col-md-12 text-right" id="Alertmsg"></div>
+                                </form>
+
+                                <form class="labelsSenha" method="POST">
+                                    <div class="BlockBox">
+                                        <input type="text" name="telefone" id="telefone" required>
+                                        <span>Telefone:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="email" id="email" required>
+                                        <span>E-mail:</span>
+                                    </div>
+                                    <div class="BlockBox">
+                                        <input type="text" name="assunto" id="assunto" required>
+                                        <span>Assunto:</span>
+                                    </div>
+                                    <div class="col-md-12 text-right" id="Alertmsg"></div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button class="CancelaBtnModal" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="SalvarBtnModal" type="button">Salvar</button>
                 </div>
             </div>
         </div>
@@ -444,20 +539,40 @@
     <!-- Modal Editar comentario-->
     <div class="modal fade" id="ModalEditComment" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog ModalEditComment">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <button type="button" class="CloseBtn" data-dismiss="modal" aria-label="Close">
+                    <img src="../../assets/icones/Close.svg" onload="SVGInject(this)">
+                </button>
                 <div class="modal-body">
-                    edit comentario
+                    <div class="blockComment">
+                        <div class="imgPerfilComment">
+                            <img src="assets/AdobeStock_491155758.jpg" alt="">
+                        </div>
+                        <div class="infosComment">
+                            <h2 class="nomeUserComment">Mariana Moreno Emerenciano</h2>
+                            <span class="nickUserComment">@mariana_moreno04</span>
+                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum
+                                sagittis vitae.
+                            </p>
+                        </div>
+                        <div class="PostActions">
+                            <div class="bannerPostagem">
+                                <img src="../../assets/imgs/Home/blog/pexels-andrea-piacquadio-3830752.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <form class="labels" method="POST">
+                        <div class="BlockBox">
+                            <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                            <span>Editar comentário:</span>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button class="CancelaBtnModal" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="SalvarBtnModal" type="button">Salvar</button>
                 </div>
             </div>
         </div>
@@ -466,20 +581,19 @@
     <!-- Modal Excluir comentario-->
     <div class="modal fade" id="ModalDeletComment" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog ModalDeletComment">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <button type="button" class="CloseBtn" data-dismiss="modal" aria-label="Close">
+                    <img src="../../assets/icones/Close.svg" onload="SVGInject(this)">
+                </button>
                 <div class="modal-body">
-                    Delete comentario
+                    <h5>Vai excluir o comentário?</h5>
+                    <h6>Tem certeza que gostaria de excluir este comentário?</h6>
+                    <span>(está ação é irreversível)</span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button class="CancelaBtnModal" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="LogoutBtnModal" type="button">Sair</button>
                 </div>
             </div>
         </div>

@@ -16,3 +16,25 @@ function ShowBlockCommentModal(elem){
     }
         
 }
+
+document.querySelectorAll('.CloseBtn').forEach(e => {
+    e.addEventListener('click', function(){
+    
+        document.querySelectorAll('.modalComment').forEach(f => {
+            f.classList.add('hide');
+        })
+    
+        document.querySelector('.modalConfig').classList.add('hide');
+    })
+});
+
+document.querySelectorAll('.CancelaBtnModal').forEach(e => {
+    e.addEventListener('click', function(){
+    
+        document.querySelectorAll('.modalComment').forEach(f => {
+            f.classList.add('hide');
+        })
+    
+        document.querySelector('.modalConfig').classList.add('hide');
+    })
+});
