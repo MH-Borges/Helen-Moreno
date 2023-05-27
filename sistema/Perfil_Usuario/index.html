@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helen Moreno | Meu universo</title>
+    <title>Helen Moreno | Tela perfil</title>
     <link rel="icon" href="../../assets/logos/Lg_laranja.png" />
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- bootstrap -->
@@ -430,15 +429,17 @@
                     </div>
                     <div class="tab-content TabsEditPerfil">
                         <div class="tab-pane fade show active" id="EditarPerfil">
-
                             <div class="editPerfilBlock">
-                               
-                                <!-- <form class="labels" method="POST">
-                                    <div class="BlockBox">
-                                        <input id="file-upload" type="file" name="fileUpload"  />
+                                <form class="labelsEdit" method="POST">
+                                    <div class="bannerImgEdit">
+                                        <input id="BannerUpload" type="file" name="BannerUpload"/>
+                                        <img class="BannerIcon" src="../../assets/icones/bannerIcon.svg" onload="SVGInject(this)">
+                                        <img class="editPen" onclick="EditBanner()" src="../../assets/icones/caneta.svg" onload="SVGInject(this)">
                                     </div>
-                                    <div class="BlockBox">
-                                        <input id="file-upload" type="file" name="fileUpload"  />
+                                    <div class="PerfilImgEdit">
+                                        <input id="ImgPerfilUpload" type="file" name="ImgPerfilUpload"/>
+                                        <img class="pessoaIcon" src="../../assets/icones/pessoa.svg" onload="SVGInject(this)">
+                                        <img class="editPen" onclick="EditImgPerfil()" src="../../assets/icones/caneta.svg" onload="SVGInject(this)">
                                     </div>
                                     <div class="BlockBox">
                                         <input type="text" name="nome" id="nome" required>
@@ -478,21 +479,21 @@
                                     </div>
                                     <div class="BlockBox">
                                         <textarea type="text" name="mensagem" id="mensagem" required></textarea>
-                                        <span>Como podemos te ajudar?</span>
+                                        <span>Uma Breve descrição sobre você!</span>
                                     </div>
+                                    <div id="Alertmsg"></div>
 
-                                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
-                                    <div class="col-md-12 text-right" id="Alertmsg"></div>
-                                </form>  -->
-
+                                    <button class="SalvarBtnModal" type="button">Salvar</button>
+                                </form> 
                             </div>
-                        
                         </div>
         
                         <div class="tab-pane fade" id="AlterarSenha">
                         
                             <div class="trocaSenhaEmailBlock">
                                 <form class="labelsEmail" method="POST">
+                                    <h4>Alterar Email:</h4>
+
                                     <div class="BlockBox">
                                         <input type="text" name="telefone" id="telefone" required>
                                         <span>Telefone:</span>
@@ -506,9 +507,12 @@
                                         <span>Assunto:</span>
                                     </div>
                                     <div class="col-md-12 text-right" id="Alertmsg"></div>
+                                    <button class="SalvarBtnModal" type="button">Salvar</button>
                                 </form>
 
                                 <form class="labelsSenha" method="POST">
+                                    <h4>Alterar Senha:</h4>
+
                                     <div class="BlockBox">
                                         <input type="text" name="telefone" id="telefone" required>
                                         <span>Telefone:</span>
@@ -522,15 +526,12 @@
                                         <span>Assunto:</span>
                                     </div>
                                     <div class="col-md-12 text-right" id="Alertmsg"></div>
+                                    <button class="SalvarBtnModal" type="button">Salvar</button>
                                 </form>
                             </div>
                             
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="CancelaBtnModal" type="button" data-dismiss="modal">Cancelar</button>
-                    <button class="SalvarBtnModal" type="button">Salvar</button>
                 </div>
             </div>
         </div>
@@ -600,5 +601,4 @@
     </div>
 
 </body>
-
 </html>

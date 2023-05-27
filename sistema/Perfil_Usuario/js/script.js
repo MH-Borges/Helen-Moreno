@@ -38,3 +38,11 @@ document.querySelectorAll('.CancelaBtnModal').forEach(e => {
         document.querySelector('.modalConfig').classList.add('hide');
     })
 });
+
+function EditBanner(){
+    $('#BannerUpload').click();
+}
+
+function EditImgPerfil(){
+    $('#ImgPerfilUpload').click();
+}
