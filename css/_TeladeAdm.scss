@@ -16,10 +16,97 @@
         z-index: 5;
     }
 
+    .admHeader{
+        width: 100vw;
+        height: 15vh;
+        position: relative;
+        .headerImg{
+            transform: scale(1, -1);
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            height: 100%;
+            ul{
+                height: 100%;
+                z-index: 999 !important;
+                .admInfosBlock{
+                    width: 20vw;
+                    height: 75%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 1vw;
+                    color: $Branco;
+                    padding: 0;
+                    img{
+                        width: 30%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        padding: 0.5vh;
+                    }
+                    .nomeTagAdm{
+                        width: 70%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0.25vw;
+                        justify-content: center;
+                        .nomeAdm{
+                            margin: 0;
+                            width: 100%;
+                            height: 65%;
+                            font-size: 1vw;
+                            font-weight: 800;
+                            padding-right: 1.75vw;
+                        }
+                        .TagAdm{
+                            border: solid $Branco 1px;
+                            margin: 0;
+                            width: 75%;
+                            height: 35%;
+                            font-size: 0.75vw;
+                            font-weight: 800;
+                            display: flex;
+                            align-items: center;
+                            border-top-right-radius: 2vw;
+                            border-bottom-right-radius: 2vw;
+                            padding-left: 0.25vw;
+                        }
+                    }
+                }
+                li{
+                    padding: 0;
+                    margin: 0 0.5vw;
+                    button{
+                        width: 2.75vw;
+                        border: none;
+                        background: none;
+                        svg{
+                            path{
+                                fill: $Branco;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        margin-left: auto;
+                    }
+                    &:nth-child(4){
+                        margin-right: 2vw;
+                    }
+                }
+            }
+        }
+    }
+
     .AdmBlock{
         width: 100vw;
-        height: 100vh;
-        border: solid red 1px;
+        height: 85vh;
         padding: 0;
         display: flex;
         justify-content: center;
@@ -29,23 +116,46 @@
             width: 100%;
             height: 100%;
             margin: 0;
-            border: solid blue 1px;
             display: flex;
             align-items: center;
             justify-content: center;
             .MenuAdm{
                 margin: 0;
                 padding: 0;
-                width: 20%;
+                width: 15%;
                 height: 100%;
-                border: solid green 1px;
                 display: flex;
                 flex-direction: column;
+                a{
+                    border: solid 1px $Branco;
+                    padding: 1.5vh;
+                    width: 80%;
+                    color: $Branco;
+                    font-size: 1.5vw;
+                    font-weight: 500;
+                    margin: 0.75vh 1vw;
+                    border-top-right-radius: 3vw;
+                    border-bottom-right-radius: 3vw;
+                }
+                .active{
+                    background-color: $RoxoEscuro;
+                    font-weight: 800;
+                }
             }
             .TabsAdm{
-                border: solid orange 1px;
-                width: 80%;
+                width: 85%;
                 height: 100%;
+                color: $Branco;
+                h5{
+                    border: solid;
+                    width: 100%;
+                    height: 85vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 5vw;
+                    font-weight: 800;
+                }
             }
         }
     }
